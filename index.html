@@ -491,29 +491,33 @@
         </div>
       </div>
 
-      <div id="rights-traps-container" class="rules8547-grid" style="margin-top:0;margin-bottom:28px;"></div>
+      <div id="rights-traps-container" class="rules8547-grid" style="margin-top:0;margin-bottom:24px;"></div>
+
+      <!-- Primary-Source Monitored Rules Dashboard -->
+      <div id="monitored-rules-grid" class="rules8547-grid" style="margin-top:0;margin-bottom:24px;"></div>
 
       <div class="combinator-panel">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
           <div>
             <h3 style="font-size:18px;font-weight:800;color:#2E2E2E;margin:0;" data-i18n="srcTableTitle">
-              실시간 SHA-256 해시 감시 대상 10대 공식 법령 · 호주 연방 이민성 원문 출처
+              정기 Poller 실시간 SHA-256 해시 &amp; 구조 파싱 감시 대상 12대 공식 1차 출처
             </h3>
             <p style="font-size:13.5px;color:#5A5654;margin:4px 0 0;" data-i18n="srcTableSub">
-              연방 법령 등록부(Federal Register of Legislation), 호주 연방 이민성(PageSchemaHiddenField JSON), 공정근로옴부즈만(FWO) 원문 해시를 주기적으로 대조하여 우편번호·면제 규정 개정을 감시해요.
+              연방 법령 등록부(Federal Register of Legislation), 호주 연방 이민성(PageSchemaHiddenField JSON 및 쿼터 표), 공정근로옴부즈만(FWO) 원문을 정기 폴링(매주 월요일 07:25 AEST 자동 실행)하여 우편번호·연령 상한·국가별 쿼터·조건 8547 면제 규정 개정을 감시해요.
             </p>
           </div>
-          <span class="badge badge-success" style="font-size:13px;padding:6px 12px;">10 / 10 Live Verified (HTTP 200)</span>
+          <span class="badge badge-success" id="live-sources-badge" style="font-size:13px;padding:6px 12px;" data-i18n="srcBadgeLive">12 / 12 Live Verified (HTTP 200)</span>
         </div>
 
         <div class="results-table-wrap">
           <table class="occ-table">
             <thead>
               <tr>
-                <th style="width:22%;" data-i18n="sThAuth">발행 기관 (Authority)</th>
-                <th style="width:42%;" data-i18n="sThTitle">공식 문서명 및 법령 번호</th>
-                <th style="width:14%;" data-i18n="sThStatus">검증 상태</th>
-                <th style="width:22%;" data-i18n="sThHash">SHA-256 무결성 해시 / 원문 링크</th>
+                <th style="width:18%;" data-i18n="sThAuth">발행 기관 (Authority)</th>
+                <th style="width:32%;" data-i18n="sThTitle">공식 문서명 및 법령 번호</th>
+                <th style="width:22%;" data-i18n="sThScope">Poller 정기 감시 · 파싱 항목</th>
+                <th style="width:10%;" data-i18n="sThStatus">검증 상태</th>
+                <th style="width:18%;" data-i18n="sThHash">SHA-256 무결성 해시 / 원문 링크</th>
               </tr>
             </thead>
             <tbody id="live-sources-body"></tbody>
@@ -579,13 +583,13 @@
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
           <img src="assets/logo-negative.png" alt="Park &amp; Co Lawyers" style="height:36px;width:auto;" />
           <div>
-            <strong style="color:#FFFFFF;">법무법인 박앤코 (Park &amp; Co Lawyers Pty Ltd)</strong> · 박창민 대표변호사 (QLS Accredited Specialist in Immigration Law)<br/>
+            <span data-i18n="footerFirmLine"><strong style="color:#FFFFFF;">법무법인 박앤코 (Park &amp; Co Lawyers Pty Ltd)</strong> · 박창민 대표변호사 (QLS Accredited Specialist in Immigration Law)</span><br/>
             Official Contact: <a href="mailto:enquiry@parkcolawyers.com" style="color:#D9A7AD;">enquiry@parkcolawyers.com</a> ·
-            Enquiry Link: <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" style="color:#D9A7AD;">https://parklawyers.com.au/links/?lang=ko</a>
+            Enquiry Link: <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" class="cta-enquiry" style="color:#D9A7AD;">https://parklawyers.com.au/links/</a>
           </div>
         </div>
         <div style="text-align:right;font-size:12.5px;">
-          <div id="footer-currency-line">Primary Source Currency: <strong>2026-10-20</strong> · Source Monitor: <code id="footer-poll-status">10/10 Live</code></div>
+          <div id="footer-currency-line">Primary Source Currency: <strong>2026-10-20</strong> · Source Monitor: <code id="footer-poll-status">12/12 Live</code></div>
           <div>&copy; 2026 Park &amp; Co Lawyers. All rights reserved.</div>
         </div>
       </div>
@@ -596,7 +600,7 @@
   <div id="detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 id="modal-title">공식 출처 실시간 모니터</h3>
+        <h3 id="modal-title" data-i18n="modalTitle">공식 1차 출처 실시간 모니터 (12/12 Live Verified)</h3>
         <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close modal">&times;</button>
       </div>
       <div id="modal-body-content" class="modal-body"></div>

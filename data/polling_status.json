@@ -1,15 +1,243 @@
 {
-  "last_polled_at": "2026-10-20T18:38:46+10:00",
+  "last_polled_at": "2026-10-20T19:00:37+10:00",
   "last_polled_date": "2026-10-20",
-  "total_sources": 10,
-  "live_verified_count": 10,
-  "changed_count": 6,
+  "total_sources": 12,
+  "live_verified_count": 12,
+  "changed_count": 7,
   "official_contact": "enquiry@parkcolawyers.com",
+  "monitored_rules": {
+    "postcodes_tables_1_to_6": {
+      "verified": true,
+      "counts": {
+        "remote": 551,
+        "northern": 350,
+        "regional": 4520,
+        "bushfire": 1284,
+        "disaster": 2677
+      },
+      "instruments": [
+        "LIN 22/012 (F2022L00271)",
+        "LIN 22/013 (F2022L00272)",
+        "LIN 25/048 (F2025L00485)"
+      ]
+    },
+    "subclass_417_age_caps": {
+      "parsed": true,
+      "total_countries": 19,
+      "age_35_count": 10,
+      "age_30_count": 9,
+      "age_35_countries": [
+        "Canada",
+        "Republic of Cyprus",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "Republic of Ireland",
+        "Italy",
+        "Republic of Korea",
+        "The United Kingdom of Great Britain and Northern Ireland (including British National Overseas passport holders)"
+      ],
+      "age_30_countries": [
+        "Belgium",
+        "Estonia",
+        "Hong Kong Special Administrative Region of the People's Republic of China",
+        "Japan",
+        "Malta",
+        "Netherlands",
+        "Norway",
+        "Sweden",
+        "Taiwan (other than an official or diplomatic passport)"
+      ],
+      "korea_age_max": 35
+    },
+    "subclass_462_country_caps": {
+      "parsed": true,
+      "total_capped_partners": 29,
+      "open_count": 23,
+      "paused_countries": [
+        "Brazil",
+        "Mongolia"
+      ],
+      "closed_countries": [],
+      "ballot_countries": [
+        "China",
+        "India",
+        "Indonesia",
+        "Vietnam"
+      ],
+      "by_country": {
+        "Argentina": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "3,400"
+        },
+        "Austria": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "500"
+        },
+        "Brazil": {
+          "status": "paused",
+          "status_label": "paused",
+          "annual_cap": "500"
+        },
+        "Chile": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "3,400"
+        },
+        "China": {
+          "status": "ballot",
+          "status_label": "CHECK BALLOT STATUS",
+          "annual_cap": "5,000"
+        },
+        "Czechia": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "500"
+        },
+        "Ecuador": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "100"
+        },
+        "Greece": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "500"
+        },
+        "Hungary": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "500"
+        },
+        "India": {
+          "status": "ballot",
+          "status_label": "CHECK BALLOT STATUS",
+          "annual_cap": "1,000"
+        },
+        "Indonesia": {
+          "status": "ballot",
+          "status_label": "CHECK BALLOT STATUS*",
+          "annual_cap": "5,000"
+        },
+        "Israel": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "2,500"
+        },
+        "Luxembourg": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "100"
+        },
+        "Malaysia": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "1,100"
+        },
+        "Mongolia": {
+          "status": "paused",
+          "status_label": "paused",
+          "annual_cap": "100"
+        },
+        "Papua New Guinea": {
+          "status": "open",
+          "status_label": "open",
+          "annual_cap": "100"
+        },
+        "Peru": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "1,500"
+        },
+        "Poland": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "1,500"
+        },
+        "Portugal": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "500"
+        },
+        "San Marino": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "100"
+        },
+        "Singapore": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "2,500"
+        },
+        "Slovak Republic": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "1,000"
+        },
+        "Slovenia": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "200"
+        },
+        "Spain": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "3,400"
+        },
+        "Switzerland": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "200"
+        },
+        "Thailand": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "2,000"
+        },
+        "Türkiye": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "100"
+        },
+        "Uruguay": {
+          "status": "open",
+          "status_label": "Open",
+          "annual_cap": "1,500"
+        },
+        "Vietnam": {
+          "status": "ballot",
+          "status_label": "CHECK BALLOT STATUS",
+          "annual_cap": "1,500"
+        }
+      }
+    },
+    "condition_8547_exemptions": {
+      "parsed": true,
+      "until_further_notice_active": true,
+      "all_exempt_categories_confirmed": true,
+      "policy_notice": "From 1 January 2024 — Active until the Government makes further decisions"
+    },
+    "statutory_vac_2026": {
+      "first_visa_aud": 840,
+      "first_visa_pacific_462_aud": 690,
+      "second_and_third_visa_aud": 1000,
+      "authority": "Migration Regulations 1994 — Sch 1 Item 1225(2) & Item 1224A(2)"
+    }
+  },
   "sources": [
     {
       "id": "ha_417_specified_work",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
       "title": "Subclass 417 — Specified Work & Designated Area Postcode Tables (Tables 1–6)",
+      "title_ko": "Subclass 417 — 지정 근로 및 6대 지정 지역 우편번호표 (Tables 1–6)",
+      "title_en": "Subclass 417 — Specified Work & Designated Area Postcode Tables (Tables 1–6)",
+      "check_scope_ko": "업종 정의 · 6대 지역 우편번호 범위 실시간 파싱",
+      "check_scope_en": "Live parsing of 417 work categories & Tables 1–6 postcodes",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work",
       "status": "live",
       "http_code": 200,
@@ -17,12 +245,18 @@
       "bytes": 63538,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "ha_462_specified_work",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
-      "title": "Subclass 462 — Specified Subclass 462 Work & Designated Area Postcode Tables (Tables 1–6)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "Subclass 462 — Specified Work & Designated Area Postcode Tables (Tables 1–6)",
+      "title_ko": "Subclass 462 — 지정 근로(광업 제외·북부 전용 규칙) 및 우편번호표 (Tables 1–6)",
+      "title_en": "Subclass 462 — Specified Work & Designated Area Postcode Tables (Tables 1–6)",
+      "check_scope_ko": "462 인정 업종 · 북부/지방/재해 우편번호 대조",
+      "check_scope_en": "Live verification of 462 work categories & postcode tables",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work",
       "status": "live",
       "http_code": 200,
@@ -30,12 +264,18 @@
       "bytes": 62011,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
-      "title": "Condition 8547 — 6-Month Work Limitation & Automatic Exemptions (Updated 21/09/2026)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "Condition 8547 — 6-Month Work Limitation & Automatic Exemptions Policy",
+      "title_ko": "조건 8547 — 동일 고용주 6개월 근무 제한 및 자동 면제 지침",
+      "title_en": "Condition 8547 — 6-Month Work Limitation & Automatic Exemptions Policy",
+      "check_scope_ko": "2024.1.1~현행 핵심산업·북부호주·장소변경 자동 면제 유지 여부 파싱",
+      "check_scope_en": "Live check of automatic exemptions, location rules & permission criteria",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation",
       "status": "live",
       "http_code": 200,
@@ -43,90 +283,170 @@
       "bytes": 6164,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
+    },
+    {
+      "id": "ha_417_first_stream",
+      "authority": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)",
+      "title_ko": "Subclass 417 (1차·2차·3차) 협정국 명단 및 국가별 연령 상한 (만 18~30 / 35세)",
+      "title_en": "Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)",
+      "check_scope_ko": "19개 협정국 국가별 연령 상한(한국·독일·핀란드·키프로스 등 만 35세) 파싱",
+      "check_scope_en": "Live parsing of 19 eligible 417 passport countries & age limits",
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417",
+      "status": "live",
+      "http_code": 200,
+      "sha256": "ac0e08f240d4223b419da45fa2f65570078883fdf4b19cb38d7c38162c063471",
+      "bytes": 50385,
+      "method": "urllib_ha_schema",
+      "changed_since_last_poll": false,
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "ha_uk_arrangements",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
-      "title": "Arrangements for UK Passport Holders (Age 18–35 & Specified Work Exemption from 1 Jul 2024)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)",
+      "title_ko": "영국(UK · BN(O)) 여권 소지자 특별 규정 (만 35세 & 2·3차 지정 근로 면제)",
+      "title_en": "Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)",
+      "check_scope_ko": "영국 여권 지정 근로 면제 및 조건 8547 적용 여부 감시",
+      "check_scope_en": "Monitors UK/BN(O) specified work exemption under Item 1225(3BA)",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/arrangements-uk-passport-holders",
       "status": "live",
       "http_code": 200,
-      "sha256": "195db0b3eaa39e444a23891409a5b52fa42ffd4b4552f848193d72eb2db973de",
+      "sha256": "5cd58d267d6223057c20f8c1cbdb1e763b57c3e2e358a93dc8624569ae0b66e8",
       "bytes": 1305709,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "ha_whm_latest_news",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
-      "title": "WHM Program Latest News (1 Jul 2026 Age 35 Expansion: Korea, Germany, Finland, Cyprus; Ballot & Caps)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)",
+      "title_ko": "WHM 프로그램 최신 개정 공지 (2026.7.1 연령 상향·추첨제·협정 개정)",
+      "title_en": "WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)",
+      "check_scope_ko": "신규 연령 상향·국가 추가·제도 개편 공지 감시",
+      "check_scope_en": "Monitors bilateral age expansions, new partner countries & policy alerts",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news",
       "status": "live",
       "http_code": 200,
-      "sha256": "a2a4ab139789420e6e68c0a8d497d4e8fd9daa11cb7b30b57473602a350b01a1",
+      "sha256": "b8ffb0a7f791f16e3ed818fbebfbcb6163f37bfc34886eb24613803403a6f735",
       "bytes": 1303372,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "ha_country_caps",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
-      "title": "Status of Subclass 462 Country Caps & Pre-Application Ballot (2026–27 Program Year)",
+      "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
+      "authority_en": "Department of Home Affairs",
+      "title": "Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)",
+      "title_ko": "Subclass 462 협정국 연간 쿼터(Cap) 마감 현황 및 추첨제(Ballot) 상태",
+      "title_en": "Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)",
+      "check_scope_ko": "30개국 쿼터 상태(Open / Paused / Closed / Ballot) 실시간 테이블 파싱",
+      "check_scope_en": "Live parsing of Open / Paused / Closed / Ballot status for 30 countries",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps",
       "status": "live",
       "http_code": 200,
-      "sha256": "3f507aab5e105fefa4b9a06fcd4db141a75e2899ad4a75e376b007d0eb6f2f53",
+      "sha256": "b423650adc258c937e1510f645b68c702a6d14f4cbb1a849493a6edc2cf23058",
       "bytes": 1307907,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
+    },
+    {
+      "id": "leg_mig_regs_1994",
+      "authority": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_ko": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_en": "Federal Register of Legislation",
+      "title": "Migration Regulations 1994 (F1996B03551 Latest Compilation — Sch 1, Sch 2, Sch 8)",
+      "title_ko": "Migration Regulations 1994 (F1996B03551 최신 현행본 — Sch 1, Sch 2, Sch 8)",
+      "title_en": "Migration Regulations 1994 (F1996B03551 Latest Compilation — Sch 1, Sch 2, Sch 8)",
+      "check_scope_ko": "Item 1224A/1225 VAC 금액, Reg 1.15FAA~FB, Cond 8547 현행 컴파일 감시",
+      "check_scope_en": "Monitors latest compilation of Migration Regulations 1994",
+      "url": "https://www.legislation.gov.au/F1996B03551/latest/details",
+      "status": "live",
+      "http_code": 200,
+      "sha256": "6e3d050782b915fdda3ee6f645ae0b35110ff2e09659d320554a1cb6cafa5c67",
+      "bytes": 61767,
+      "method": "urllib_direct",
+      "changed_since_last_poll": true,
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "leg_lin_22_012",
-      "authority": "Federal Register of Legislation",
-      "title": "Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) 2022 — F2022L00271",
+      "authority": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_ko": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_en": "Federal Register of Legislation",
+      "title": "Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) — F2022L00271",
+      "title_ko": "Subclass 417 지정 근로 및 지정 지역 고시문 (LIN 22/012) — F2022L00271",
+      "title_en": "Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) — F2022L00271",
+      "check_scope_ko": "LIN 22/012 최신 컴파일 번호 및 개정 이력 감시",
+      "check_scope_en": "Monitors LIN 22/012 compilation currency and amendments",
       "url": "https://www.legislation.gov.au/F2022L00271/latest/details",
       "status": "live",
       "http_code": 200,
-      "sha256": "d2b19c1c5dc8e2059bed7e967cc78940d44545abc36cb2683ac58af5327e32a7",
-      "bytes": 60154,
+      "sha256": "dc8ff8c30cab051aa7ae5e0cb71336929b4c7101f47bc11c65233c4cff90349d",
+      "bytes": 60145,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "leg_lin_22_013",
-      "authority": "Federal Register of Legislation",
-      "title": "Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) 2022 — F2022L00272",
+      "authority": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_ko": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_en": "Federal Register of Legislation",
+      "title": "Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) — F2022L00272",
+      "title_ko": "Subclass 462 지정 근로 및 지정 지역 고시문 (LIN 22/013) — F2022L00272",
+      "title_en": "Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) — F2022L00272",
+      "check_scope_ko": "LIN 22/013 최신 컴파일 번호 및 개정 이력 감시",
+      "check_scope_en": "Monitors LIN 22/013 compilation currency and amendments",
       "url": "https://www.legislation.gov.au/F2022L00272/latest/details",
       "status": "live",
       "http_code": 200,
-      "sha256": "ca0a5aebfde717220ea130e2d3ffec581f4d55a65837a7519e18e1b217642002",
-      "bytes": 60136,
+      "sha256": "180375892cae115008b2995d4229cfd7e25ef06bf578fd45811158f8c7e42f98",
+      "bytes": 60145,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "leg_lin_25_048",
-      "authority": "Federal Register of Legislation",
-      "title": "Migration Legislation Amendment (Specified Work and Areas for Subclass 417 and 462 Visas) Instrument 2025 (LIN 25/048) — F2025L00485",
+      "authority": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_ko": "호주 연방 법제처 (Federal Register of Legislation)",
+      "authority_en": "Federal Register of Legislation",
+      "title": "Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) — F2025L00485",
+      "title_ko": "2025 산불·자연재해 지정 지역 확대 개정 고시문 (LIN 25/048) — F2025L00485",
+      "title_en": "Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) — F2025L00485",
+      "check_scope_ko": "Table 5(산불) 및 Table 6(홍수·사이클론) 우편번호 개정 고시 감시",
+      "check_scope_en": "Monitors Table 5 (Bushfire) and Table 6 (Disaster) legislative updates",
       "url": "https://www.legislation.gov.au/F2025L00485/latest/details",
       "status": "live",
       "http_code": 200,
-      "sha256": "c6a827ee5476a5e223b8f55e0aa37e5e983220c23a517ab4c1ade2f8dc2ef594",
-      "bytes": 60222,
+      "sha256": "8742c4ac090fc1f6e9d41b1e3a58085dfb2f6876d175bbaa61f432c951adeaf3",
+      "bytes": 60195,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     },
     {
       "id": "fwo_piecework",
-      "authority": "Fair Work Ombudsman (호주 공정근로옴부즈만)",
+      "authority": "호주 공정근로옴부즈만 (Fair Work Ombudsman)",
+      "authority_ko": "호주 공정근로옴부즈만 (Fair Work Ombudsman)",
+      "authority_en": "Fair Work Ombudsman",
       "title": "Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements",
+      "title_ko": "원예업 어워드(Horticulture Award) 성과급(Piecework) 최저시급 보장 지침",
+      "title_en": "Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements",
+      "check_scope_ko": "피스레이트 서면 계약 및 최저시급 보장 규정 감시",
+      "check_scope_en": "Monitors piecework minimum wage guarantee & pay slip rules",
       "url": "https://www.fairwork.gov.au/pay-and-wages/minimum-wages/piece-rates-and-commission-payments",
       "status": "live",
       "http_code": 200,
@@ -134,7 +454,7 @@
       "bytes": 432000,
       "method": "urllib_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-20T18:38:46+10:00"
+      "checked_at": "2026-10-20T19:00:37+10:00"
     }
   ]
 }
