@@ -40,7 +40,7 @@
       <div class="nav-actions">
         <button type="button" id="btn-polling-status" class="btn-secondary" style="background:rgba(46,107,79,0.22);border-color:#2E6B4F;color:#E7F3EC !important;font-size:12.5px;padding:6px 12px;">
           <span id="polling-badge-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#10B981;margin-right:4px;"></span>
-          <span id="polling-badge-label" data-i18n="pollBadge">출처 모니터 (2026-10-20 · 실시간 10/10 검증 완료)</span>
+          <span id="polling-badge-label" data-i18n="pollBadge">출처 모니터 (2026-10-20 · 실시간 12/12 검증 완료)</span>
         </button>
         <div class="lang-switch" role="group" aria-label="Language Switcher">
           <button type="button" id="lang-toggle-ko" class="lang-btn active">한국어 (KO)</button>
@@ -58,7 +58,7 @@
     <div class="container urgent-strip-inner">
       <div>
         <span class="urgent-badge" data-i18n="urgentBadge">2026 법령·정책 핵심 업데이트</span>
-        <span data-i18n="urgentText">2026.07.01부터 대한민국(Republic of Korea)·독일·핀란드·키프로스 여권 소지자의 Subclass 417 연령 상한이 만 18~35세(만 36세 생일 전날 AEST/AEDT 23:59까지)로 확대 [5] / 영국(UK·BN(O)) 여권 소지자는 2·3차 417 지정 근로 면제(단, 조건 8547 6개월 제한은 동일 적용) [4] / 2025.04.05 발효 LIN 25/048 산불(Table 5)·자연재해(Table 6) 우편번호 전수 반영 [9] / 현행 법정 비자 신청비(VAC): 1차 $840 (태평양 국가 462 $690) · 2차·3차 $1,000 [1].</span>
+        <span data-i18n="urgentText">2026.07.01부터 대한민국(Republic of Korea)·독일·핀란드·키프로스 여권 소지자의 Subclass 417 연령 상한이 만 18~35세(만 36세 생일 전날 호주 동부 표준시 AEST 23:59까지)로 확대 [5] / 영국(UK·BN(O)) 여권 소지자는 2024.07.01 이후 신청 시 2·3차 417 지정 근로 면제(단, 조건 8547 6개월 제한은 동일 적용) [4] / 2025.04.05 발효 LIN 25/048 산불(Table 5)·자연재해(Table 6) 우편번호 전수 반영 [9] / 현행 법정 비자 신청비(VAC): 1차 $840 (파푸아뉴기니·태평양 국가 462 $690) · 2차·3차 $1,000 (파푸아뉴기니 462 $690) [1].</span>
       </div>
       <a href="#legal-disclaimer" style="color:#D9A7AD;font-weight:700;font-size:12.5px;white-space:nowrap;" data-i18n="urgentLink">[1]–[18] 1차 출처 각주 &darr;</a>
     </div>
@@ -137,12 +137,12 @@
       <div class="stat-cell">
         <div class="s-over" data-i18n="stat5Over">DESIGNATED POSTCODES</div>
         <div class="s-num" data-i18n="stat5Val">6개 공식 지역표</div>
-        <div class="s-sub" data-i18n="stat5Sub">지방 4,520 · 북부 350 · 외곽 551 · 재해 2,677 [7–9]</div>
+        <div class="s-sub" data-i18n="stat5Sub">지방 4,520 · 북부 350 · 외곽 545(+4) · 재해 2,677 [7–9]</div>
       </div>
       <div class="stat-cell">
         <div class="s-over" data-i18n="stat6Over">STATUTORY VAC (2026)</div>
         <div class="s-num" data-i18n="stat6Val">$840 / $1,000</div>
-        <div class="s-sub" data-i18n="stat6Sub">1차 $840(태평양 $690) · 2·3차 $1,000 [1]</div>
+        <div class="s-sub" data-i18n="stat6Sub">1차 $840(파푸아뉴기니·태평양 462 $690) · 2·3차 $1,000 [1]</div>
       </div>
     </div>
   </section>
@@ -260,9 +260,10 @@
               </div>
 
               <div class="filter-group">
-                <label for="calc-target" class="filter-label" data-i18n="lblCalcTarget">2. 목표 연장 비자 차수</label>
+                <label for="calc-target" class="filter-label" data-i18n="lblCalcTarget">2. 목표 비자 차수</label>
                 <select id="calc-target" class="filter-select">
-                  <option value="second">2차 비자 (Second Visa — 최소 3개월 / 88일 지정 근로)</option>
+                  <option value="first">1차 비자 (First Visa — 신규 신청 연령·쿼터·추첨제 확인)</option>
+                  <option value="second" selected>2차 비자 (Second Visa — 최소 3개월 / 88일 지정 근로)</option>
                   <option value="third">3차 비자 (Third Visa — 최소 6개월 / 179일 지정 근로, 2019.7.1 이후)</option>
                 </select>
               </div>
@@ -273,7 +274,7 @@
               </div>
 
               <div class="filter-group">
-                <label for="calc-age" class="filter-label" data-i18n="lblCalcAge">4. 신청 시점 만 나이 (호주 동부시간 AEST/AEDT 기준)</label>
+                <label for="calc-age" class="filter-label" data-i18n="lblCalcAge">4. 신청 시점 만 나이 (호주 동부 표준시 AEST 기준)</label>
                 <input type="number" id="calc-age" class="filter-select" min="18" max="45" value="28" />
               </div>
 
@@ -282,8 +283,8 @@
                 <select id="calc-visa-held" class="filter-select">
                   <option value="valid_whm">적격 WHM 비자 (2차 신청 시 1차 WHM / 3차 신청 시 2차 WHM 보유 중 수행)</option>
                   <option value="valid_bva_akio">1차 WHM 보유 중 2차 WHM을 신청하여 발효된 브리징 비자 (Akio 원칙 — 3차 산입 가능)</option>
-                  <option value="covid_408">COVID-19 408 Pandemic 비자 (필수 코로나 의료 업무 수행 이력 보유 시)</option>
-                  <option value="invalid_1st_for_3rd">3차 비자 신청인데 1차 WHM 재류 중에만 수행한 근로 (산입 불가!)</option>
+                  <option value="covid_408">COVID-19 408 Pandemic 비자 (Schedule 13 Part 92 cl 9205–9208 경과 규정 수동 검토 필요)</option>
+                  <option value="invalid_1st_for_3rd">3차 비자 신청인데 1차 WHM 체류 중에만 수행한 근로 (산입 불가!)</option>
                   <option value="invalid_student_ingrid">학생비자(500) 등 타 비자 또는 타 비자에서 전환된 브리징 비자 보유 중 수행 (Ingrid 함정 — 산입 불가!)</option>
                 </select>
               </div>
@@ -291,11 +292,18 @@
               <div class="filter-group">
                 <label for="calc-location-status" class="filter-label" data-i18n="lblCalcLocStatus">6. 현재 신청 위치 및 실체비자(Substantive Visa) 상태</label>
                 <select id="calc-location-status" class="filter-select">
-                  <option value="onshore_substantive">호주 내(Onshore) — 현재 유효한 실체비자(1·2차 WHM 등) 보유 중 (cl 417.513 연속 체류 적용)</option>
-                  <option value="onshore_28days">호주 내(Onshore) — 브리징 비자 보유 중이나 마지막 실체비자 만료 후 28일 이내 (Item 1225(3B)(f)(ii) 특례)</option>
-                  <option value="offshore">호주 밖(Offshore) — 해외에서 신청 및 해외에서 승인 대기 (cl 417.511 입국일로부터 12개월)</option>
+                  <option value="onshore_substantive">호주 내(Onshore) — 현재 직전 1·2차 WHM 비자 보유 중 (cl 417.511(2) / 462.512 연속 체류 적용)</option>
+                  <option value="onshore_other_substantive">호주 내(Onshore) — WHM 외 다른 실체비자(500·600 등) 보유 중 (cl 417.511(3) / 462.513 승인일로부터 12개월)</option>
+                  <option value="onshore_28days">호주 내(Onshore) — 브리징 비자 보유 또는 마지막 실체비자 만료 후 28일 이내 (Item 1225(3B)(f)(ii) · cl 417.511(3) / 462.513)</option>
+                  <option value="offshore">호주 밖(Offshore) — 해외 신청 및 해외 승인 대기 (cl 417.511(1) / 462.511 입국일로부터 12개월)</option>
+                  <option value="offshore_to_onshore_mismatch">신청 위치 ↔ 현재 위치 불일치 (해외 신청 후 호주 입국 / 호주 신청 후 출국 — cl 417.411–412 승인 보류 주의)</option>
                   <option value="onshore_over28">호주 내(Onshore) — 마지막 실체비자 만료 후 28일 경과 (호주 내 유효 신청 불가!)</option>
                 </select>
+              </div>
+
+              <div class="filter-group" style="grid-column: span 2;">
+                <label for="calc-assessment-date" class="filter-label" data-i18n="lblCalcAssessDate">7. 판정 기준일 / 비자 신청 예정일 (기준일 이후 미래 계획 근로는 완료 일수에서 자동 분리)</label>
+                <input type="date" id="calc-assessment-date" class="filter-select" value="2026-10-20" />
               </div>
             </div>
 
@@ -307,6 +315,10 @@
               <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;cursor:pointer;">
                 <input type="checkbox" id="calc-no-excluded-emp" checked />
                 <span data-i18n="chkNoExcludedEmp">장관이 지정한 ‘제외 고용주(Excluded Employer, Reg 1.15FB)’ 밑에서 수행한 근로가 아닙니다 (cl 417.211(5)(d) 필수 요건)</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;cursor:pointer;">
+                <input type="checkbox" id="calc-uk-passport-confirmed" checked />
+                <span data-i18n="chkUkPassportConfirmed">[영국(UK·BN(O)) 신청자 확인] 2024.07.01 이후 유효한 영국(GBNI) 또는 BN(O) 여권으로 신청합니다 (Item 1225(3BA))</span>
               </label>
             </div>
           </div>
@@ -422,8 +434,32 @@
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
               <input type="checkbox" id="c8547-visa-reset" style="margin-top:4px;" />
-              <span data-i18n="chk8547VisaReset"><strong>신규 WHM 비자 승인 또는 브리징 비자 발효 (6개월 시계 리셋 — PAM3 s 3.2 &amp; 3.4.1):</strong> 근무 중 2차·3차 WHM 비자가 새로 승인되었거나, 기존 WHM 비자가 만료되면서 후속 비자 대기용 브리징 비자(BVA/BVB)가 발효됨 (발효일로부터 6개월 시계가 0일로 새로 시작됨!)</span>
+              <span data-i18n="chk8547VisaReset"><strong>신규 WHM 비자 승인 또는 브리징 비자 발효 (6개월 시계 리셋 — PAM3 s 3.2 &amp; 3.4.1):</strong> 근무 중 2차·3차 WHM 비자가 새로 승인되었거나, 기존 WHM 비자가 만료되면서 후속 비자 대기용 브리징 비자(조건 8547 포함)가 발효됨 (아래에 정확한 리셋 기준일 및 비자 전환 유형 입력 필수!)</span>
             </label>
+
+            <div class="filters-grid" style="grid-template-columns: repeat(2, 1fr);background:var(--color-paper);padding:10px 12px;border-radius:6px;border:1px solid var(--color-line);">
+              <div class="filter-group">
+                <label for="c8547-reset-type" class="filter-label" data-i18n="lbl8547ResetType">4-1. 시계 리셋 이벤트 유형 (PAM3 s 3.2 / 3.4.1)</label>
+                <select id="c8547-reset-type" class="filter-select">
+                  <option value="new_whm_granted">신규 2차·3차 WHM 비자 승인 (승인일로부터 새 6개월 시작)</option>
+                  <option value="bva_in_effect_with_8547">기존 WHM 만료 후 브리징 비자 발효 (조건 8547 부과 확인 — 발효일로부터 새 6개월 시작)</option>
+                  <option value="bva_granted_not_in_effect">브리징 비자가 승인(Grant)만 되고 아직 발효(In effect)되지 않음 (시계 리셋 안 됨!)</option>
+                  <option value="bva_in_effect_8547_unknown">브리징 비자 발효되었으나 부과된 근로 조건(8547 유무) 미확인 (수동 확인 필요)</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="c8547-reset-date" class="filter-label" data-i18n="lbl8547ResetDate">4-2. 신규 비자 승인일 / 브리징 발효일 (리셋 기산일)</label>
+                <input type="date" id="c8547-reset-date" class="filter-select" value="" />
+              </div>
+              <div class="filter-group">
+                <label for="c8547-check-date" class="filter-label" data-i18n="lbl8547CheckDate">4-3. 판정 기준일 (현재 시점 만료 여부 확인)</label>
+                <input type="date" id="c8547-check-date" class="filter-select" value="2026-10-20" />
+              </div>
+              <div class="filter-group">
+                <label for="c8547-visa-expiry" class="filter-label" data-i18n="lbl8547VisaExpiry">4-4. 현재 비자 만료일 (선택 — 비자 만료 시 취업권 소멸)</label>
+                <input type="date" id="c8547-visa-expiry" class="filter-select" value="" />
+              </div>
+            </div>
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
               <input type="checkbox" id="c8547-multi-client" style="margin-top:4px;" />
@@ -432,13 +468,23 @@
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
               <input type="checkbox" id="c8547-workers-comp" style="margin-top:4px;" />
-              <span data-i18n="chk8547WorkersComp"><strong>산재보상 급여(Workers Compensation) 수령 기간 (PAM3 s 3.2.4):</strong> 산재보상 수령 기간으로 인해 총 재직 기간이 6개월을 초과함 (해당 기간 자동 면제)</span>
+              <span data-i18n="chk8547WorkersComp"><strong>산재보상 급여(Workers Compensation) 수령 기간 (PAM3 s 3.2.4):</strong> 산재보상 수령 기간으로 인해 총 재직 기간이 6개월을 초과함 (산재 수령 기간과 실제 근무 기간 구분 및 증빙 수동 검토 대상)</span>
             </label>
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
               <input type="checkbox" id="c8547-permission-grounds" style="margin-top:4px;" />
-              <span data-i18n="chk8547PermGrounds"><strong>사전 서면 허가(Written Permission) 신청 사유 보유:</strong> ① 풀타임 취업 가능 비자(482 SID · 186 ENS · 820 파트너 등, 500 학생비자 제외)를 접수하고 결과 대기 중이거나, ② 고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 첨부해 6개월 만료 전에 허가를 신청함</span>
+              <span data-i18n="chk8547PermGrounds"><strong>사전 서면 허가(Written Permission) 신청 사유 보유:</strong> ① 풀타임 취업 가능 비자(482 SID · 186 ENS · 820 파트너 등, 500 학생비자 제외)를 접수하고 결과 대기 중이거나, ② 고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 보유함</span>
             </label>
+
+            <div class="filter-group" style="margin-top:4px;">
+              <label for="c8547-permission-status" class="filter-label" data-i18n="lbl8547PermStatus">5. 서면 허가 신청서 실제 제출 시점 및 상태 (만료 전 vs 만료 후 접수 구분)</label>
+              <select id="c8547-permission-status" class="filter-select">
+                <option value="none">미신청 (아직 서면 허가 신청서를 제출하지 않음)</option>
+                <option value="submitted_before_expiry_pending">6개월 만료일 이전에 온라인 제출 완료 — 결정 대기 중 (결과 통지 시까지 계속 근무 가능)</option>
+                <option value="submitted_after_expiry_pending">6개월 만료일 이후에 온라인 제출 — 결정 대기 중 (즉시 근무 중단 후 서면 승인 대기 필수!)</option>
+                <option value="approved_in_writing">호주 연방 이민성으로부터 서면 연장 승인 통지 수령 완료</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -487,7 +533,7 @@
       <div class="section-head">
         <div>
           <span class="overline-serif light-mode" data-i18n="rightsOverline">MODULE 06 · WORKPLACE RIGHTS, REFUSAL TRAPS &amp; LIVE SOURCE MONITOR</span>
-          <h2 data-i18n="rightsTitle">워킹홀리데이 핵심 권리 vs 비자 거절·취소 빈발 함정 &amp; 10대 공식 출처 실시간 모니터</h2>
+          <h2 data-i18n="rightsTitle">워킹홀리데이 핵심 권리 vs 비자 거절·취소 빈발 함정 &amp; 12대 공식 1차 출처 실시간 모니터</h2>
         </div>
       </div>
 
