@@ -1,7 +1,7 @@
 {
   "manifest_version": "2026.10.20-codex-audit",
-  "generated_at": "2026-10-26T07:25:57+10:00",
-  "last_polled_date": "2026-10-26",
+  "generated_at": "2026-11-02T07:25:57+10:00",
+  "last_polled_date": "2026-11-02",
   "verification_stages": [
     "fetchStatus (HTTP transport retrieval)",
     "contentCheckStatus (Substantive text / JSON schema extraction & non-empty body check)",
@@ -34,7 +34,7 @@
       "bytes": 63538,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -58,7 +58,7 @@
       "bytes": 62011,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -82,7 +82,7 @@
       "bytes": 6164,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -106,7 +106,7 @@
       "bytes": 50385,
       "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -126,11 +126,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "6c8dc8d470d6723f434fe68a5b398346ecb478a18864408dd222035b452fb7d6",
-      "bytes": 1306798,
+      "sha256": "ebfcaf59d2b7f2147b98b44b99b38695e814c68ec2610ee79dff1d3b56a8bbeb",
+      "bytes": 1309465,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -150,11 +150,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "60c447c6fb7c8a73c85356bdc85faf494cef423923bd330e9e8eba13efb4d94b",
-      "bytes": 1304461,
+      "sha256": "e7de883c96a8a1ba5eeb44266fa85a89a9afa86605b08a66ffe9e672d32eaead",
+      "bytes": 1307128,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -174,11 +174,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "6e5f9a58ede3c6de6b493ad36a31b081ed98ee2204b9c139c2662e5b0de39d37",
-      "bytes": 1308996,
+      "sha256": "b1c5e912405a18055d1c4617d7e0b2f68d843fde69da5bf27512a813c3a02423",
+      "bytes": 1311649,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -198,11 +198,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "dab5a68ec1f958efe1878f355352f949de423103d2bc4392e62a6a293bb09227",
-      "bytes": 61767,
+      "sha256": "83245ddc256e4da0e1f63b76b2324a0e38510512a5e10b95ddecd8dd4b94bd08",
+      "bytes": 65574,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -222,11 +222,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "85cf4683a1c2f023cc256a06cb4d8e835d45c9834ec9766b4d3d553b53703b35",
-      "bytes": 60136,
+      "sha256": "7d8db96ae8a8aef4d3d2d30fef7b62ca997ae5226bf1658d2690251fda08d009",
+      "bytes": 62702,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -246,11 +246,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "dd2db285d5fcdc296627f077f1a4da7e8a64082baf7a7963e3903e710cb010b3",
-      "bytes": 60154,
+      "sha256": "80beeb79b650cb9524232e1bd89d417ada2035d03ced4b3946c61ea937d2816d",
+      "bytes": 62702,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -270,11 +270,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "4837fd808071e7fa2bbdf7c2adc327f7976e61eb7b1ce920315f9f2ea1f753d3",
-      "bytes": 60204,
+      "sha256": "646b5b642e93fa3c9eab2d517ef89d4f63e19cd71b5b515964962ba211d213d6",
+      "bytes": 62770,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "checked_at": "2026-11-02T07:25:57+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -294,11 +294,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "20db4e74f182d5fe406aca28a24ee89486cac9c93471564383fa94a8e75ffbfe",
-      "bytes": 432000,
+      "sha256": "6df80ffc3c747aac845b7fce613f86871dd5a030ba2c37321690b2d195c07d20",
+      "bytes": 432008,
       "method": "urllib_direct",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-10-26T07:25:57+10:00"
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-02T07:25:57+10:00"
     }
   ],
   "internal_policy_references": [
@@ -389,9 +389,10 @@
     "subclass_462_country_caps": {
       "parsed": true,
       "total_capped_partners": 29,
-      "open_count": 23,
+      "open_count": 22,
       "paused_countries": [
         "Brazil",
+        "Ecuador",
         "Mongolia"
       ],
       "closed_countries": [],
@@ -433,8 +434,8 @@
           "annual_cap": "500"
         },
         "Ecuador": {
-          "status": "open",
-          "status_label": "Open",
+          "status": "paused",
+          "status_label": "Paused",
           "annual_cap": "100"
         },
         "Greece": {
