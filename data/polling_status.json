@@ -1,9 +1,9 @@
 {
-  "last_polled_at": "2026-11-05T15:04:17+10:00",
+  "last_polled_at": "2026-11-05T15:07:23+10:00",
   "last_polled_date": "2026-11-05",
   "total_sources": 12,
-  "live_verified_count": 11,
-  "changed_count": 6,
+  "live_verified_count": 12,
+  "changed_count": 5,
   "official_contact": "https://parklawyers.com.au/links/?lang=ko",
   "monitored_rules": {
     "postcodes_tables_1_to_6": {
@@ -23,11 +23,34 @@
       ]
     },
     "subclass_417_age_caps": {
-      "parsed": false,
+      "parsed": true,
+      "total_countries": 19,
       "age_35_count": 10,
       "age_30_count": 9,
-      "age_35_countries": [],
-      "age_30_countries": []
+      "age_35_countries": [
+        "Canada",
+        "Republic of Cyprus",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "Republic of Ireland",
+        "Italy",
+        "Republic of Korea",
+        "The United Kingdom of Great Britain and Northern Ireland (including British National Overseas passport holders)"
+      ],
+      "age_30_countries": [
+        "Belgium",
+        "Estonia",
+        "Hong Kong Special Administrative Region of the People's Republic of China",
+        "Japan",
+        "Malta",
+        "Netherlands",
+        "Norway",
+        "Sweden",
+        "Taiwan (other than an official or diplomatic passport)"
+      ],
+      "korea_age_max": 35
     },
     "subclass_462_country_caps": {
       "parsed": true,
@@ -269,7 +292,7 @@
       "bytes": 63394,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -293,7 +316,7 @@
       "bytes": 61903,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -317,7 +340,7 @@
       "bytes": 6164,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -331,17 +354,17 @@
       "check_scope_en": "Live parsing of 19 eligible 417 passport countries & age limits",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417",
       "sourceKind": "public_policy_guidance",
-      "status": "error",
-      "fetchStatus": "failed",
-      "contentCheckStatus": "empty_or_invalid_shell",
-      "ruleMatchStatus": "unverified",
-      "reviewStatus": "manual_review_needed",
-      "http_code": null,
+      "status": "live",
+      "fetchStatus": "retrieved",
+      "contentCheckStatus": "content_extracted",
+      "ruleMatchStatus": "matched",
+      "reviewStatus": "verified_2026-10-20",
+      "http_code": 200,
       "sha256": "c9f339bf4ff7d97628c375dd0d473c62d506a1e12c4f112d0c845b9d736073b9",
-      "bytes": null,
-      "method": "cached",
+      "bytes": 50247,
+      "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -361,11 +384,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "7f5bd5b7b16e1b0098d0428a93c6507c8cdf6e4bc266972d9014398100ae457c",
+      "sha256": "5eee419b02e220d12b9c2867066f285e60fa4fd53cd2cfc3d9fc316af2df9800",
       "bytes": 1309396,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -388,8 +411,8 @@
       "sha256": "89bb82c4252f287598d7531271d01450e85fcd4ab3139d2a3a71940462ae08b4",
       "bytes": 1307107,
       "method": "curl_h2_direct",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -413,7 +436,7 @@
       "bytes": 1311650,
       "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -433,11 +456,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "7da5876d32bda7a2627da057635d0045038df0269c864b2e39ebc52e47008bfd",
+      "sha256": "704f76c8676bdecc407bcbb84ec2802f000df3be167248da8656163ee4cdb3f5",
       "bytes": 65568,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -457,11 +480,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "f85c60cd74513956a74af653697d8cde7fa574242bc16634480c3cd3758d027a",
+      "sha256": "eb1937ac4fa31595839229a1ea6cebf45ed568efb0b32b40b71c3d3f79cbd3b8",
       "bytes": 62696,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -481,11 +504,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "933118aeae2566100da9064646baeb610fad288b23a08db84de6b411772c9475",
+      "sha256": "23c710738fc5fa965ef0242860bec8b1ae6fdcd99749f59254b090e02e4b3996",
       "bytes": 62696,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -505,11 +528,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "6f138ae1c33e14a2e73a640645e265dcec16b5a2cfa31a4d0f5199f726f8e2eb",
+      "sha256": "7a57522d0515d9093bae264b3dffc87e88dd10c0b063bcdd78d828726cb997bb",
       "bytes": 62764,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -533,7 +556,7 @@
       "bytes": 432008,
       "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:04:17+10:00"
+      "checked_at": "2026-11-05T15:07:23+10:00"
     }
   ]
 }
