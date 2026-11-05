@@ -1,9 +1,9 @@
 {
-  "last_polled_at": "2026-11-05T15:02:11+10:00",
+  "last_polled_at": "2026-11-05T15:04:17+10:00",
   "last_polled_date": "2026-11-05",
   "total_sources": 12,
   "live_verified_count": 11,
-  "changed_count": 4,
+  "changed_count": 6,
   "official_contact": "https://parklawyers.com.au/links/?lang=ko",
   "monitored_rules": {
     "postcodes_tables_1_to_6": {
@@ -23,34 +23,11 @@
       ]
     },
     "subclass_417_age_caps": {
-      "parsed": true,
-      "total_countries": 19,
+      "parsed": false,
       "age_35_count": 10,
       "age_30_count": 9,
-      "age_35_countries": [
-        "Canada",
-        "Republic of Cyprus",
-        "Denmark",
-        "Finland",
-        "France",
-        "Germany",
-        "Republic of Ireland",
-        "Italy",
-        "Republic of Korea",
-        "The United Kingdom of Great Britain and Northern Ireland (including British National Overseas passport holders)"
-      ],
-      "age_30_countries": [
-        "Belgium",
-        "Estonia",
-        "Hong Kong Special Administrative Region of the People's Republic of China",
-        "Japan",
-        "Malta",
-        "Netherlands",
-        "Norway",
-        "Sweden",
-        "Taiwan (other than an official or diplomatic passport)"
-      ],
-      "korea_age_max": 35
+      "age_35_countries": [],
+      "age_30_countries": []
     },
     "subclass_462_country_caps": {
       "parsed": true,
@@ -290,9 +267,9 @@
       "http_code": 200,
       "sha256": "eff61b2fc868fcc39566c5bf52c80f5e37207338d433e8e5051ee3bdcdc4c3dd",
       "bytes": 63394,
-      "method": "urllib_ha_schema",
+      "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -314,9 +291,9 @@
       "http_code": 200,
       "sha256": "161b8e8a533cb21c41f4f43484ca723e9788802d85761340b1f020d30d943646",
       "bytes": 61903,
-      "method": "urllib_ha_schema",
+      "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -338,9 +315,9 @@
       "http_code": 200,
       "sha256": "e3f86561b8a8a6d5f4a3bf07008ea196ad4d6e10c945175e6eae87906f1b217a",
       "bytes": 6164,
-      "method": "urllib_ha_schema",
+      "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -354,17 +331,17 @@
       "check_scope_en": "Live parsing of 19 eligible 417 passport countries & age limits",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417",
       "sourceKind": "public_policy_guidance",
-      "status": "live",
-      "fetchStatus": "retrieved",
-      "contentCheckStatus": "content_extracted",
-      "ruleMatchStatus": "matched",
-      "reviewStatus": "verified_2026-10-20",
-      "http_code": 200,
+      "status": "error",
+      "fetchStatus": "failed",
+      "contentCheckStatus": "empty_or_invalid_shell",
+      "ruleMatchStatus": "unverified",
+      "reviewStatus": "manual_review_needed",
+      "http_code": null,
       "sha256": "c9f339bf4ff7d97628c375dd0d473c62d506a1e12c4f112d0c845b9d736073b9",
-      "bytes": 50247,
-      "method": "urllib_ha_schema",
+      "bytes": null,
+      "method": "cached",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -384,11 +361,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "b80ae5bc01e73bca518edd34c9670681fd733bbdf43ae3f667cf7fc000577e4f",
+      "sha256": "7f5bd5b7b16e1b0098d0428a93c6507c8cdf6e4bc266972d9014398100ae457c",
       "bytes": 1309396,
-      "method": "urllib_direct",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "method": "curl_h2_direct",
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -402,17 +379,17 @@
       "check_scope_en": "Monitors bilateral age expansions, new partner countries & policy alerts",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news",
       "sourceKind": "public_policy_guidance",
-      "status": "error",
-      "fetchStatus": "failed",
-      "contentCheckStatus": "empty_or_invalid_shell",
-      "ruleMatchStatus": "unverified",
-      "reviewStatus": "manual_review_needed",
-      "http_code": null,
-      "sha256": "7c38309e86d8cd5d3331e7d1f8711e09eb127da10a6e7445889e1ccffbd52ce1",
-      "bytes": null,
-      "method": "cached",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "status": "live",
+      "fetchStatus": "retrieved",
+      "contentCheckStatus": "content_extracted",
+      "ruleMatchStatus": "matched",
+      "reviewStatus": "verified_2026-10-20",
+      "http_code": 200,
+      "sha256": "89bb82c4252f287598d7531271d01450e85fcd4ab3139d2a3a71940462ae08b4",
+      "bytes": 1307107,
+      "method": "curl_h2_direct",
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -434,9 +411,9 @@
       "http_code": 200,
       "sha256": "d45dba993e0ef9d00475944c67302749a2d3d1f25c90a3fa5371ee7ef01ecc92",
       "bytes": 1311650,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -456,11 +433,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "1bef8d580796eeac6b2fc69ebc9e4f2c2d44b1b1550aa52b01b9df2c37469f37",
+      "sha256": "7da5876d32bda7a2627da057635d0045038df0269c864b2e39ebc52e47008bfd",
       "bytes": 65568,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -480,11 +457,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "3f2279ffa1289aad66d17d1f0312e2daaed462b7983abb5cd3d255bf6291dd9b",
+      "sha256": "f85c60cd74513956a74af653697d8cde7fa574242bc16634480c3cd3758d027a",
       "bytes": 62696,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -504,11 +481,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "92d4fb705baa28fd547e19186b332e1cc934c0bb3d1b3a6582ba2b3904456479",
+      "sha256": "933118aeae2566100da9064646baeb610fad288b23a08db84de6b411772c9475",
       "bytes": 62696,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -528,11 +505,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "fd68751ee75606b58ca82d657fc3c4a1aaae5fb2227e1dd1e47526ca1267603b",
+      "sha256": "6f138ae1c33e14a2e73a640645e265dcec16b5a2cfa31a4d0f5199f726f8e2eb",
       "bytes": 62764,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -554,9 +531,9 @@
       "http_code": 200,
       "sha256": "6df80ffc3c747aac845b7fce613f86871dd5a030ba2c37321690b2d195c07d20",
       "bytes": 432008,
-      "method": "urllib_direct",
+      "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:02:11+10:00"
+      "checked_at": "2026-11-05T15:04:17+10:00"
     }
   ]
 }
