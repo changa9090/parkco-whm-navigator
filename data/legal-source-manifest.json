@@ -1,6 +1,6 @@
 {
   "manifest_version": "2026.10.20-codex-audit",
-  "generated_at": "2026-11-05T14:58:48+10:00",
+  "generated_at": "2026-11-05T15:02:11+10:00",
   "last_polled_date": "2026-11-05",
   "verification_stages": [
     "fetchStatus (HTTP transport retrieval)",
@@ -33,8 +33,8 @@
       "sha256": "eff61b2fc868fcc39566c5bf52c80f5e37207338d433e8e5051ee3bdcdc4c3dd",
       "bytes": 63394,
       "method": "urllib_ha_schema",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -57,8 +57,8 @@
       "sha256": "161b8e8a533cb21c41f4f43484ca723e9788802d85761340b1f020d30d943646",
       "bytes": 61903,
       "method": "urllib_ha_schema",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -72,17 +72,17 @@
       "check_scope_en": "Live check of automatic exemptions, location rules & permission criteria",
       "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation",
       "sourceKind": "public_policy_guidance",
-      "status": "error",
-      "fetchStatus": "failed",
-      "contentCheckStatus": "empty_or_invalid_shell",
-      "ruleMatchStatus": "unverified",
-      "reviewStatus": "manual_review_needed",
-      "http_code": null,
+      "status": "live",
+      "fetchStatus": "retrieved",
+      "contentCheckStatus": "content_extracted",
+      "ruleMatchStatus": "matched",
+      "reviewStatus": "verified_2026-10-20",
+      "http_code": 200,
       "sha256": "e3f86561b8a8a6d5f4a3bf07008ea196ad4d6e10c945175e6eae87906f1b217a",
-      "bytes": null,
-      "method": "cached",
+      "bytes": 6164,
+      "method": "urllib_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -105,8 +105,8 @@
       "sha256": "c9f339bf4ff7d97628c375dd0d473c62d506a1e12c4f112d0c845b9d736073b9",
       "bytes": 50247,
       "method": "urllib_ha_schema",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -129,8 +129,8 @@
       "sha256": "b80ae5bc01e73bca518edd34c9670681fd733bbdf43ae3f667cf7fc000577e4f",
       "bytes": 1309396,
       "method": "urllib_direct",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -144,17 +144,17 @@
       "check_scope_en": "Monitors bilateral age expansions, new partner countries & policy alerts",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news",
       "sourceKind": "public_policy_guidance",
-      "status": "live",
-      "fetchStatus": "retrieved",
-      "contentCheckStatus": "content_extracted",
-      "ruleMatchStatus": "matched",
-      "reviewStatus": "verified_2026-10-20",
-      "http_code": 200,
+      "status": "error",
+      "fetchStatus": "failed",
+      "contentCheckStatus": "empty_or_invalid_shell",
+      "ruleMatchStatus": "unverified",
+      "reviewStatus": "manual_review_needed",
+      "http_code": null,
       "sha256": "7c38309e86d8cd5d3331e7d1f8711e09eb127da10a6e7445889e1ccffbd52ce1",
-      "bytes": 1307107,
-      "method": "urllib_direct",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "bytes": null,
+      "method": "cached",
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -177,8 +177,8 @@
       "sha256": "d45dba993e0ef9d00475944c67302749a2d3d1f25c90a3fa5371ee7ef01ecc92",
       "bytes": 1311650,
       "method": "urllib_direct",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -198,11 +198,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "a2de63596dcc051c86772be94837d348b315c4cd422f01814aea20d8909070c2",
+      "sha256": "1bef8d580796eeac6b2fc69ebc9e4f2c2d44b1b1550aa52b01b9df2c37469f37",
       "bytes": 65568,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -222,11 +222,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "876b8445cbb8d3fb83a15f7f766eebcced38d6313b6efcc522cbbff276c7b2f7",
+      "sha256": "3f2279ffa1289aad66d17d1f0312e2daaed462b7983abb5cd3d255bf6291dd9b",
       "bytes": 62696,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -246,11 +246,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "ce125034beef7d9e510c5ee7cec682300646c3041259f29ebcb63cbb67b2a208",
+      "sha256": "92d4fb705baa28fd547e19186b332e1cc934c0bb3d1b3a6582ba2b3904456479",
       "bytes": 62696,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -270,11 +270,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "d4f56d7b48188292344bfa635b76df677c6bb57f5911daccb2dbf0ae3dfd034a",
+      "sha256": "fd68751ee75606b58ca82d657fc3c4a1aaae5fb2227e1dd1e47526ca1267603b",
       "bytes": 62764,
       "method": "urllib_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -298,7 +298,7 @@
       "bytes": 432008,
       "method": "urllib_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T14:58:48+10:00"
+      "checked_at": "2026-11-05T15:02:11+10:00"
     }
   ],
   "internal_policy_references": [
@@ -552,8 +552,10 @@
       }
     },
     "condition_8547_exemptions": {
-      "parsed": false,
-      "until_further_notice_active": true
+      "parsed": true,
+      "until_further_notice_active": true,
+      "all_exempt_categories_confirmed": true,
+      "policy_notice": "From 1 January 2024 — Active until the Government makes further decisions"
     },
     "statutory_vac_2026": {
       "first_visa_aud": 840,
