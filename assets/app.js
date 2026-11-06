@@ -1,9 +1,9 @@
-/**
- * Park & Co Lawyers — WHM (Subclass 417 & 462) Extension, Specified Work & Condition 8547 Navigator
+/*
+ * Park & Co Lawyers · WHM (Subclass 417 & 462) Extension, Specified Work & Condition 8547 Navigator
  * Primary-Source Verified Legal Engine (Migration Regulations 1994, LIN 22/012, LIN 22/013, LIN 25/048, PAM3 VM-3182/1813/1144)
  */
 const POSTCODE_TABLES = {"remote":[[800,999],[2356,2356],[2386,2387],[2396,2396],[2405,2406],[2672,2672],[2675,2675],[2825,2826],[2829,2829],[2832,2836],[2838,2840],[2873,2873],[2878,2879],[2898,2899],[3424,3424],[3506,3506],[3509,3509],[3512,3512],[3889,3892],[4025,4025],[4183,4183],[4417,4420],[4422,4423],[4426,4428],[4454,4454],[4461,4462],[4465,4465],[4467,4468],[4470,4470],[4474,4475],[4477,4482],[4486,4494],[4496,4497],[4680,4680],[4694,4695],[4697,4697],[4699,4707],[4709,4714],[4717,4717],[4720,4728],[4730,4733],[4735,4746],[4750,4751],[4753,4754],[4756,4757],[4798,4812],[4814,4825],[4828,4830],[4849,4850],[4852,4852],[4854,4856],[4858,4861],[4865,4865],[4868,4888],[4890,4892],[4895,4895],[5220,5223],[5302,5304],[5440,5440],[5576,5577],[5582,5583],[5602,5607],[5611,5611],[5630,5633],[5640,5642],[5650,5655],[5660,5661],[5670,5671],[5680,5680],[5690,5690],[5713,5713],[5715,5715],[5717,5717],[5719,5720],[5722,5725],[5730,5734],[6161,6161],[6335,6338],[6341,6341],[6343,6343],[6346,6346],[6348,6348],[6350,6353],[6355,6359],[6361,6361],[6363,6363],[6365,6365],[6367,6369],[6373,6373],[6375,6375],[6385,6386],[6418,6429],[6431,6431],[6434,6434],[6436,6438],[6440,6440],[6443,6443],[6445,6448],[6450,6450],[6452,6452],[6466,6468],[6470,6470],[6472,6473],[6475,6477],[6479,6480],[6484,6484],[6487,6490],[6515,6515],[6517,6519],[6536,6536],[6605,6606],[6608,6609],[6612,6614],[6616,6616],[6620,6620],[6623,6623],[6625,6625],[6627,6628],[6630,6632],[6635,6635],[6638,6640],[6731,6731],[6733,6733],[6798,6799],[7139,7139],[7255,7257],[7466,7470]],"northern":[[800,999],[4472,4472],[4478,4478],[4481,4482],[4680,4680],[4694,4695],[4697,4697],[4699,4707],[4709,4714],[4717,4717],[4720,4728],[4730,4733],[4735,4746],[4750,4751],[4753,4754],[4756,4757],[4798,4812],[4814,4825],[4828,4830],[4849,4850],[4852,4852],[4854,4856],[4858,4861],[4865,4865],[4868,4888],[4890,4892],[4895,4895],[6537,6537],[6642,6642],[6646,6646],[6701,6701],[6705,6705],[6707,6707],[6710,6714],[6716,6716],[6718,6718],[6720,6722],[6725,6726],[6728,6728],[6740,6740],[6743,6743],[6751,6751],[6753,6754],[6758,6758],[6760,6760],[6762,6762],[6765,6765],[6770,6770]],"regional":[[800,999],[2311,2312],[2328,2411],[2420,2490],[2536,2551],[2575,2594],[2618,2739],[2787,2899],[3139,3139],[3211,3334],[3340,3424],[3430,3649],[3658,3749],[3753,3753],[3756,3756],[3758,3758],[3762,3762],[3764,3764],[3778,3781],[3783,3783],[3797,3797],[3799,3799],[3810,3909],[3921,3925],[3945,3974],[3979,3979],[3981,3996],[4124,4125],[4133,4133],[4211,4211],[4270,4272],[4275,4275],[4280,4280],[4285,4285],[4287,4287],[4307,4499],[4510,4510],[4512,4512],[4515,4519],[4522,4899],[5000,5999],[6041,6044],[6055,6056],[6069,6069],[6076,6076],[6083,6084],[6111,6111],[6121,6126],[6200,6799],[7000,7999]],"bushfire":[[822,822],[847,847],[852,852],[854,854],[860,860],[862,862],[870,870],[872,875],[2069,2076],[2083,2083],[2172,2173],[2178,2178],[2224,2234],[2250,2251],[2256,2265],[2267,2267],[2278,2278],[2280,2287],[2289,2290],[2305,2306],[2311,2312],[2315,2331],[2333,2341],[2344,2347],[2350,2350],[2352,2356],[2358,2361],[2365,2365],[2369,2372],[2386,2388],[2390,2390],[2397,2406],[2408,2411],[2415,2415],[2420,2431],[2439,2441],[2443,2450],[2452,2456],[2460,2460],[2462,2466],[2469,2490],[2500,2500],[2502,2502],[2505,2506],[2508,2508],[2515,2519],[2525,2526],[2530,2530],[2536,2541],[2545,2546],[2548,2551],[2555,2555],[2560,2560],[2568,2588],[2590,2590],[2594,2594],[2600,2633],[2640,2640],[2642,2642],[2644,2644],[2646,2646],[2649,2653],[2655,2656],[2658,2661],[2678,2678],[2702,2702],[2710,2710],[2716,2716],[2720,2720],[2722,2722],[2725,2727],[2729,2730],[2733,2733],[2745,2745],[2747,2750],[2752,2754],[2756,2760],[2765,2765],[2773,2780],[2782,2787],[2790,2795],[2797,2800],[2803,2808],[2818,2818],[2820,2820],[2822,2822],[2824,2826],[2828,2835],[2838,2840],[2844,2850],[2852,2852],[2864,2868],[2870,2870],[2873,2873],[2877,2877],[2900,2920],[3023,3024],[3029,3029],[3037,3037],[3104,3104],[3114,3116],[3125,3125],[3127,3140],[3145,3145],[3147,3156],[3158,3158],[3160,3163],[3165,3175],[3177,3180],[3183,3183],[3185,3185],[3187,3187],[3189,3190],[3192,3192],[3194,3202],[3204,3204],[3211,3227],[3233,3234],[3236,3239],[3241,3243],[3249,3251],[3254,3254],[3260,3260],[3264,3266],[3268,3268],[3270,3287],[3289,3289],[3292,3294],[3300,3305],[3309,3312],[3314,3315],[3317,3319],[3321,3323],[3328,3338],[3340,3342],[3345,3345],[3350,3352],[3355,3358],[3360,3364],[3370,3371],[3373,3375],[3377,3381],[3384,3385],[3387,3388],[3393,3393],[3395,3395],[3400,3401],[3407,3407],[3409,3409],[3412,3415],[3418,3420],[3423,3424],[3427,3427],[3430,3435],[3437,3438],[3440,3442],[3444,3444],[3446,3448],[3450,3451],[3453,3453],[3458,3458],[3460,3465],[3467,3469],[3472,3472],[3475,3475],[3477,3478],[3480,3480],[3482,3483],[3485,3485],[3488,3488],[3490,3490],[3515,3516],[3518,3518],[3521,3523],[3525,3525],[3527,3527],[3529,3533],[3544,3544],[3550,3551],[3555,3559],[3570,3570],[3600,3600],[3607,3608],[3610,3610],[3612,3612],[3614,3614],[3616,3618],[3629,3631],[3633,3634],[3646,3647],[3658,3660],[3662,3666],[3669,3670],[3672,3673],[3675,3675],[3677,3677],[3682,3683],[3685,3685],[3687,3688],[3690,3691],[3695,3695],[3697,3701],[3704,3705],[3707,3709],[3711,3715],[3717,3720],[3722,3723],[3725,3726],[3732,3733],[3735,3735],[3737,3741],[3744,3744],[3746,3747],[3749,3749],[3753,3753],[3756,3758],[3762,3767],[3770,3770],[3777,3779],[3781,3783],[3785,3789],[3791,3793],[3795,3797],[3802,3810],[3812,3816],[3818,3818],[3820,3825],[3831,3833],[3835,3835],[3840,3840],[3842,3842],[3844,3844],[3847,3847],[3850,3852],[3854,3854],[3856,3860],[3862,3862],[3864,3865],[3869,3871],[3873,3875],[3878,3878],[3880,3880],[3882,3882],[3885,3893],[3895,3896],[3898,3898],[3900,3900],[3902,3904],[3909,3913],[3915,3916],[3918,3920],[3922,3923],[3925,3931],[3933,3934],[3936,3946],[3950,3951],[3953,3954],[3956,3960],[3962,3962],[3964,3967],[3971,3971],[3975,3981],[3984,3984],[3987,3988],[3990,3992],[3995,3996],[4114,4114],[4118,4119],[4124,4125],[4127,4133],[4157,4161],[4163,4165],[4178,4178],[4183,4184],[4205,4205],[4207,4218],[4220,4221],[4223,4228],[4270,4270],[4272,4272],[4275,4275],[4280,4280],[4285,4285],[4287,4287],[4300,4301],[4303,4307],[4309,4314],[4340,4344],[4346,4347],[4350,4350],[4352,4365],[4370,4378],[4380,4385],[4387,4388],[4390,4390],[4400,4407],[4417,4417],[4426,4428],[4454,4455],[4461,4462],[4465,4465],[4467,4467],[4474,4474],[4480,4480],[4486,4488],[4492,4494],[4496,4498],[4515,4515],[4517,4519],[4550,4551],[4553,4575],[4580,4581],[4600,4601],[4614,4615],[4621,4621],[4625,4627],[4630,4630],[4670,4671],[4673,4674],[4676,4678],[4680,4680],[4694,4695],[4697,4697],[4700,4706],[4709,4712],[4717,4717],[4720,4720],[4722,4723],[4741,4741],[4810,4812],[4814,4816],[4818,4819],[4849,4850],[4852,4852],[4854,4856],[4858,4861],[4865,4865],[4868,4873],[4877,4888],[4890,4892],[4895,4895],[5052,5052],[5072,5073],[5076,5076],[5110,5110],[5112,5118],[5120,5121],[5131,5134],[5136,5142],[5144,5144],[5151,5157],[5201,5201],[5204,5204],[5220,5223],[5231,5238],[5240,5245],[5250,5255],[5259,5261],[5264,5267],[5271,5271],[5273,5273],[5275,5275],[5301,5304],[5320,5321],[5330,5330],[5351,5351],[5353,5354],[5356,5357],[5374,5374],[5552,5552],[5558,5558],[5570,5573],[5575,5577],[5580,5583],[5605,5607],[5630,5632],[6030,6038],[6055,6055],[6063,6069],[6077,6079],[6083,6083],[6090,6090],[6302,6302],[6304,6304],[6306,6306],[6528,6528],[6628,6628],[6630,6632],[6635,6635],[6640,6640],[6642,6642],[6646,6646],[6705,6705],[6721,6722],[6725,6726],[6753,6753],[6758,6758],[6760,6760],[6762,6762],[7017,7017],[7026,7027],[7030,7030],[7116,7116],[7119,7120],[7140,7140],[7190,7190],[7212,7216],[7264,7264],[7270,7270],[7275,7275],[7304,7304]],"disaster":[[822,822],[847,847],[852,852],[854,854],[860,860],[862,862],[870,870],[872,875],[886,886],[2011,2011],[2018,2022],[2031,2032],[2035,2036],[2038,2042],[2044,2045],[2048,2050],[2063,2063],[2067,2067],[2069,2077],[2079,2087],[2092,2097],[2099,2108],[2112,2122],[2125,2128],[2130,2133],[2141,2148],[2150,2168],[2170,2179],[2190,2200],[2203,2214],[2216,2234],[2250,2251],[2256,2263],[2287,2287],[2289,2289],[2291,2300],[2302,2305],[2307,2308],[2311,2312],[2315,2331],[2333,2347],[2350,2350],[2352,2361],[2365,2365],[2369,2372],[2379,2382],[2386,2388],[2390,2390],[2395,2406],[2408,2411],[2415,2415],[2420,2431],[2439,2441],[2443,2450],[2452,2456],[2460,2460],[2462,2466],[2469,2490],[2500,2500],[2502,2502],[2505,2506],[2508,2508],[2515,2519],[2525,2530],[2533,2541],[2545,2546],[2548,2551],[2555,2560],[2563,2588],[2590,2590],[2594,2594],[2611,2611],[2618,2633],[2640,2653],[2655,2656],[2658,2661],[2663,2663],[2665,2666],[2668,2669],[2671,2672],[2675,2675],[2678,2678],[2680,2681],[2700,2703],[2705,2707],[2710,2717],[2720,2722],[2725,2727],[2729,2739],[2745,2745],[2747,2750],[2752,2754],[2756,2763],[2765,2770],[2773,2780],[2782,2787],[2790,2795],[2797,2800],[2803,2810],[2817,2818],[2820,2836],[2838,2840],[2842,2850],[2852,2852],[2864,2871],[2873,2880],[2898,2898],[3000,3000],[3002,3004],[3006,3006],[3008,3008],[3011,3011],[3013,3013],[3019,3019],[3024,3024],[3029,3029],[3031,3032],[3034,3034],[3039,3041],[3051,3054],[3065,3067],[3089,3091],[3096,3097],[3099,3099],[3101,3104],[3116,3116],[3121,3133],[3135,3141],[3145,3156],[3158,3163],[3165,3175],[3177,3180],[3183,3183],[3185,3185],[3187,3187],[3189,3190],[3192,3192],[3194,3202],[3204,3204],[3207,3207],[3211,3227],[3243,3243],[3249,3251],[3254,3254],[3260,3260],[3264,3272],[3277,3277],[3280,3283],[3285,3285],[3289,3289],[3292,3294],[3300,3305],[3309,3312],[3314,3315],[3317,3317],[3321,3325],[3328,3338],[3340,3342],[3345,3345],[3350,3352],[3355,3358],[3360,3364],[3370,3371],[3373,3375],[3377,3381],[3384,3385],[3387,3388],[3393,3393],[3395,3395],[3400,3401],[3407,3407],[3409,3409],[3431,3435],[3437,3438],[3440,3442],[3444,3444],[3446,3448],[3450,3451],[3453,3453],[3458,3458],[3460,3465],[3467,3469],[3472,3472],[3475,3475],[3477,3478],[3480,3480],[3482,3483],[3485,3485],[3488,3489],[3491,3491],[3494,3494],[3496,3496],[3498,3498],[3500,3501],[3505,3507],[3509,3509],[3512,3512],[3515,3518],[3520,3523],[3525,3525],[3527,3527],[3529,3531],[3533,3533],[3537,3537],[3540,3540],[3542,3542],[3544,3544],[3546,3546],[3549,3551],[3555,3559],[3561,3568],[3570,3573],[3575,3576],[3579,3581],[3583,3586],[3588,3591],[3594,3597],[3599,3599],[3607,3608],[3610,3610],[3612,3612],[3614,3614],[3616,3618],[3620,3624],[3629,3631],[3633,3641],[3644,3644],[3646,3647],[3649,3649],[3658,3660],[3662,3666],[3669,3670],[3672,3673],[3675,3675],[3677,3678],[3682,3683],[3685,3685],[3687,3688],[3690,3691],[3695,3695],[3697,3701],[3704,3705],[3707,3709],[3711,3715],[3717,3720],[3722,3723],[3725,3728],[3730,3730],[3732,3733],[3735,3735],[3737,3741],[3744,3744],[3746,3747],[3749,3749],[3754,3754],[3756,3767],[3770,3770],[3775,3775],[3777,3779],[3781,3783],[3785,3789],[3791,3793],[3795,3797],[3799,3799],[3802,3810],[3812,3816],[3818,3818],[3820,3825],[3831,3833],[3835,3835],[3840,3840],[3842,3842],[3844,3844],[3847,3847],[3850,3852],[3854,3854],[3856,3860],[3862,3862],[3864,3865],[3869,3871],[3873,3875],[3878,3878],[3880,3880],[3882,3882],[3885,3893],[3895,3896],[3898,3898],[3900,3900],[3902,3904],[3909,3913],[3915,3916],[3918,3920],[3922,3923],[3925,3931],[3933,3934],[3936,3946],[3950,3951],[3953,3954],[3956,3960],[3962,3962],[3964,3967],[3971,3971],[3975,3981],[3984,3984],[3987,3988],[3990,3992],[3995,3996],[4000,4000],[4005,4014],[4017,4022],[4025,4025],[4030,4032],[4034,4037],[4051,4051],[4053,4055],[4059,4061],[4064,4070],[4073,4078],[4101,4125],[4127,4133],[4151,4161],[4163,4165],[4169,4174],[4178,4179],[4183,4184],[4205,4205],[4207,4218],[4220,4221],[4223,4228],[4270,4270],[4272,4272],[4275,4275],[4280,4280],[4285,4285],[4287,4287],[4300,4301],[4303,4307],[4309,4314],[4340,4344],[4346,4347],[4350,4350],[4352,4365],[4370,4378],[4380,4385],[4387,4388],[4390,4390],[4400,4408],[4410,4413],[4415,4428],[4454,4455],[4461,4462],[4465,4465],[4467,4468],[4470,4470],[4472,4472],[4474,4474],[4477,4477],[4479,4481],[4486,4494],[4496,4498],[4500,4512],[4514,4521],[4550,4575],[4580,4581],[4600,4601],[4605,4606],[4608,4608],[4610,4615],[4620,4621],[4625,4627],[4630,4630],[4650,4650],[4655,4655],[4659,4660],[4662,4662],[4670,4671],[4673,4674],[4676,4678],[4680,4680],[4694,4695],[4697,4697],[4699,4702],[4709,4709],[4712,4712],[4714,4720],[4722,4724],[4727,4727],[4730,4730],[4733,4733],[4735,4736],[4741,4741],[4800,4800],[4804,4812],[4814,4816],[4818,4819],[4822,4825],[4828,4830],[4849,4850],[4852,4852],[4854,4856],[4858,4861],[4865,4865],[4868,4888],[4890,4892],[4895,4895],[5157,5157],[5172,5172],[5201,5201],[5210,5214],[5236,5238],[5253,5256],[5259,5261],[5264,5267],[5301,5302],[5304,5304],[5306,5311],[5321,5322],[5330,5333],[5340,5346],[5354,5354],[5357,5357],[6030,6038],[6055,6055],[6063,6069],[6077,6079],[6083,6083],[6090,6090],[6227,6230],[6232,6233],[6236,6236],[6254,6254],[6275,6275],[6280,6282],[6284,6286],[6288,6288],[6290,6290],[6302,6302],[6304,6304],[6306,6306],[6336,6337],[6346,6346],[6385,6385],[6429,6434],[6436,6438],[6440,6440],[6442,6443],[6450,6450],[6528,6528],[6532,6532],[6535,6536],[6623,6623],[6628,6628],[6630,6632],[6635,6635],[6639,6640],[6642,6642],[6646,6646],[6701,6701],[6705,6705],[6710,6710],[6712,6714],[6718,6718],[6720,6722],[6725,6726],[6728,6728],[6740,6740],[6743,6743],[6753,6753],[6758,6758],[6760,6760],[6762,6762],[6765,6765],[6770,6770],[7000,7999]],"counts":{"remote":545,"northern":350,"regional":4520,"bushfire":1284,"disaster":2677,"additional_tourism":4},"additional_tourism":[[4406,4406],[4416,4416],[4498,4498],[7215,7215]]};
-const POLLING_DATA = {"last_polled_at":"2026-11-05T15:07:23+10:00","last_polled_date":"2026-11-05","total_sources":12,"live_verified_count":12,"changed_count":5,"official_contact":"https://parklawyers.com.au/links/?lang=ko","monitored_rules":{"postcodes_tables_1_to_6":{"verified":true,"counts":{"remote":545,"northern":350,"regional":4520,"bushfire":1284,"disaster":2677,"additional_tourism":4},"instruments":["LIN 22/012 (F2022L00271)","LIN 22/013 (F2022L00272)","LIN 25/048 (F2025L00485)"]},"subclass_417_age_caps":{"parsed":true,"total_countries":19,"age_35_count":10,"age_30_count":9,"age_35_countries":["Canada","Republic of Cyprus","Denmark","Finland","France","Germany","Republic of Ireland","Italy","Republic of Korea","The United Kingdom of Great Britain and Northern Ireland (including British National Overseas passport holders)"],"age_30_countries":["Belgium","Estonia","Hong Kong Special Administrative Region of the People's Republic of China","Japan","Malta","Netherlands","Norway","Sweden","Taiwan (other than an official or diplomatic passport)"],"korea_age_max":35},"subclass_462_country_caps":{"parsed":true,"total_capped_partners":29,"open_count":21,"paused_countries":["Brazil","Ecuador","Mongolia","Switzerland"],"closed_countries":[],"ballot_countries":["China","India","Indonesia","Vietnam"],"by_country":{"Argentina":{"status":"open","status_label":"Open","annual_cap":"3,400"},"Austria":{"status":"open","status_label":"Open","annual_cap":"500"},"Brazil":{"status":"paused","status_label":"paused","annual_cap":"500"},"Chile":{"status":"open","status_label":"Open","annual_cap":"3,400"},"China":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"5,000"},"Czechia":{"status":"open","status_label":"Open","annual_cap":"500"},"Ecuador":{"status":"paused","status_label":"Paused","annual_cap":"100"},"Greece":{"status":"open","status_label":"Open","annual_cap":"500"},"Hungary":{"status":"open","status_label":"Open","annual_cap":"500"},"India":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"1,000"},"Indonesia":{"status":"ballot","status_label":"CHECK BALLOT STATUS*","annual_cap":"5,000"},"Israel":{"status":"open","status_label":"Open","annual_cap":"2,500"},"Luxembourg":{"status":"open","status_label":"Open","annual_cap":"100"},"Malaysia":{"status":"open","status_label":"Open","annual_cap":"1,100"},"Mongolia":{"status":"paused","status_label":"paused","annual_cap":"100"},"Papua New Guinea":{"status":"open","status_label":"open","annual_cap":"100"},"Peru":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Poland":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Portugal":{"status":"open","status_label":"Open","annual_cap":"500"},"San Marino":{"status":"open","status_label":"Open","annual_cap":"100"},"Singapore":{"status":"open","status_label":"Open","annual_cap":"2,500"},"Slovak Republic":{"status":"open","status_label":"Open","annual_cap":"1,000"},"Slovenia":{"status":"open","status_label":"Open","annual_cap":"200"},"Spain":{"status":"open","status_label":"Open","annual_cap":"3,400"},"Switzerland":{"status":"paused","status_label":"paused","annual_cap":"200"},"Thailand":{"status":"open","status_label":"Open","annual_cap":"2,000"},"Türkiye":{"status":"open","status_label":"Open","annual_cap":"100"},"Uruguay":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Vietnam":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"1,500"}}},"condition_8547_exemptions":{"parsed":true,"until_further_notice_active":true,"all_exempt_categories_confirmed":true,"policy_notice":"From 1 January 2024 — Active until the Government makes further decisions"},"statutory_vac_2026":{"first_visa_aud":840,"first_visa_pacific_462_aud":690,"papua_new_guinea_462_aud":690,"second_and_third_visa_aud":1000,"authority":"Migration Regulations 1994 — Sch 1 Item 1225(2) & Item 1224A(2)"}},"internal_policy_references":[{"id":"pam3_vm_3182","cite":"PAM3 (Procedural Instruction): Working Holiday Visa Program (Subclass 417) — VM-3182 (Level 100169)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-3182 Level 100169)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work"},{"id":"pam3_vm_1813","cite":"PAM3 (Procedural Instruction): Work and Holiday Visa Program (Subclass 462) — VM-1813 (Level 100178)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-1813 Level 100178)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work"},{"id":"pam3_vm_1144","cite":"PAM3 (Procedural Instruction): Condition 8547 — 6-Month Work Limitation — VM-1144 (Level 100280)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-1144 Level 100280)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation"}],"sources":[{"id":"ha_417_specified_work","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 417 — Specified Work & Designated Area Postcode Tables (Tables 1–6)","title_ko":"Subclass 417 — 지정 근로 및 6대 지정 지역 우편번호표 (Tables 1–6)","title_en":"Subclass 417 — Specified Work & Designated Area Postcode Tables (Tables 1–6)","check_scope_ko":"업종 정의 · 6대 지역 우편번호 범위 실시간 파싱","check_scope_en":"Live parsing of 417 work categories & Tables 1–6 postcodes","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"eff61b2fc868fcc39566c5bf52c80f5e37207338d433e8e5051ee3bdcdc4c3dd","bytes":63394,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_462_specified_work","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 462 — Specified Work & Designated Area Postcode Tables (Tables 1–6)","title_ko":"Subclass 462 — 지정 근로(광업 제외·북부 전용 규칙) 및 우편번호표 (Tables 1–6)","title_en":"Subclass 462 — Specified Work & Designated Area Postcode Tables (Tables 1–6)","check_scope_ko":"462 인정 업종 · 북부/지방/재해 우편번호 대조","check_scope_en":"Live verification of 462 work categories & postcode tables","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"161b8e8a533cb21c41f4f43484ca723e9788802d85761340b1f020d30d943646","bytes":61903,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_8547_6month_limit","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Condition 8547 — 6-Month Work Limitation & Automatic Exemptions Policy","title_ko":"조건 8547 — 동일 고용주 6개월 근무 제한 및 자동 면제 지침","title_en":"Condition 8547 — 6-Month Work Limitation & Automatic Exemptions Policy","check_scope_ko":"2024.1.1~현행 핵심산업·북부호주·장소변경 자동 면제 유지 여부 파싱","check_scope_en":"Live check of automatic exemptions, location rules & permission criteria","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"e3f86561b8a8a6d5f4a3bf07008ea196ad4d6e10c945175e6eae87906f1b217a","bytes":6164,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_417_first_stream","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)","title_ko":"Subclass 417 (1차·2차·3차) 협정국 명단 및 국가별 연령 상한 (만 18~30 / 35세)","title_en":"Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)","check_scope_ko":"19개 협정국 국가별 연령 상한(한국·독일·핀란드·키프로스 등 만 35세) 파싱","check_scope_en":"Live parsing of 19 eligible 417 passport countries & age limits","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"c9f339bf4ff7d97628c375dd0d473c62d506a1e12c4f112d0c845b9d736073b9","bytes":50247,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_uk_arrangements","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)","title_ko":"영국(UK · BN(O)) 여권 소지자 특별 규정 (만 35세 & 2·3차 지정 근로 면제)","title_en":"Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)","check_scope_ko":"영국 여권 지정 근로 면제 및 조건 8547 적용 여부 감시","check_scope_en":"Monitors UK/BN(O) specified work exemption under Item 1225(3BA)","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/arrangements-uk-passport-holders","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"5eee419b02e220d12b9c2867066f285e60fa4fd53cd2cfc3d9fc316af2df9800","bytes":1309396,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_whm_latest_news","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)","title_ko":"WHM 프로그램 최신 개정 공지 (2026.7.1 연령 상향·추첨제·협정 개정)","title_en":"WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)","check_scope_ko":"신규 연령 상향·국가 추가·제도 개편 공지 감시","check_scope_en":"Monitors bilateral age expansions, new partner countries & policy alerts","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"89bb82c4252f287598d7531271d01450e85fcd4ab3139d2a3a71940462ae08b4","bytes":1307107,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_country_caps","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)","title_ko":"Subclass 462 협정국 연간 쿼터(Cap) 마감 현황 및 추첨제(Ballot) 상태","title_en":"Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)","check_scope_ko":"30개국 쿼터 상태(Open / Paused / Closed / Ballot) 실시간 테이블 파싱","check_scope_en":"Live parsing of Open / Paused / Closed / Ballot status for 30 countries","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"d45dba993e0ef9d00475944c67302749a2d3d1f25c90a3fa5371ee7ef01ecc92","bytes":1311650,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_mig_regs_1994","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration Regulations 1994 (F1996B03551 Latest Compilation — Sch 1, Sch 2, Sch 8)","title_ko":"Migration Regulations 1994 (F1996B03551 최신 현행본 — Sch 1, Sch 2, Sch 8)","title_en":"Migration Regulations 1994 (F1996B03551 Latest Compilation — Sch 1, Sch 2, Sch 8)","check_scope_ko":"Item 1224A/1225 VAC 금액, Reg 1.15FAA~FB, Cond 8547 현행 컴파일 감시","check_scope_en":"Monitors latest compilation of Migration Regulations 1994","url":"https://www.legislation.gov.au/F1996B03551/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"704f76c8676bdecc407bcbb84ec2802f000df3be167248da8656163ee4cdb3f5","bytes":65568,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_22_012","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) — F2022L00271","title_ko":"Subclass 417 지정 근로 및 지정 지역 고시문 (LIN 22/012) — F2022L00271","title_en":"Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) — F2022L00271","check_scope_ko":"LIN 22/012 최신 컴파일 번호 및 개정 이력 감시","check_scope_en":"Monitors LIN 22/012 compilation currency and amendments","url":"https://www.legislation.gov.au/F2022L00271/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"eb1937ac4fa31595839229a1ea6cebf45ed568efb0b32b40b71c3d3f79cbd3b8","bytes":62696,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_22_013","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) — F2022L00272","title_ko":"Subclass 462 지정 근로 및 지정 지역 고시문 (LIN 22/013) — F2022L00272","title_en":"Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) — F2022L00272","check_scope_ko":"LIN 22/013 최신 컴파일 번호 및 개정 이력 감시","check_scope_en":"Monitors LIN 22/013 compilation currency and amendments","url":"https://www.legislation.gov.au/F2022L00272/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"23c710738fc5fa965ef0242860bec8b1ae6fdcd99749f59254b090e02e4b3996","bytes":62696,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_25_048","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) — F2025L00485","title_ko":"2025 산불·자연재해 지정 지역 확대 개정 고시문 (LIN 25/048) — F2025L00485","title_en":"Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) — F2025L00485","check_scope_ko":"Table 5(산불) 및 Table 6(홍수·사이클론) 우편번호 개정 고시 감시","check_scope_en":"Monitors Table 5 (Bushfire) and Table 6 (Disaster) legislative updates","url":"https://www.legislation.gov.au/F2025L00485/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"7a57522d0515d9093bae264b3dffc87e88dd10c0b063bcdd78d828726cb997bb","bytes":62764,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"fwo_piecework","authority":"호주 공정근로옴부즈만 (Fair Work Ombudsman)","authority_ko":"호주 공정근로옴부즈만 (Fair Work Ombudsman)","authority_en":"Fair Work Ombudsman","title":"Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements","title_ko":"원예업 어워드(Horticulture Award) 성과급(Piecework) 최저시급 보장 지침","title_en":"Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements","check_scope_ko":"피스레이트 서면 계약 및 최저시급 보장 규정 감시","check_scope_en":"Monitors piecework minimum wage guarantee & pay slip rules","url":"https://www.fairwork.gov.au/pay-and-wages/minimum-wages/piece-rates-and-commission-payments","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"6df80ffc3c747aac845b7fce613f86871dd5a030ba2c37321690b2d195c07d20","bytes":432008,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"}]};
+const POLLING_DATA = {"last_polled_at":"2026-11-05T15:07:23+10:00","last_polled_date":"2026-11-05","total_sources":12,"live_verified_count":12,"changed_count":5,"official_contact":"https://parklawyers.com.au/links/?lang=ko","monitored_rules":{"postcodes_tables_1_to_6":{"verified":true,"counts":{"remote":545,"northern":350,"regional":4520,"bushfire":1284,"disaster":2677,"additional_tourism":4},"instruments":["LIN 22/012 (F2022L00271)","LIN 22/013 (F2022L00272)","LIN 25/048 (F2025L00485)"]},"subclass_417_age_caps":{"parsed":true,"total_countries":19,"age_35_count":10,"age_30_count":9,"age_35_countries":["Canada","Republic of Cyprus","Denmark","Finland","France","Germany","Republic of Ireland","Italy","Republic of Korea","The United Kingdom of Great Britain and Northern Ireland (including British National Overseas passport holders)"],"age_30_countries":["Belgium","Estonia","Hong Kong Special Administrative Region of the People's Republic of China","Japan","Malta","Netherlands","Norway","Sweden","Taiwan (other than an official or diplomatic passport)"],"korea_age_max":35},"subclass_462_country_caps":{"parsed":true,"total_capped_partners":29,"open_count":21,"paused_countries":["Brazil","Ecuador","Mongolia","Switzerland"],"closed_countries":[],"ballot_countries":["China","India","Indonesia","Vietnam"],"by_country":{"Argentina":{"status":"open","status_label":"Open","annual_cap":"3,400"},"Austria":{"status":"open","status_label":"Open","annual_cap":"500"},"Brazil":{"status":"paused","status_label":"paused","annual_cap":"500"},"Chile":{"status":"open","status_label":"Open","annual_cap":"3,400"},"China":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"5,000"},"Czechia":{"status":"open","status_label":"Open","annual_cap":"500"},"Ecuador":{"status":"paused","status_label":"Paused","annual_cap":"100"},"Greece":{"status":"open","status_label":"Open","annual_cap":"500"},"Hungary":{"status":"open","status_label":"Open","annual_cap":"500"},"India":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"1,000"},"Indonesia":{"status":"ballot","status_label":"CHECK BALLOT STATUS*","annual_cap":"5,000"},"Israel":{"status":"open","status_label":"Open","annual_cap":"2,500"},"Luxembourg":{"status":"open","status_label":"Open","annual_cap":"100"},"Malaysia":{"status":"open","status_label":"Open","annual_cap":"1,100"},"Mongolia":{"status":"paused","status_label":"paused","annual_cap":"100"},"Papua New Guinea":{"status":"open","status_label":"open","annual_cap":"100"},"Peru":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Poland":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Portugal":{"status":"open","status_label":"Open","annual_cap":"500"},"San Marino":{"status":"open","status_label":"Open","annual_cap":"100"},"Singapore":{"status":"open","status_label":"Open","annual_cap":"2,500"},"Slovak Republic":{"status":"open","status_label":"Open","annual_cap":"1,000"},"Slovenia":{"status":"open","status_label":"Open","annual_cap":"200"},"Spain":{"status":"open","status_label":"Open","annual_cap":"3,400"},"Switzerland":{"status":"paused","status_label":"paused","annual_cap":"200"},"Thailand":{"status":"open","status_label":"Open","annual_cap":"2,000"},"Türkiye":{"status":"open","status_label":"Open","annual_cap":"100"},"Uruguay":{"status":"open","status_label":"Open","annual_cap":"1,500"},"Vietnam":{"status":"ballot","status_label":"CHECK BALLOT STATUS","annual_cap":"1,500"}}},"condition_8547_exemptions":{"parsed":true,"until_further_notice_active":true,"all_exempt_categories_confirmed":true,"policy_notice":"From 1 January 2024 · Active until the Government makes further decisions"},"statutory_vac_2026":{"first_visa_aud":840,"first_visa_pacific_462_aud":690,"papua_new_guinea_462_aud":690,"second_and_third_visa_aud":1000,"authority":"Migration Regulations 1994 · Sch 1 Item 1225(2) & Item 1224A(2)"}},"internal_policy_references":[{"id":"pam3_vm_3182","cite":"PAM3 (Procedural Instruction): Working Holiday Visa Program (Subclass 417) · VM-3182 (Level 100169)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-3182 Level 100169)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work"},{"id":"pam3_vm_1813","cite":"PAM3 (Procedural Instruction): Work and Holiday Visa Program (Subclass 462) · VM-1813 (Level 100178)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-1813 Level 100178)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work"},{"id":"pam3_vm_1144","cite":"PAM3 (Procedural Instruction): Condition 8547 · 6-Month Work Limitation · VM-1144 (Level 100280)","sourceKind":"internal_policy_reference","notPubliclyPollable":true,"fetchStatus":"internal_legendcom_mirror","contentCheckStatus":"verified_against_local_mirror","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","localMirrorReference":"Policy Reference (VM-1144 Level 100280)","publicCompanionUrl":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation"}],"sources":[{"id":"ha_417_specified_work","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 417 · Specified Work & Designated Area Postcode Tables (Tables 1–6)","title_ko":"Subclass 417 · 지정 근로 및 6대 지정 지역 우편번호표 (Tables 1–6)","title_en":"Subclass 417 · Specified Work & Designated Area Postcode Tables (Tables 1–6)","check_scope_ko":"업종 정의 · 6대 지역 우편번호 범위 실시간 파싱","check_scope_en":"Live parsing of 417 work categories & Tables 1–6 postcodes","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"eff61b2fc868fcc39566c5bf52c80f5e37207338d433e8e5051ee3bdcdc4c3dd","bytes":63394,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_462_specified_work","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 462 · Specified Work & Designated Area Postcode Tables (Tables 1–6)","title_ko":"Subclass 462 · 지정 근로(광업 제외·북부 전용 규칙) 및 우편번호표 (Tables 1–6)","title_en":"Subclass 462 · Specified Work & Designated Area Postcode Tables (Tables 1–6)","check_scope_ko":"462 인정 업종 · 북부/지방/재해 우편번호 대조","check_scope_en":"Live verification of 462 work categories & postcode tables","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"161b8e8a533cb21c41f4f43484ca723e9788802d85761340b1f020d30d943646","bytes":61903,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_8547_6month_limit","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Condition 8547 · 6-Month Work Limitation & Automatic Exemptions Policy","title_ko":"조건 8547 · 동일 고용주 6개월 근무 제한 및 자동 면제 지침","title_en":"Condition 8547 · 6-Month Work Limitation & Automatic Exemptions Policy","check_scope_ko":"2024.1.1~현행 핵심산업·북부호주·장소변경 자동 면제 유지 여부 파싱","check_scope_en":"Live check of automatic exemptions, location rules & permission criteria","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"e3f86561b8a8a6d5f4a3bf07008ea196ad4d6e10c945175e6eae87906f1b217a","bytes":6164,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_417_first_stream","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)","title_ko":"Subclass 417 (1차·2차·3차) 협정국 명단 및 국가별 연령 상한 (만 18~30 / 35세)","title_en":"Subclass 417 Eligible Passports & Country Age Limits (18–30 vs 18–35)","check_scope_ko":"19개 협정국 국가별 연령 상한(한국·독일·핀란드·키프로스 등 만 35세) 파싱","check_scope_en":"Live parsing of 19 eligible 417 passport countries & age limits","url":"https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/first-working-holiday-417","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"c9f339bf4ff7d97628c375dd0d473c62d506a1e12c4f112d0c845b9d736073b9","bytes":50247,"method":"curl_h2_ha_schema","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_uk_arrangements","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)","title_ko":"영국(UK · BN(O)) 여권 소지자 특별 규정 (만 35세 & 2·3차 지정 근로 면제)","title_en":"Arrangements for UK & BN(O) Passport Holders (Age 35 & Specified Work Exemption)","check_scope_ko":"영국 여권 지정 근로 면제 및 조건 8547 적용 여부 감시","check_scope_en":"Monitors UK/BN(O) specified work exemption under Item 1225(3BA)","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/arrangements-uk-passport-holders","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"5eee419b02e220d12b9c2867066f285e60fa4fd53cd2cfc3d9fc316af2df9800","bytes":1309396,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_whm_latest_news","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)","title_ko":"WHM 프로그램 최신 개정 공지 (2026.7.1 연령 상향·추첨제·협정 개정)","title_en":"WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)","check_scope_ko":"신규 연령 상향·국가 추가·제도 개편 공지 감시","check_scope_en":"Monitors bilateral age expansions, new partner countries & policy alerts","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"89bb82c4252f287598d7531271d01450e85fcd4ab3139d2a3a71940462ae08b4","bytes":1307107,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"ha_country_caps","authority":"호주 연방 이민성 (Department of Home Affairs)","authority_ko":"호주 연방 이민성 (Department of Home Affairs)","authority_en":"Department of Home Affairs","title":"Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)","title_ko":"Subclass 462 협정국 연간 쿼터(Cap) 마감 현황 및 추첨제(Ballot) 상태","title_en":"Status of Subclass 462 Country Caps & Pre-Application Ballot (Current Program Year)","check_scope_ko":"30개국 쿼터 상태(Open / Paused / Closed / Ballot) 실시간 테이블 파싱","check_scope_en":"Live parsing of Open / Paused / Closed / Ballot status for 30 countries","url":"https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"d45dba993e0ef9d00475944c67302749a2d3d1f25c90a3fa5371ee7ef01ecc92","bytes":1311650,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_mig_regs_1994","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration Regulations 1994 (F1996B03551 Latest Compilation · Sch 1, Sch 2, Sch 8)","title_ko":"Migration Regulations 1994 (F1996B03551 최신 현행본 · Sch 1, Sch 2, Sch 8)","title_en":"Migration Regulations 1994 (F1996B03551 Latest Compilation · Sch 1, Sch 2, Sch 8)","check_scope_ko":"Item 1224A/1225 VAC 금액, Reg 1.15FAA~FB, Cond 8547 현행 컴파일 감시","check_scope_en":"Monitors latest compilation of Migration Regulations 1994","url":"https://www.legislation.gov.au/F1996B03551/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"704f76c8676bdecc407bcbb84ec2802f000df3be167248da8656163ee4cdb3f5","bytes":65568,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_22_012","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) · F2022L00271","title_ko":"Subclass 417 지정 근로 및 지정 지역 고시문 (LIN 22/012) · F2022L00271","title_en":"Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) · F2022L00271","check_scope_ko":"LIN 22/012 최신 컴파일 번호 및 개정 이력 감시","check_scope_en":"Monitors LIN 22/012 compilation currency and amendments","url":"https://www.legislation.gov.au/F2022L00271/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"eb1937ac4fa31595839229a1ea6cebf45ed568efb0b32b40b71c3d3f79cbd3b8","bytes":62696,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_22_013","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) · F2022L00272","title_ko":"Subclass 462 지정 근로 및 지정 지역 고시문 (LIN 22/013) · F2022L00272","title_en":"Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) · F2022L00272","check_scope_ko":"LIN 22/013 최신 컴파일 번호 및 개정 이력 감시","check_scope_en":"Monitors LIN 22/013 compilation currency and amendments","url":"https://www.legislation.gov.au/F2022L00272/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"23c710738fc5fa965ef0242860bec8b1ae6fdcd99749f59254b090e02e4b3996","bytes":62696,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"leg_lin_25_048","authority":"호주 연방 법제처 (Federal Register of Legislation)","authority_ko":"호주 연방 법제처 (Federal Register of Legislation)","authority_en":"Federal Register of Legislation","title":"Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) · F2025L00485","title_ko":"2025 산불·자연재해 지정 지역 확대 개정 고시문 (LIN 25/048) · F2025L00485","title_en":"Migration Amendment (Specified Work and Areas for 417 and 462) Instrument 2025 (LIN 25/048) · F2025L00485","check_scope_ko":"Table 5(산불) 및 Table 6(홍수·사이클론) 우편번호 개정 고시 감시","check_scope_en":"Monitors Table 5 (Bushfire) and Table 6 (Disaster) legislative updates","url":"https://www.legislation.gov.au/F2025L00485/latest/details","sourceKind":"public_legislation","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"7a57522d0515d9093bae264b3dffc87e88dd10c0b063bcdd78d828726cb997bb","bytes":62764,"method":"curl_h2_direct","changed_since_last_poll":true,"checked_at":"2026-11-05T15:07:23+10:00"},{"id":"fwo_piecework","authority":"호주 공정근로옴부즈만 (Fair Work Ombudsman)","authority_ko":"호주 공정근로옴부즈만 (Fair Work Ombudsman)","authority_en":"Fair Work Ombudsman","title":"Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements","title_ko":"원예업 어워드(Horticulture Award) 성과급(Piecework) 최저시급 보장 지침","title_en":"Horticulture Award Piecework Minimum Wage Guarantee & Workplace Entitlements","check_scope_ko":"피스레이트 서면 계약 및 최저시급 보장 규정 감시","check_scope_en":"Monitors piecework minimum wage guarantee & pay slip rules","url":"https://www.fairwork.gov.au/pay-and-wages/minimum-wages/piece-rates-and-commission-payments","sourceKind":"public_policy_guidance","status":"live","fetchStatus":"retrieved","contentCheckStatus":"content_extracted","ruleMatchStatus":"matched","reviewStatus":"verified_2026-10-20","http_code":200,"sha256":"6df80ffc3c747aac845b7fce613f86871dd5a030ba2c37321690b2d195c07d20","bytes":432008,"method":"curl_h2_direct","changed_since_last_poll":false,"checked_at":"2026-11-05T15:07:23+10:00"}]};
 
 let currentLang = 'ko';
 
@@ -84,7 +84,7 @@ function evaluatePostcodeAreas(pcStr) {
   };
 }
 
-/**
+/*
  * Evaluate the effect of a subsequent Visitor / ETA / eVisitor visa on an existing WHM (417/462) visa.
  * Fixes W01 (T01, T02): ETA (Subclass 601) does NOT cease an already-granted WHM visa under s 82(2) / cl 601.512,
  * whereas eVisitor (Subclass 651) or Visitor (Subclass 600) coming into effect can cease a WHM visa.
@@ -139,57 +139,57 @@ function evaluateSubsequentVisitorVisa(visaType) {
 // 19 Subclass 417 Eligible Countries + 30 Subclass 462 Eligible Countries
 const COUNTRIES = {
   "417": [
-    { code: "KR", ko: "대한민국 (Republic of Korea) — 만 18~35세 [2026.7.1 상향!]", en: "Republic of Korea — Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000, noteKo: "2026년 7월 1일부터 대한민국 여권 소지자의 Subclass 417 신청 가능 연령이 만 18~35세(만 36세 생일 전날 호주 동부 표준시 AEST 23:59까지)로 확대되었어요!", noteEn: "From 1 July 2026, Republic of Korea passport holders are eligible for Subclass 417 up to age 35 (inclusive, until 11:59 pm AEST the day before turning 36)." },
-    { code: "UK", ko: "영국 (UK & BN(O) 여권) — 만 18~35세 · 지정 근로 면제!", en: "United Kingdom (incl. BN(O)) — Age 18–35 · Specified Work Exempt", maxAge: 35, ukExempt: true, vac1: 840, vac23: 1000, noteKo: "2024년 7월 1일 이후 영국(GBNI) 또는 영국 해외시민(BN(O)) 여권으로 신청 시 2차·3차 417 지정 근로(88/179일)가 전면 면제돼요(Item 1225(3BA)). 단, 조건 8547(6개월 동일 고용주 제한) 및 조건 8548(4개월 학업 제한)은 그대로 적용돼요.", noteEn: "From 1 July 2024, UK and BN(O) passport holders are exempt from specified work for 2nd and 3rd Subclass 417 visas (Item 1225(3BA)). Condition 8547 (6-month employer limit) still applies." },
-    { code: "CA", ko: "캐나다 (Canada) — 만 18~35세", en: "Canada — Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "CY", ko: "키프로스 (Republic of Cyprus) — 만 18~35세 [2026.7.1 상향]", en: "Republic of Cyprus — Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "DK", ko: "덴마크 (Denmark) — 만 18~35세", en: "Denmark — Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "FI", ko: "핀란드 (Finland) — 만 18~35세 [2026.7.1 상향]", en: "Finland — Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "FR", ko: "프랑스 (France) — 만 18~35세", en: "France — Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "DE", ko: "독일 (Germany) — 만 18~35세 [2026.7.1 상향]", en: "Germany — Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "IE", ko: "아일랜드 (Republic of Ireland) — 만 18~35세", en: "Republic of Ireland — Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "IT", ko: "이탈리아 (Italy) — 만 18~35세", en: "Italy — Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "JP", ko: "일본 (Japan) — 만 18~30세", en: "Japan — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "TW", ko: "대만 (Taiwan, 일반 여권) — 만 18~30세", en: "Taiwan (ordinary passport) — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "HK", ko: "홍콩 (HKSAR) — 만 18~30세", en: "Hong Kong SAR — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "BE", ko: "벨기에 (Belgium) — 만 18~30세", en: "Belgium — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "EE", ko: "에스토니아 (Estonia) — 만 18~30세", en: "Estonia — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "MT", ko: "몰타 (Malta) — 만 18~30세", en: "Malta — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "NL", ko: "네덜란드 (Netherlands) — 만 18~30세", en: "Netherlands — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "NO", ko: "노르웨이 (Norway) — 만 18~30세", en: "Norway — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "SE", ko: "스웨덴 (Sweden) — 만 18~30세", en: "Sweden — Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 }
+    { code: "KR", ko: "대한민국 (Republic of Korea) · 만 18~35세 [2026.7.1 상향!]", en: "Republic of Korea · Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000, noteKo: "2026년 7월 1일부터 대한민국 여권 소지자의 Subclass 417 신청 가능 연령이 만 18~35세(만 36세 생일 전날 호주 동부 표준시 AEST 23:59까지)로 확대되었어요!", noteEn: "From 1 July 2026, Republic of Korea passport holders are eligible for Subclass 417 up to age 35 (inclusive, until 11:59 pm AEST the day before turning 36)." },
+    { code: "UK", ko: "영국 (UK & BN(O) 여권) · 만 18~35세 · 지정 근로 면제!", en: "United Kingdom (incl. BN(O)) · Age 18–35 · Specified Work Exempt", maxAge: 35, ukExempt: true, vac1: 840, vac23: 1000, noteKo: "2024년 7월 1일 이후 영국(GBNI) 또는 영국 해외시민(BN(O)) 여권으로 신청 시 2차·3차 417 지정 근로(88/179일)가 전면 면제돼요(Item 1225(3BA)). 단, 조건 8547(6개월 동일 고용주 제한) 및 조건 8548(4개월 학업 제한)은 그대로 적용돼요.", noteEn: "From 1 July 2024, UK and BN(O) passport holders are exempt from specified work for 2nd and 3rd Subclass 417 visas (Item 1225(3BA)). Condition 8547 (6-month employer limit) still applies." },
+    { code: "CA", ko: "캐나다 (Canada) · 만 18~35세", en: "Canada · Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "CY", ko: "키프로스 (Republic of Cyprus) · 만 18~35세 [2026.7.1 상향]", en: "Republic of Cyprus · Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "DK", ko: "덴마크 (Denmark) · 만 18~35세", en: "Denmark · Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "FI", ko: "핀란드 (Finland) · 만 18~35세 [2026.7.1 상향]", en: "Finland · Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "FR", ko: "프랑스 (France) · 만 18~35세", en: "France · Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "DE", ko: "독일 (Germany) · 만 18~35세 [2026.7.1 상향]", en: "Germany · Age 18–35 (Increased 1 Jul 2026)", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "IE", ko: "아일랜드 (Republic of Ireland) · 만 18~35세", en: "Republic of Ireland · Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "IT", ko: "이탈리아 (Italy) · 만 18~35세", en: "Italy · Age 18–35", maxAge: 35, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "JP", ko: "일본 (Japan) · 만 18~30세", en: "Japan · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "TW", ko: "대만 (Taiwan, 일반 여권) · 만 18~30세", en: "Taiwan (ordinary passport) · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "HK", ko: "홍콩 (HKSAR) · 만 18~30세", en: "Hong Kong SAR · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "BE", ko: "벨기에 (Belgium) · 만 18~30세", en: "Belgium · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "EE", ko: "에스토니아 (Estonia) · 만 18~30세", en: "Estonia · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "MT", ko: "몰타 (Malta) · 만 18~30세", en: "Malta · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "NL", ko: "네덜란드 (Netherlands) · 만 18~30세", en: "Netherlands · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "NO", ko: "노르웨이 (Norway) · 만 18~30세", en: "Norway · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "SE", ko: "스웨덴 (Sweden) · 만 18~30세", en: "Sweden · Age 18–30", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 }
   ],
   "462": [
-    { code: "US", ko: "미국 (USA) — 만 18~30세 (쿼터 제한 없음)", en: "United States of America (USA) — Age 18–30 (No annual cap)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "CN", ko: "중국 (PR China) — 만 18~30세 (1차 추첨제 Ballot · 연 5,000명)", en: "China (PRC) — Age 18–30 (1st visa Ballot · Cap 5,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "IN", ko: "인도 (India) — 만 18~30세 (1차 추첨제 Ballot · 연 1,000명)", en: "India — Age 18–30 (1st visa Ballot · Cap 1,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "VN", ko: "베트남 (Vietnam) — 만 18~30세 (1차 추첨제 Ballot · 연 1,500명)", en: "Vietnam — Age 18–30 (1st visa Ballot · Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "ID", ko: "인도네시아 (Indonesia) — 만 18~30세 (2026 추첨제 전환 · 연 5,000명)", en: "Indonesia — Age 18–30 (Ballot in 2026 · Cap 5,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "SG", ko: "싱가포르 (Singapore) — 만 18~30세 (연 2,500명)", en: "Singapore — Age 18–30 (Cap 2,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "MY", ko: "말레이시아 (Malaysia) — 만 18~30세 (연 1,100명)", en: "Malaysia — Age 18–30 (Cap 1,100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "TH", ko: "태국 (Thailand) — 만 18~30세 (연 2,000명)", en: "Thailand — Age 18–30 (Cap 2,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "PG", ko: "파푸아뉴기니 (PNG) — 만 18~30세 (태평양 우대 VAC $690 · 연 100명)", en: "Papua New Guinea (PNG) — Age 18–30 (Pacific VAC $690 · Cap 100)", maxAge: 30, ukExempt: false, vac1: 690, vac23: 690 },
-    { code: "AR", ko: "아르헨티나 (Argentina) — 만 18~30세 (연 3,400명)", en: "Argentina — Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "AT", ko: "오스트리아 (Austria) — 만 18~30세 (연 500명)", en: "Austria — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "BR", ko: "브라질 (Brazil) — 만 18~30세 (연 500명)", en: "Brazil — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "CL", ko: "칠레 (Chile) — 만 18~30세 (연 3,400명)", en: "Chile — Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "CZ", ko: "체코 (Czechia) — 만 18~30세 (연 500명)", en: "Czechia — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "EC", ko: "에콰도르 (Ecuador) — 만 18~30세 (연 100명)", en: "Ecuador — Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "GR", ko: "그리스 (Greece) — 만 18~30세 (연 500명)", en: "Greece — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "HU", ko: "헝가리 (Hungary) — 만 18~30세 (연 500명)", en: "Hungary — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "IL", ko: "이스라엘 (Israel) — 만 18~30세 (연 2,500명)", en: "Israel — Age 18–30 (Cap 2,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "LU", ko: "룩셈부르크 (Luxembourg) — 만 18~30세 (2026.6.3 정부지지서한 면제 · 연 100명)", en: "Luxembourg — Age 18–30 (LoS removed 3 Jun 2026 · Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "MN", ko: "몽골 (Mongolia) — 만 18~30세 (연 100명)", en: "Mongolia — Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "PE", ko: "페루 (Peru) — 만 18~30세 (연 1,500명)", en: "Peru — Age 18–30 (Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "PL", ko: "폴란드 (Poland) — 만 18~30세 (연 1,500명)", en: "Poland — Age 18–30 (Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "PT", ko: "포르투갈 (Portugal) — 만 18~30세 (연 500명)", en: "Portugal — Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "SM", ko: "산마리노 (San Marino) — 만 18~30세 (연 100명)", en: "San Marino — Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "SK", ko: "슬로바키아 (Slovak Republic) — 만 18~30세 (연 1,000명)", en: "Slovak Republic — Age 18–30 (Cap 1,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "SI", ko: "슬로베니아 (Slovenia) — 만 18~30세 (연 200명)", en: "Slovenia — Age 18–30 (Cap 200)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "ES", ko: "스페인 (Spain) — 만 18~30세 (연 3,400명)", en: "Spain — Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "CH", ko: "스위스 (Switzerland) — 만 18~30세 (연 200명)", en: "Switzerland — Age 18–30 (Cap 200)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "TR", ko: "튀르키예 (Türkiye) — 만 18~30세 (연 100명)", en: "Türkiye — Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
-    { code: "UY", ko: "우루과이 (Uruguay) — 만 18~30세 (2026.7.1 연 1,500명 증원)", en: "Uruguay — Age 18–30 (Increased to 1,500 from 1 Jul 2026)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 }
+    { code: "US", ko: "미국 (USA) · 만 18~30세 (쿼터 제한 없음)", en: "United States of America (USA) · Age 18–30 (No annual cap)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "CN", ko: "중국 (PR China) · 만 18~30세 (1차 추첨제 Ballot · 연 5,000명)", en: "China (PRC) · Age 18–30 (1st visa Ballot · Cap 5,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "IN", ko: "인도 (India) · 만 18~30세 (1차 추첨제 Ballot · 연 1,000명)", en: "India · Age 18–30 (1st visa Ballot · Cap 1,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "VN", ko: "베트남 (Vietnam) · 만 18~30세 (1차 추첨제 Ballot · 연 1,500명)", en: "Vietnam · Age 18–30 (1st visa Ballot · Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "ID", ko: "인도네시아 (Indonesia) · 만 18~30세 (2026 추첨제 전환 · 연 5,000명)", en: "Indonesia · Age 18–30 (Ballot in 2026 · Cap 5,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "SG", ko: "싱가포르 (Singapore) · 만 18~30세 (연 2,500명)", en: "Singapore · Age 18–30 (Cap 2,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "MY", ko: "말레이시아 (Malaysia) · 만 18~30세 (연 1,100명)", en: "Malaysia · Age 18–30 (Cap 1,100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "TH", ko: "태국 (Thailand) · 만 18~30세 (연 2,000명)", en: "Thailand · Age 18–30 (Cap 2,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "PG", ko: "파푸아뉴기니 (PNG) · 만 18~30세 (태평양 우대 VAC $690 · 연 100명)", en: "Papua New Guinea (PNG) · Age 18–30 (Pacific VAC $690 · Cap 100)", maxAge: 30, ukExempt: false, vac1: 690, vac23: 690 },
+    { code: "AR", ko: "아르헨티나 (Argentina) · 만 18~30세 (연 3,400명)", en: "Argentina · Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "AT", ko: "오스트리아 (Austria) · 만 18~30세 (연 500명)", en: "Austria · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "BR", ko: "브라질 (Brazil) · 만 18~30세 (연 500명)", en: "Brazil · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "CL", ko: "칠레 (Chile) · 만 18~30세 (연 3,400명)", en: "Chile · Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "CZ", ko: "체코 (Czechia) · 만 18~30세 (연 500명)", en: "Czechia · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "EC", ko: "에콰도르 (Ecuador) · 만 18~30세 (연 100명)", en: "Ecuador · Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "GR", ko: "그리스 (Greece) · 만 18~30세 (연 500명)", en: "Greece · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "HU", ko: "헝가리 (Hungary) · 만 18~30세 (연 500명)", en: "Hungary · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "IL", ko: "이스라엘 (Israel) · 만 18~30세 (연 2,500명)", en: "Israel · Age 18–30 (Cap 2,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "LU", ko: "룩셈부르크 (Luxembourg) · 만 18~30세 (2026.6.3 정부지지서한 면제 · 연 100명)", en: "Luxembourg · Age 18–30 (LoS removed 3 Jun 2026 · Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "MN", ko: "몽골 (Mongolia) · 만 18~30세 (연 100명)", en: "Mongolia · Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "PE", ko: "페루 (Peru) · 만 18~30세 (연 1,500명)", en: "Peru · Age 18–30 (Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "PL", ko: "폴란드 (Poland) · 만 18~30세 (연 1,500명)", en: "Poland · Age 18–30 (Cap 1,500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "PT", ko: "포르투갈 (Portugal) · 만 18~30세 (연 500명)", en: "Portugal · Age 18–30 (Cap 500)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "SM", ko: "산마리노 (San Marino) · 만 18~30세 (연 100명)", en: "San Marino · Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "SK", ko: "슬로바키아 (Slovak Republic) · 만 18~30세 (연 1,000명)", en: "Slovak Republic · Age 18–30 (Cap 1,000)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "SI", ko: "슬로베니아 (Slovenia) · 만 18~30세 (연 200명)", en: "Slovenia · Age 18–30 (Cap 200)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "ES", ko: "스페인 (Spain) · 만 18~30세 (연 3,400명)", en: "Spain · Age 18–30 (Cap 3,400)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "CH", ko: "스위스 (Switzerland) · 만 18~30세 (연 200명)", en: "Switzerland · Age 18–30 (Cap 200)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "TR", ko: "튀르키예 (Türkiye) · 만 18~30세 (연 100명)", en: "Türkiye · Age 18–30 (Cap 100)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 },
+    { code: "UY", ko: "우루과이 (Uruguay) · 만 18~30세 (2026.7.1 연 1,500명 증원)", en: "Uruguay · Age 18–30 (Increased to 1,500 from 1 Jul 2026)", maxAge: 30, ukExempt: false, vac1: 840, vac23: 1000 }
   ]
 };
 
@@ -242,8 +242,8 @@ const WORK_CATEGORIES = [
   },
   {
     id: "mining",
-    ko: "광업 (Mining — 417 전용, 462 불가!)",
-    en: "Mining (Subclass 417 ONLY — Ineligible for 462)",
+    ko: "광업 (Mining · 417 전용, 462 불가!)",
+    en: "Mining (Subclass 417 ONLY · Ineligible for 462)",
     area417Ko: "지방 호주 (Table 4 Regional Australia)",
     area417En: "Regional Australia (Table 4)",
     area462Ko: "인정 불가 (Subclass 462 지정 근로 제외 업종!)",
@@ -289,10 +289,10 @@ const WORK_CATEGORIES = [
     id: "bushfire",
     ko: "산불 피해 복구 업무 (Bushfire recovery)",
     en: "Bushfire recovery work",
-    area417Ko: "산불 선포 지역 (Table 5 Bushfire Declared Areas — 1,284개 우편번호, 2025.4.5 추가 반영)",
-    area417En: "Bushfire Declared Areas (Table 5 — updated 5 Apr 2025)",
-    area462Ko: "산불 선포 지역 (Table 5 Bushfire Declared Areas — 1,284개 우편번호, 2025.4.5 추가 반영)",
-    area462En: "Bushfire Declared Areas (Table 5 — updated 5 Apr 2025)",
+    area417Ko: "산불 선포 지역 (Table 5 Bushfire Declared Areas · 1,284개 우편번호, 2025.4.5 추가 반영)",
+    area417En: "Bushfire Declared Areas (Table 5 · updated 5 Apr 2025)",
+    area462Ko: "산불 선포 지역 (Table 5 Bushfire Declared Areas · 1,284개 우편번호, 2025.4.5 추가 반영)",
+    area462En: "Bushfire Declared Areas (Table 5 · updated 5 Apr 2025)",
     cutoff: "2019-08-01",
     volunteerAllowed: true,
     dateRuleKo: "2019.08.01 이후 · 유급 및 자원봉사(무급) 모두 인정!",
@@ -304,10 +304,10 @@ const WORK_CATEGORIES = [
     id: "disaster",
     ko: "홍수·사이클론·악천후 자연재해 복구 (Flood, cyclone or severe weather recovery)",
     en: "Natural disaster recovery (flood, cyclone, severe weather)",
-    area417Ko: "자연재해 선포 지역 (Table 6 Natural Disaster Declared Areas — 2,677개 우편번호, 2025.4.5 개정)",
-    area417En: "Natural Disaster Declared Areas (Table 6 — updated 5 Apr 2025)",
-    area462Ko: "자연재해 선포 지역 (Table 6 Natural Disaster Declared Areas — 2,677개 우편번호, 2025.4.5 개정)",
-    area462En: "Natural Disaster Declared Areas (Table 6 — updated 5 Apr 2025)",
+    area417Ko: "자연재해 선포 지역 (Table 6 Natural Disaster Declared Areas · 2,677개 우편번호, 2025.4.5 개정)",
+    area417En: "Natural Disaster Declared Areas (Table 6 · updated 5 Apr 2025)",
+    area462Ko: "자연재해 선포 지역 (Table 6 Natural Disaster Declared Areas · 2,677개 우편번호, 2025.4.5 개정)",
+    area462En: "Natural Disaster Declared Areas (Table 6 · updated 5 Apr 2025)",
     cutoff: "2022-01-01",
     volunteerAllowed: true,
     dateRuleKo: "2022.01.01 이후 · 유급 및 자원봉사(무급) 모두 인정!",
@@ -364,8 +364,8 @@ const FOUR_GATES = [
 ];
 
 const EVIDENCE_ITEMS = [
-  { id: "payslips", ko: "급여명세서 (Payslips — 시급/피스레이트·근무시간·고용주 ABN 명시 필수, cl 417.211(5)(c))", en: "Payslips showing hours/piece rates, pay period, and employer ABN (mandatory under cl 417.211(5)(c))" },
-  { id: "bank", ko: "호주 은행 계좌 입금 내역서 (Bank statements — 급여명세서 실수령액과 일치)", en: "Australian bank statements matching net pay deposits on payslips" },
+  { id: "payslips", ko: "급여명세서 (Payslips · 시급/피스레이트·근무시간·고용주 ABN 명시 필수, cl 417.211(5)(c))", en: "Payslips showing hours/piece rates, pay period, and employer ABN (mandatory under cl 417.211(5)(c))" },
+  { id: "bank", ko: "호주 은행 계좌 입금 내역서 (Bank statements · 급여명세서 실수령액과 일치)", en: "Australian bank statements matching net pay deposits on payslips" },
   { id: "super_ato", ko: "연금(Superannuation) 납입 내역 및 ATO 소득명세서 (STP Income Statement / Payment Summary)", en: "Superannuation contribution statements & ATO Single Touch Payroll (STP) Income Statement" },
   { id: "form1263_1464", ko: "고용주 확인서 / Form 1263(417) · Form 1464(462) (실제 직무·근무지 우편번호·기간 기재)", en: "Employer reference or Form 1263 (417) / Form 1464 (462) confirming exact duties, dates & work postcode" },
   { id: "piecework", ko: "서면 성과급(Piecework) 근로계약서 (피스레이트 근무 시 Fair Work 최저시급 보장 조항 포함)", en: "Written Piecework Agreement (if paid piece rates, meeting Fair Work minimum wage guarantee)" },
@@ -439,7 +439,7 @@ const HARVEST_REGIONS = [
     { ko: "포도 수확 (Grape picking)", en: "Grape picking", months: [2,3,4], winKo: "2–4월", winEn: "Feb–Apr" },
     { ko: "포도나무 전정 (Vine pruning)", en: "Vine pruning", months: [6,7,8], winKo: "6–8월", winEn: "Jun–Aug" }
   ]},
-  { id: "carnarvon", state: "WA", nameKo: "카나번 (Carnarvon — 북부 호주 Table 3 포함!)", nameEn: "Carnarvon (Northern Australia Table 3)", pc: "6701", rangeText: "6701", covKo: "서호주 북부(Table 3) 연중 바나나·채소·망고", covEn: "WA Northern Australia year-round subtropical crops", crops: [
+  { id: "carnarvon", state: "WA", nameKo: "카나번 (Carnarvon · 북부 호주 Table 3 포함!)", nameEn: "Carnarvon (Northern Australia Table 3)", pc: "6701", rangeText: "6701", covKo: "서호주 북부(Table 3) 연중 바나나·채소·망고", covEn: "WA Northern Australia year-round subtropical crops", crops: [
     { ko: "바나나 · 채소 · 토마토", en: "Bananas, vegetables & tomatoes", months: [1,2,3,4,5,6,7,8,9,10,11,12], winKo: "1–12월 (연중)", winEn: "Jan–Dec" },
     { ko: "포도 (Grapes)", en: "Grapes", months: [4,5,6,7,8,9,10,11,12], winKo: "4–12월", winEn: "Apr–Dec" },
     { ko: "망고 (Mangoes)", en: "Mangoes", months: [11,12,1,2,3,4,5], winKo: "11–5월", winEn: "Nov–May" },
@@ -460,7 +460,7 @@ const C8547_RULES = [
     koTitle: "1. ‘6개월’의 정확한 법정 산정 기준 (PAM3 [Sch8/8547] s 3.2.1)",
     enTitle: "1. How the '6 Months' is Calculated (PAM3 [Sch8/8547] s 3.2.1)",
     koBody: "6개월은 실제 근무한 시간(Hours)이나 출근 일수(Days)가 아니라, <strong>첫 출근일(직무교육·트레이닝 포함)로부터 경과한 달력 개월 수(6 Calendar Months)</strong>로 산정해요. 풀타임·파트타임·캐주얼·교대근무·자원봉사 모두 동일하며, 고용관계가 유지되는 동안의 유급·무급 휴가(Leave) 기간도 6개월에 그대로 포함돼요. (단, 고용관계가 완전히 종료된 후 상당 기간 뒤 재고용된 경우에는 실제 고용 기간만 합산해요.)",
-    enBody: "The 6-month limit is measured by elapsed calendar months from the day work or workplace training starts—NOT hours or days worked. It applies to full-time, part-time, casual, shift and voluntary work. Paid or unpaid leave during ongoing employment counts toward the 6 months."
+    enBody: "The 6-month limit is measured by elapsed calendar months from the day work or workplace training starts · NOT hours or days worked. It applies to full-time, part-time, casual, shift and voluntary work. Paid or unpaid leave during ongoing employment counts toward the 6 months."
   },
   {
     koTitle: "2. ‘동일 고용주(One Employer)’와 최종 사용자(End-User) 원칙 (PAM3 s 3.2.2)",
@@ -477,7 +477,7 @@ const C8547_RULES = [
   {
     koTitle: "4. 북부 호주(Northern Australia Table 3) 한정 4대 산업 자동 면제",
     enTitle: "4. Northern Australia Automatic Exemptions (Table 3 Postcodes Only)",
-    koBody: "근무지 우편번호가 <strong>북부 호주(Northern Australia Table 3 — NT 전역 및 북부 QLD·WA 350개 우편번호)</strong>에 속하는 경우, ① <strong>어업·진주 양식</strong>, ② <strong>임업·벌목</strong>, ③ <strong>건설업</strong>, ④ <strong>광업</strong> 종사자는 사전 허가 없이 같은 고용주와 6개월을 초과해 일할 수 있어요. (시드니·멜버른·브리즈번 등 비-북부 지역의 건설·광업은 자동 면제 대상이 아니에요!)",
+    koBody: "근무지 우편번호가 <strong>북부 호주(Northern Australia Table 3 · NT 전역 및 북부 QLD·WA 350개 우편번호)</strong>에 속하는 경우, ① <strong>어업·진주 양식</strong>, ② <strong>임업·벌목</strong>, ③ <strong>건설업</strong>, ④ <strong>광업</strong> 종사자는 사전 허가 없이 같은 고용주와 6개월을 초과해 일할 수 있어요. (시드니·멜버른·브리즈번 등 비-북부 지역의 건설·광업은 자동 면제 대상이 아니에요!)",
     enBody: "In Northern Australia (Table 3 postcodes covering all of NT and northern QLD/WA), work in (1) Fishing & pearling, (2) Tree farming & felling, (3) Construction, and (4) Mining is automatically exempt from the 6-month limit."
   },
   {
@@ -495,7 +495,7 @@ const C8547_RULES = [
   {
     koTitle: "7. 사전 서면 허가(Written Permission) 신청 요건 및 ‘만료 전 접수’ 원칙",
     enTitle: "7. Requesting Written Permission & Critical On-Time Submission Rule",
-    koBody: "자동 면제 대상이 아닌 경우, ① <strong>지속적 풀타임 취업이 허용되는 비자(482 SID, 186 ENS, 820 파트너 등 — 500 학생비자 제외)를 신청하고 심사 대기 중</strong>이거나, ② <strong>고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 첨부</strong>한 경우 온라인으로 연장 허가를 신청할 수 있어요. <strong>6개월 만료 전에 신청하면 결과가 나올 때까지 계속 일할 수 있지만, 6개월이 지난 뒤 신청하면 즉시 일을 중단하고 결과를 기다려야 해요!</strong>",
+    koBody: "자동 면제 대상이 아닌 경우, ① <strong>지속적 풀타임 취업이 허용되는 비자(482 SID, 186 ENS, 820 파트너 등 · 500 학생비자 제외)를 신청하고 심사 대기 중</strong>이거나 ② <strong>고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 첨부</strong>한 경우 온라인으로 연장 허가를 신청할 수 있어요. <strong>6개월 만료 전에 신청하면 결과가 나올 때까지 계속 일할 수 있지만 6개월이 지난 뒤 신청하면 즉시 일을 중단하고 결과를 기다려야 해요!</strong>",
     enBody: "If not automatically exempt, you may request permission if you (1) applied for a visa allowing ongoing full-time work (e.g. 482, 186, 820), or (2) perform critical work supported by an employer letter. If submitted BEFORE 6 months ends, you may keep working while awaiting a decision; if submitted late, you must stop working immediately."
   },
   {
@@ -507,24 +507,24 @@ const C8547_RULES = [
 ];
 
 const FOOTNOTES = [
-  { id: 1, cite: "Migration Regulations 1994 — Schedule 1 Item 1225 (Working Holiday Class TZ) & Item 1224A (Work and Holiday Class US)", sourceKind: "public_legislation", descKo: "1차 비자 VAC $840(파푸아뉴기니·태평양 국가 462 $690) 및 2·3차 비자 VAC $1,000(파푸아뉴기니 462 $690), 호주 내 신청 시 실체비자 보유 또는 만료 후 28일 이내 유예 규정(1225(3B)(f)(ii) · 1224A(3)(c)(iv)).", descEn: "Base VAC ($840 1st visa, $690 Papua New Guinea & Pacific-regional 462, $1,000 2nd/3rd visa) and onshore 28-day substantive visa grace period.", url: "https://www.legislation.gov.au/F1996B03551/latest" },
-  { id: 2, cite: "Migration Regulations 1994 — Schedule 2 Part 417 (cl 417.211, 417.411–412, 417.511(1)–(3)) & Part 462 (cl 462.218–219, 462.411–412, 462.511–513)", sourceKind: "public_legislation", descKo: "2차(3개월)·3차(6개월, 2019.7.1 이후 2차 비자/연계 브리징 보유 중) 지정 근로 요건, 적법 급여 지급 요건, 승인 시 위치 요건(cl 417.411–412 / 462.411–412) 및 체류기간 산정 규정(417은 cl 417.511(1)·(2)·(3), 462는 cl 462.511·512·513).", descEn: "Primary criteria for 2nd (3 months) and 3rd (6 months on 2nd visa/BVA) WHM visas, lawful remuneration, location at grant (cl 417.411–412 / 462.411–412), and stay period clauses (cl 417.511(1)–(3) for 417; cl 462.511–513 for 462).", url: "https://www.legislation.gov.au/F1996B03551/latest" },
-  { id: 3, cite: "Migration Regulations 1994 — Schedule 8 Visa Conditions 8547 (6-month work limitation) & 8548 (4-month study limitation)", sourceKind: "public_legislation", descKo: "모든 417·462 비자에 의무 부과되는 동일 고용주 6개월 근무 제한 및 4개월(17주) 학업·훈련 제한 규정.", descEn: "Mandatory visa conditions 8547 (max 6 months with any one employer) and 8548 (max 4 months study or training).", url: "https://www.legislation.gov.au/F1996B03551/latest" },
-  { id: 4, cite: "Migration Amendment (Working Holiday Visa) Regulations / F2024L00661 & Item 1225(3BA) — UK Passport Arrangements", sourceKind: "public_policy_guidance", descKo: "2023.7.1 영국 여권 연령 만 18~35세 확대 및 2024.7.1 이후 영국(GBNI·BN(O)) 여권 신청자 2·3차 417 지정 근로 면제.", descEn: "UK & BN(O) passport holders age 18–35 (from 1 Jul 2023) and exemption from specified work for 2nd/3rd 417 visas (from 1 Jul 2024).", url: "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/arrangements-uk-passport-holders" },
+  { id: 1, cite: "Migration Regulations 1994 · Schedule 1 Item 1225 (Working Holiday Class TZ) & Item 1224A (Work and Holiday Class US)", sourceKind: "public_legislation", descKo: "1차 비자 VAC $840(파푸아뉴기니·태평양 국가 462 $690) 및 2·3차 비자 VAC $1,000(파푸아뉴기니 462 $690), 호주 내 신청 시 실체비자 보유 또는 만료 후 28일 이내 유예 규정(1225(3B)(f)(ii) · 1224A(3)(c)(iv)).", descEn: "Base VAC ($840 1st visa, $690 Papua New Guinea & Pacific-regional 462, $1,000 2nd/3rd visa) and onshore 28-day substantive visa grace period.", url: "https://www.legislation.gov.au/F1996B03551/latest" },
+  { id: 2, cite: "Migration Regulations 1994 · Schedule 2 Part 417 (cl 417.211, 417.411–412, 417.511(1)–(3)) & Part 462 (cl 462.218–219, 462.411–412, 462.511–513)", sourceKind: "public_legislation", descKo: "2차(3개월)·3차(6개월, 2019.7.1 이후 2차 비자/연계 브리징 보유 중) 지정 근로 요건, 적법 급여 지급 요건, 승인 시 위치 요건(cl 417.411–412 / 462.411–412) 및 체류기간 산정 규정(417은 cl 417.511(1)·(2)·(3), 462는 cl 462.511·512·513).", descEn: "Primary criteria for 2nd (3 months) and 3rd (6 months on 2nd visa/BVA) WHM visas, lawful remuneration, location at grant (cl 417.411–412 / 462.411–412), and stay period clauses (cl 417.511(1)–(3) for 417; cl 462.511–513 for 462).", url: "https://www.legislation.gov.au/F1996B03551/latest" },
+  { id: 3, cite: "Migration Regulations 1994 · Schedule 8 Visa Conditions 8547 (6-month work limitation) & 8548 (4-month study limitation)", sourceKind: "public_legislation", descKo: "모든 417·462 비자에 의무 부과되는 동일 고용주 6개월 근무 제한 및 4개월(17주) 학업·훈련 제한 규정.", descEn: "Mandatory visa conditions 8547 (max 6 months with any one employer) and 8548 (max 4 months study or training).", url: "https://www.legislation.gov.au/F1996B03551/latest" },
+  { id: 4, cite: "Migration Amendment (Working Holiday Visa) Regulations / F2024L00661 & Item 1225(3BA) · UK Passport Arrangements", sourceKind: "public_policy_guidance", descKo: "2023.7.1 영국 여권 연령 만 18~35세 확대 및 2024.7.1 이후 영국(GBNI·BN(O)) 여권 신청자 2·3차 417 지정 근로 면제.", descEn: "UK & BN(O) passport holders age 18–35 (from 1 Jul 2023) and exemption from specified work for 2nd/3rd 417 visas (from 1 Jul 2024).", url: "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news/arrangements-uk-passport-holders" },
   { id: 5, cite: "Migration Amendment (Working Holiday Maker Age Criteria) Regulations 2026 (Schedule 13 Part 163) & Home Affairs Latest News (1 July 2026)", sourceKind: "public_policy_guidance", descKo: "연령 요건의 Schedule 1 유효 신청 요건(Item 1225(3AA) · 1224A(3)(aab)) 편입 및 2026.7.1부터 대한민국·독일·핀란드·키프로스 Subclass 417 연령 상한 만 18~35세(만 36세 생일 전날 AEST 23:59까지) 확대.", descEn: "2026 Schedule 1 age criteria reform and 1 July 2026 expansion of Subclass 417 age limit to 18–35 (inclusive, until 11:59 pm AEST the day before turning 36) for Republic of Korea, Germany, Finland, and Cyprus.", url: "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news" },
-  { id: 6, cite: "Migration Regulations 1994 — Reg 1.15FAA (417), Reg 1.15FA (462) & Reg 1.15FB (Excluded Employer Prohibition)", sourceKind: "public_legislation", descKo: "지정 근로 위임 규정 및 근로자 안전·복지 위험으로 장관이 지정한 제외 고용주(Excluded Employer, F2024L00182 · F2024L00919) 근무 불인정 규정.", descEn: "Statutory definitions of specified work and prohibition on counting work performed for an Excluded Employer under Reg 1.15FB.", url: "https://www.legislation.gov.au/F1996B03551/latest" },
-  { id: 7, cite: "Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) 2022 — Compilation No. 3 (F2022L00271)", sourceKind: "public_legislation", descKo: "Subclass 417 지정 근로 업종 및 우편번호 지역표 고시 법령 문서.", descEn: "Legislative Instrument specifying Subclass 417 work categories and designated postcode areas.", url: "https://www.legislation.gov.au/F2022L00271/latest/details" },
-  { id: 8, cite: "Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) 2022 — Compilation No. 3 (F2022L00272)", sourceKind: "public_legislation", descKo: "Subclass 462 지정 근로 업종(광업 제외, 어업·임업 북부 호주 전용 등) 및 우편번호 지역표 고시 법령 문서.", descEn: "Legislative Instrument specifying Subclass 462 work categories and designated postcode areas.", url: "https://www.legislation.gov.au/F2022L00272/latest/details" },
-  { id: 9, cite: "Migration Legislation Amendment (Specified Work and Areas for Subclass 417 and 462 Visas) Instrument 2025 (LIN 25/048) — F2025L00485", sourceKind: "public_legislation", descKo: "2025.4.5 발효(2025.4.5 이후 신청분 적용) 산불 피해 선포 지역(Table 5) 및 홍수·사이클론·악천후 자연재해 선포 지역(Table 6) 우편번호 확대 개정문.", descEn: "5 April 2025 legislative amendment (applicable to applications lodged on or after 5 Apr 2025) expanding Bushfire (Table 5) and Natural Disaster (Table 6) declared postcode tables.", url: "https://www.legislation.gov.au/F2025L00485/latest/details" },
-  { id: 10, cite: "Department of Home Affairs — Specified work for Working Holiday (subclass 417) & Work and Holiday (subclass 462)", sourceKind: "public_policy_guidance", descKo: "호주 연방 이민성 공식 지정 근로 일수 산정 지침(88일/179일, 풀타임·파트타임·피스레이트·유무급 휴일·업종 유연성 및 Table 1~6 우편번호).", descEn: "Official Home Affairs specified work guidance and designated postcode tables (Tables 1–6).", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work" },
-  { id: 11, cite: "PAM3 (Procedural Instruction): Working Holiday Visa Program (Subclass 417) — VM-3182 (Level 100169) [Internal Policy Reference — LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "호주 연방 이민성 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 — 공개 폴링 대상 아님) — 지정 근로 일수 산정(s 4.5.3: 풀타임 주말 포함 vs 파트타임 실근무일, 단시간 근무 합산 불가, 최소 달력 기간).", descEn: "Internal Departmental policy instruction VM-3182 (verified via LegendCom mirror; not a publicly pollable URL) on Subclass 417 specified work day-counting and remuneration verification.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work" },
-  { id: 12, cite: "PAM3 (Procedural Instruction): Work and Holiday Visa Program (Subclass 462) — VM-1813 (Level 100178) [Internal Policy Reference — LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "호주 연방 이민성 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 — 공개 폴링 대상 아님) — Subclass 462 지정 근로 최소 3달력월 경과 원칙, Form 1464 및 고용주 불리 정보(Adverse Info) 28일 소명 절차.", descEn: "Internal Departmental policy instruction VM-1813 (verified via LegendCom mirror; not a publicly pollable URL) on Subclass 462 specified work assessment and natural justice procedures.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work" },
-  { id: 13, cite: "Department of Home Affairs — Condition 8547: 6-Month Work Limitation (Updated 21 September 2026)", sourceKind: "public_policy_guidance", descKo: "2024.1.1 이후 현행 조건 8547 자동 면제(장소 변경·재택근무, 농축산, 자연재해, 5대 핵심 산업, 북부 호주 4대 산업) 및 사전 서면 허가 지침.", descEn: "Official Home Affairs Condition 8547 policy covering automatic exemptions, location changes, clock resets, and permission requests.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation" },
-  { id: 14, cite: "PAM3 (Procedural Instruction): Condition 8547 — 6-Month Work Limitation — VM-1144 (Level 100280) [Internal Policy Reference — LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "조건 8547 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 — 공개 폴링 대상 아님) — 6달력월 산정(s 3.2.1), 최종 사용자(End-user) 원칙(s 3.2.2), 산재보상 수령 기간 검토(s 3.2.4), 비자 승인/브리징 발효 시 시계 리셋(s 3.4.1), 만료 2주 전 허가 신청(s 3.3).", descEn: "Internal Departmental policy instruction VM-1144 (verified via LegendCom mirror; not a publicly pollable URL) detailing elapsed calendar month calculation, end-user rule, workers compensation review, and visa clock resets.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation" },
-  { id: 15, cite: "Department of Home Affairs — Status of Subclass 462 Country Caps & Pre-Application Ballot (2026–27)", sourceKind: "public_policy_guidance", descKo: "30개 Subclass 462 협정국 연간 쿼터 현황 및 중국·인도·베트남·인도네시아(향후 등록 안내 포함) 1차 비자 추첨제(Ballot) 운영 안내.", descEn: "Subclass 462 annual country caps and pre-application ballot rules for China, India, Vietnam, and Indonesia.", url: "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps" },
-  { id: 16, cite: "Fair Work Ombudsman — Piecework Rates & Horticulture Award Minimum Wage Guarantee", sourceKind: "public_policy_guidance", descKo: "성과급(Piecework) 근로자의 시간당 최저임금 보장 의무 및 서면 성과급 계약서 요건.", descEn: "Fair Work Ombudsman guidance on piecework agreements and the minimum wage guarantee under the Horticulture Award.", url: "https://www.fairwork.gov.au/pay-and-wages/minimum-wages/piece-rates-and-commission-payments" },
-  { id: 17, cite: "Workforce Australia — Harvest Jobs & Regional Vacancies Portal (Replacing Harvest Trail after 30 June 2024)", sourceKind: "public_policy_guidance", descKo: "구 Harvest Trail 종료(2024.6.30) 이후 연방 정부 공식 농장·수확 구인 검색 포털.", descEn: "Official Australian Government Workforce Australia harvest vacancy search.", url: "https://www.workforceaustralia.gov.au/individuals/jobs/search?searchText=harvest+worker" },
-  { id: 18, cite: "ABARES — Snapshot of Australian Agriculture 2026 & Horticultural Labour Demand Baseline", sourceKind: "public_policy_guidance", descKo: "호주 농업자원경제과학국(ABARES) 계절별 원예 임시직·계약직 노동 수요 통계(평균 118,400명 · 피크 130,300명).", descEn: "ABARES seasonal horticultural casual and contract workforce demand statistics.", url: "https://www.agriculture.gov.au/abares/products/insights/snapshot-of-australian-agriculture" }
+  { id: 6, cite: "Migration Regulations 1994 · Reg 1.15FAA (417), Reg 1.15FA (462) & Reg 1.15FB (Excluded Employer Prohibition)", sourceKind: "public_legislation", descKo: "지정 근로 위임 규정 및 근로자 안전·복지 위험으로 장관이 지정한 제외 고용주(Excluded Employer, F2024L00182 · F2024L00919) 근무 불인정 규정.", descEn: "Statutory definitions of specified work and prohibition on counting work performed for an Excluded Employer under Reg 1.15FB.", url: "https://www.legislation.gov.au/F1996B03551/latest" },
+  { id: 7, cite: "Migration (Specified work and areas for Subclass 417 visas) Instrument (LIN 22/012) 2022 · Compilation No. 3 (F2022L00271)", sourceKind: "public_legislation", descKo: "Subclass 417 지정 근로 업종 및 우편번호 지역표 고시 법령 문서.", descEn: "Legislative Instrument specifying Subclass 417 work categories and designated postcode areas.", url: "https://www.legislation.gov.au/F2022L00271/latest/details" },
+  { id: 8, cite: "Migration (Specified work and areas for Subclass 462 visas) Instrument (LIN 22/013) 2022 · Compilation No. 3 (F2022L00272)", sourceKind: "public_legislation", descKo: "Subclass 462 지정 근로 업종(광업 제외, 어업·임업 북부 호주 전용 등) 및 우편번호 지역표 고시 법령 문서.", descEn: "Legislative Instrument specifying Subclass 462 work categories and designated postcode areas.", url: "https://www.legislation.gov.au/F2022L00272/latest/details" },
+  { id: 9, cite: "Migration Legislation Amendment (Specified Work and Areas for Subclass 417 and 462 Visas) Instrument 2025 (LIN 25/048) · F2025L00485", sourceKind: "public_legislation", descKo: "2025.4.5 발효(2025.4.5 이후 신청분 적용) 산불 피해 선포 지역(Table 5) 및 홍수·사이클론·악천후 자연재해 선포 지역(Table 6) 우편번호 확대 개정문.", descEn: "5 April 2025 legislative amendment (applicable to applications lodged on or after 5 Apr 2025) expanding Bushfire (Table 5) and Natural Disaster (Table 6) declared postcode tables.", url: "https://www.legislation.gov.au/F2025L00485/latest/details" },
+  { id: 10, cite: "Department of Home Affairs · Specified work for Working Holiday (subclass 417) & Work and Holiday (subclass 462)", sourceKind: "public_policy_guidance", descKo: "호주 연방 이민성 공식 지정 근로 일수 산정 지침(88일/179일, 풀타임·파트타임·피스레이트·유무급 휴일·업종 유연성 및 Table 1~6 우편번호).", descEn: "Official Home Affairs specified work guidance and designated postcode tables (Tables 1–6).", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work" },
+  { id: 11, cite: "PAM3 (Procedural Instruction): Working Holiday Visa Program (Subclass 417) · VM-3182 (Level 100169) [Internal Policy Reference · LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "호주 연방 이민성 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 · 공개 폴링 대상 아님) · 지정 근로 일수 산정(s 4.5.3: 풀타임 주말 포함 vs 파트타임 실근무일, 단시간 근무 합산 불가, 최소 달력 기간).", descEn: "Internal Departmental policy instruction VM-3182 (verified via LegendCom mirror; not a publicly pollable URL) on Subclass 417 specified work day-counting and remuneration verification.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/specified-work" },
+  { id: 12, cite: "PAM3 (Procedural Instruction): Work and Holiday Visa Program (Subclass 462) · VM-1813 (Level 100178) [Internal Policy Reference · LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "호주 연방 이민성 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 · 공개 폴링 대상 아님) · Subclass 462 지정 근로 최소 3달력월 경과 원칙, Form 1464 및 고용주 불리 정보(Adverse Info) 28일 소명 절차.", descEn: "Internal Departmental policy instruction VM-1813 (verified via LegendCom mirror; not a publicly pollable URL) on Subclass 462 specified work assessment and natural justice procedures.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/specified-462-work" },
+  { id: 13, cite: "Department of Home Affairs · Condition 8547: 6-Month Work Limitation (Updated 21 September 2026)", sourceKind: "public_policy_guidance", descKo: "2024.1.1 이후 현행 조건 8547 자동 면제(장소 변경·재택근무, 농축산, 자연재해, 5대 핵심 산업, 북부 호주 4대 산업) 및 사전 서면 허가 지침.", descEn: "Official Home Affairs Condition 8547 policy covering automatic exemptions, location changes, clock resets, and permission requests.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation" },
+  { id: 14, cite: "PAM3 (Procedural Instruction): Condition 8547 · 6-Month Work Limitation · VM-1144 (Level 100280) [Internal Policy Reference · LegendCom]", sourceKind: "internal_policy_reference", notPubliclyPollable: true, descKo: "조건 8547 내부 심사지침(LegendCom 원문 대조, 비공개 내부 문건 · 공개 폴링 대상 아님) · 6달력월 산정(s 3.2.1), 최종 사용자(End-user) 원칙(s 3.2.2), 산재보상 수령 기간 검토(s 3.2.4), 비자 승인/브리징 발효 시 시계 리셋(s 3.4.1), 만료 2주 전 허가 신청(s 3.3).", descEn: "Internal Departmental policy instruction VM-1144 (verified via LegendCom mirror; not a publicly pollable URL) detailing elapsed calendar month calculation, end-user rule, workers compensation review, and visa clock resets.", url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417/6-month-work-limitation" },
+  { id: 15, cite: "Department of Home Affairs · Status of Subclass 462 Country Caps & Pre-Application Ballot (2026–27)", sourceKind: "public_policy_guidance", descKo: "30개 Subclass 462 협정국 연간 쿼터 현황 및 중국·인도·베트남·인도네시아(향후 등록 안내 포함) 1차 비자 추첨제(Ballot) 운영 안내.", descEn: "Subclass 462 annual country caps and pre-application ballot rules for China, India, Vietnam, and Indonesia.", url: "https://immi.homeaffairs.gov.au/what-we-do/whm-program/status-of-country-caps" },
+  { id: 16, cite: "Fair Work Ombudsman · Piecework Rates & Horticulture Award Minimum Wage Guarantee", sourceKind: "public_policy_guidance", descKo: "성과급(Piecework) 근로자의 시간당 최저임금 보장 의무 및 서면 성과급 계약서 요건.", descEn: "Fair Work Ombudsman guidance on piecework agreements and the minimum wage guarantee under the Horticulture Award.", url: "https://www.fairwork.gov.au/pay-and-wages/minimum-wages/piece-rates-and-commission-payments" },
+  { id: 17, cite: "Workforce Australia · Harvest Jobs & Regional Vacancies Portal (Replacing Harvest Trail after 30 June 2024)", sourceKind: "public_policy_guidance", descKo: "구 Harvest Trail 종료(2024.6.30) 이후 연방 정부 공식 농장·수확 구인 검색 포털.", descEn: "Official Australian Government Workforce Australia harvest vacancy search.", url: "https://www.workforceaustralia.gov.au/individuals/jobs/search?searchText=harvest+worker" },
+  { id: 18, cite: "ABARES · Snapshot of Australian Agriculture 2026 & Horticultural Labour Demand Baseline", sourceKind: "public_policy_guidance", descKo: "호주 농업자원경제과학국(ABARES) 계절별 원예 임시직·계약직 노동 수요 통계(평균 118,400명 · 피크 130,300명).", descEn: "ABARES seasonal horticultural casual and contract workforce demand statistics.", url: "https://www.agriculture.gov.au/abares/products/insights/snapshot-of-australian-agriculture" }
 ];
 
 // =========================================================================
@@ -608,7 +608,7 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
   const workStart = opts.workStartDate || "";
 
   if (catId === "covid") {
-    return { eligible: true, status: "eligible", labelKo: "인정 (호주 전역 — 2020.2.1 이후 필수 코로나 의료·방역 직무)", labelEn: "Eligible (Anywhere in Australia — Critical COVID-19 medical work)" };
+    return { eligible: true, status: "eligible", labelKo: "인정 (호주 전역 · 2020.2.1 이후 필수 코로나 의료·방역 직무)", labelEn: "Eligible (Anywhere in Australia · Critical COVID-19 medical work)" };
   }
   if (catId === "bushfire") {
     if ((appDate && appDate < "2025-04-05") || opts.bushfireUnpaidBefore2025) {
@@ -616,7 +616,7 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
         eligible: false,
         status: "manual_review",
         historicalRuleApplies: true,
-        labelKo: "수동 검토 필요 (LIN 25/048 산불 우편번호 확대는 2025.04.05 이후 신청분부터 적용 — 이전 신청·경과 규정 대상은 구 고시문 대조 필수)",
+        labelKo: "수동 검토 필요 (LIN 25/048 산불 우편번호 확대는 2025.04.05 이후 신청분부터 적용 · 이전 신청·경과 규정 대상은 구 고시문 대조 필수)",
         labelEn: "Manual review required (LIN 25/048 applies to applications made on or after 5 Apr 2025; check prior instrument / transitional rules)"
       };
     }
@@ -630,7 +630,7 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
         eligible: false,
         status: "manual_review",
         historicalRuleApplies: true,
-        labelKo: "수동 검토 필요 (LIN 25/048 자연재해 우편번호 확대는 2025.04.05 이후 신청분부터 적용 — 이전 신청분은 구 고시문 대조 필수)",
+        labelKo: "수동 검토 필요 (LIN 25/048 자연재해 우편번호 확대는 2025.04.05 이후 신청분부터 적용 · 이전 신청분은 구 고시문 대조 필수)",
         labelEn: "Manual review required (LIN 25/048 applies to applications made on or after 5 Apr 2025; check prior instrument)"
       };
     }
@@ -646,7 +646,7 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
           eligible: false,
           status: "manual_review",
           historicalRuleApplies: true,
-          labelKo: "수동 검토 필요 (2016.11.19~2021.06.21 북부 호주 Table 3 Subclass 462 관광·접객업 구 고시 적용 대상 — LIN 22/013 경과 규정 확인)",
+          labelKo: "수동 검토 필요 (2016.11.19~2021.06.21 북부 호주 Table 3 Subclass 462 관광·접객업 구 고시 적용 대상 · LIN 22/013 경과 규정 확인)",
           labelEn: "Manual review required (Pre-22 Jun 2021 Subclass 462 Northern Australia Table 3 tourism historical instrument rule)"
         };
       }
@@ -656,14 +656,14 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
         eligible: true,
         status: "eligible",
         areaSubkind: "table2_additional_tourism",
-        labelKo: "인정 (Table 2 관광·접객업 추가 지정 지역 우편번호 4406·4416·4498·7215 포함 — Table 1 외곽 호주와 별도 분류)",
-        labelEn: "Eligible (In Table 2 Additional Remote Tourism & Hospitality Area: 4406, 4416, 4498, 7215 — separate from Table 1 Remote)"
+        labelKo: "인정 (Table 2 관광·접객업 추가 지정 지역 우편번호 4406·4416·4498·7215 포함 · Table 1 외곽 호주와 별도 분류)",
+        labelEn: "Eligible (In Table 2 Additional Remote Tourism & Hospitality Area: 4406, 4416, 4498, 7215 · separate from Table 1 Remote)"
       };
     }
     const ok = pcEval.northern || pcEval.remote;
     return ok
       ? { eligible: true, status: "eligible", labelKo: "인정 (Table 3 북부 호주 또는 Table 1 외곽·극외곽 호주 포함)", labelEn: "Eligible (In Table 3 Northern or Table 1 Remote & Very Remote Australia)" }
-      : { eligible: false, status: "ineligible", labelKo: "불인정 (관광·접객업은 북부 호주 Table 3 및 외곽 Table 1·2 우편번호에서만 인정 — 일반 지방 불인정)", labelEn: "Ineligible (Tourism & hospitality requires Northern Table 3 or Remote Tables 1/2 postcode)" };
+      : { eligible: false, status: "ineligible", labelKo: "불인정 (관광·접객업은 북부 호주 Table 3 및 외곽 Table 1·2 우편번호에서만 인정 · 일반 지방 불인정)", labelEn: "Ineligible (Tourism & hospitality requires Northern Table 3 or Remote Tables 1/2 postcode)" };
   }
   if (catId === "mining") {
     if (subclass === "462") {
@@ -687,7 +687,7 @@ function evaluateCategoryForPostcode(subclass, catId, pcEval, opts = {}) {
   const ok = subclass === "462" ? (pcEval.northern || pcEval.regional) : pcEval.regional;
   return ok
     ? { eligible: true, status: "eligible", labelKo: "인정 (Table 4 지방 호주 / Table 3 북부 호주 우편번호 포함)", labelEn: "Eligible (In Table 4 Regional / Table 3 Northern Australia)" }
-    : { eligible: false, status: "ineligible", labelKo: "불인정 (Table 4 지방 호주 우편번호에 미포함 — 대도시권)", labelEn: "Not in Table 4 Regional Australia (Metro area)" };
+    : { eligible: false, status: "ineligible", labelKo: "불인정 (Table 4 지방 호주 우편번호에 미포함 · 대도시권)", labelEn: "Not in Table 4 Regional Australia (Metro area)" };
 }
 
 function renderPostcodeVerifier() {
@@ -735,8 +735,8 @@ function renderPostcodeVerifier() {
 
   const unallocatedWarningHtml = ev.unverifiedLocalityWarning ? `
     <div style="margin-bottom:12px;padding:10px 14px;border-radius:6px;background:#FEF6E7;border-left:4px solid #B8860B;font-size:13.2px;color:#6B4D00;">
-      <strong>${t(`주의 — 법령상 숫자 범위(0800–0999 등)에는 포함되나 미할당·비표준 우편번호(${pcStr}) 확인 필요:`, `Warning — Postcode ${pcStr} is inside the statutory numeric range but is not a standard allocated street postcode:`)}</strong>
-      ${t("법령 지역표는 NT 전역을 '0800 to 0999'로 표기하지만, 실제 노무 제공 사업장의 유효한 우편번호(Australia Post 공식 배정 구역)인지 급여명세서와 사업장 주소로 반드시 재확인하세요.", "Legislative tables list NT as '0800 to 0999', but you must verify that the physical workplace address corresponds to an actual allocated Australia Post locality.")}
+      <strong>${t(`주의 · 법령상 숫자 범위(0800–0999 등)에는 포함되나 미할당·비표준 우편번호(${pcStr}) 확인 필요:`, `Warning · Postcode ${pcStr} is inside the statutory numeric range but is not a standard allocated street postcode:`)}</strong>
+      ${t("법령 지역표는 NT 전역을 '0800 to 0999'로 표기하지만 실제 노무 제공 사업장의 유효한 우편번호(Australia Post 공식 배정 구역)인지 급여명세서와 사업장 주소로 반드시 재확인하세요.", "Legislative tables list NT as '0800 to 0999', but you must verify that the physical workplace address corresponds to an actual allocated Australia Post locality.")}
     </div>
   ` : "";
 
@@ -755,8 +755,8 @@ function renderPostcodeVerifier() {
     <div style="margin-bottom:12px;padding:10px 14px;border-radius:6px;background:${ev.northern ? '#EDF7F1' : '#F4EFE6'};border-left:4px solid ${ev.northern ? '#2E6B4F' : '#7A1F2B'};font-size:13.5px;">
       <strong>${t(`우편번호 ${pcStr} 조건 8547 (동일 고용주 6개월 제한) 판정:`, `Postcode ${pcStr} Condition 8547 (6-Month Work Limit) Status:`)}</strong>
       ${ev.northern
-        ? t("이 우편번호는 <strong>북부 호주(Northern Australia Table 3)</strong>에 해당하므로, 호주 전역 5대 핵심 산업(농축산·식품가공·보건·돌봄·보육·관광접객·재해복구)뿐만 아니라 <strong>건설업·광업·어업·임업</strong>에서도 사전 허가 없이 동일 고용주와 6개월 초과 근무가 <strong>자동 면제</strong>돼요!", "This postcode is in Northern Australia (Table 3): automatic 6-month exemption applies to Construction, Mining, Fishing & Forestry in addition to nationwide critical sectors!")
-        : t("이 우편번호는 북부 호주(Table 3)가 아니므로, <strong>호주 전역 면제 분야(농축산·식품가공·보건·노인/장애인돌봄·보육·관광접객·자연재해복구)</strong> 또는 <strong>근무 장소 변경(장소당 6개월 이하)</strong>에 해당해야 사전 허가 없이 6개월 초과 근무가 가능해요 (건설·광업은 북부 호주 외 지역에서 자동 면제 안 됨).", "Not in Northern Australia (Table 3): automatic 6-month exemption applies only to nationwide exempt sectors (Agri/Food, Health, Aged/Disability, Childcare, Tourism/Hospitality, Disaster Recovery) or when changing physical workplaces (≤6m each).")
+        ? t("이 우편번호는 <strong>북부 호주(Northern Australia Table 3)</strong>에 해당하므로 호주 전역 5대 핵심 산업(농축산·식품가공·보건·돌봄·보육·관광접객·재해복구)뿐만 아니라 <strong>건설업·광업·어업·임업</strong>에서도 사전 허가 없이 동일 고용주와 6개월 초과 근무가 <strong>자동 면제</strong>돼요!", "This postcode is in Northern Australia (Table 3): automatic 6-month exemption applies to Construction, Mining, Fishing & Forestry in addition to nationwide critical sectors!")
+        : t("이 우편번호는 북부 호주(Table 3)가 아니므로 <strong>호주 전역 면제 분야(농축산·식품가공·보건·노인/장애인돌봄·보육·관광접객·자연재해복구)</strong> 또는 <strong>근무 장소 변경(장소당 6개월 이하)</strong>에 해당해야 사전 허가 없이 6개월 초과 근무가 가능해요 (건설·광업은 북부 호주 외 지역에서 자동 면제 안 됨).", "Not in Northern Australia (Table 3): automatic 6-month exemption applies only to nationwide exempt sectors (Agri/Food, Health, Aged/Disability, Childcare, Tourism/Hospitality, Disaster Recovery) or when changing physical workplaces (≤6m each).")
       }
     </div>
     <div class="results-table-wrap">
@@ -764,8 +764,8 @@ function renderPostcodeVerifier() {
         <thead>
           <tr>
             <th style="width:28%;">${t("지정 근로 업종", "Specified Work Category")}</th>
-            <th style="width:36%;">${t(`우편번호 ${pcStr} — Subclass 417 판정`, `Postcode ${pcStr} — Subclass 417`)}</th>
-            <th style="width:36%;">${t(`우편번호 ${pcStr} — Subclass 462 판정`, `Postcode ${pcStr} — Subclass 462`)}</th>
+            <th style="width:36%;">${t(`우편번호 ${pcStr} · Subclass 417 판정`, `Postcode ${pcStr} · Subclass 417`)}</th>
+            <th style="width:36%;">${t(`우편번호 ${pcStr} · Subclass 462 판정`, `Postcode ${pcStr} · Subclass 462`)}</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -815,7 +815,7 @@ function renderEvidenceChecklist() {
   });
 }
 
-/**
+/*
  * Evaluate Subclass 462 1st-visa annual country cap & pre-application ballot rules.
  * Fixes W16 (T35, T36): 1st-visa caps/ballots apply ONLY when targetVisa === "first" and subclass === "462";
  * 2nd and 3rd WHM visa extensions are NEVER subject to annual caps or ballots.
@@ -914,7 +914,7 @@ function evaluateFirstVisaCapAndBallot(subclass, arg2, arg3) {
   };
 }
 
-/**
+/*
  * Evaluate stay period & location-at-grant rules under Sch 2 Part 417 & Part 462.
  * Fixes W09 (T19–T22) & W18 (T47):
  * - Subclass 417 stay period clauses: cl 417.511(1) [offshore], cl 417.511(2) [onshore non-WHM], cl 417.511(3) [onshore holding WHM]
@@ -937,7 +937,7 @@ function evaluateStayAndGrantRules(subclass, arg2, arg3) {
       workRightsWarning: false,
       clauseCite: cContinuous,
       cite: cContinuous,
-      stayRuleKo: `직전 WHM 비자 만료 예정일로부터 +12개월 연장 (1차 입국일로부터 총 24개월/36개월 연속 체류 보장 — 조기 신청해도 잔여기간 손실 없음, ${cContinuous})`,
+      stayRuleKo: `직전 WHM 비자 만료 예정일로부터 +12개월 연장 (1차 입국일로부터 총 24개월/36개월 연속 체류 보장 · 조기 신청해도 잔여기간 손실 없음, ${cContinuous})`,
       stayRuleEn: `+12 months added to the date the previous WHM visa would otherwise cease (total 24/36 months continuous stay from first entry; early application does not lose remaining time, ${cContinuous})`
     };
   }
@@ -1005,7 +1005,7 @@ function evaluateStayAndGrantRules(subclass, arg2, arg3) {
   };
 }
 
-/**
+/*
  * Evaluate Condition 8548 (4-month / 17-week study or training limitation).
  * Fixes W18 (T48): Distinguishes online/distance enrollment calculation vs workplace training induction.
  */
@@ -1339,7 +1339,7 @@ function evaluateSinglePeriod(p, subclass, targetVisa, opts = {}) {
   const completedFte = computeModeFte(completedNetDays, effectiveCountingMode, p.exactShiftsWorked, p.stdShiftsPerWeek);
   const futureFte = futureRawDays > 0 ? computeModeFte(futureRawDays, effectiveCountingMode, 0, p.stdShiftsPerWeek) : { roundedDays: 0 };
 
-  // W04 (T10, T11): Short shift handling — do NOT confirm days as green/countable unless nonShortShiftsConfirmed is provided
+  // W04 (T10, T11): Short shift handling · do NOT confirm days as green/countable unless nonShortShiftsConfirmed is provided
   if (p.shortShiftWarning) {
     if (typeof p.nonShortShiftsConfirmed === "number" && p.nonShortShiftsConfirmed >= 0) {
       const stdWeek = Math.max(1, Number(p.stdShiftsPerWeek) || 5);
@@ -1374,8 +1374,8 @@ function evaluateSinglePeriod(p, subclass, targetVisa, opts = {}) {
       hasExactDailyDates: false,
       validDatesSet: new Set(),
       statusClass: "warn",
-      msgKo: `수동 확인 필요 (미검증 ${completedFte.roundedDays}일 보류 — PAM3 단시간 근무 주의): 해당 산업의 일일 표준 근로시간에 미달하는 단시간 근무일(Short shifts)은 1일로 산입하거나 여러 날을 합산할 수 없어요(PAM3 s 4.5.3). 표준 시간을 충족한 실제 근무일수를 먼저 분리·확인해야 해요.`,
-      msgEn: `Manual verification required (${completedFte.roundedDays} unverified days held — PAM3 Short Shift Rule): Shifts shorter than the industry standard daily hours cannot be counted as a full day or combined across days (PAM3 s 4.5.3).`
+      msgKo: `수동 확인 필요 (미검증 ${completedFte.roundedDays}일 보류 · PAM3 단시간 근무 주의): 해당 산업의 일일 표준 근로시간에 미달하는 단시간 근무일(Short shifts)은 1일로 산입하거나 여러 날을 합산할 수 없어요(PAM3 s 4.5.3). 표준 시간을 충족한 실제 근무일수를 먼저 분리·확인해야 해요.`,
+      msgEn: `Manual verification required (${completedFte.roundedDays} unverified days held · PAM3 Short Shift Rule): Shifts shorter than the industry standard daily hours cannot be counted as a full day or combined across days (PAM3 s 4.5.3).`
     };
   }
 
@@ -1452,7 +1452,7 @@ function evaluateSinglePeriod(p, subclass, targetVisa, opts = {}) {
   };
 }
 
-/**
+/*
  * Portfolio-level evaluator across multiple work periods + statutory gates.
  * Fixes W02 (T03–T06), W03 (T08–T09), W04 (T10–T11), W05 (T07), W07 (T14–T15), W08 (T16–T18), W09 (T19–T22), W16 (T35–T36).
  */
@@ -1666,11 +1666,11 @@ function renderPeriodsList() {
             <label class="filter-label">${t("PAM3 근로 형태 및 일수 산정 방식", "PAM3 Work Pattern & Counting Basis")}</label>
             <select class="filter-select p-field" data-id="${p.id}" data-field="countingMode">
               <option value="fulltime" ${p.countingMode === "fulltime" ? "selected" : ""}>${t("풀타임 / 산업 표준 교대근무 (주 5일+ · 주말/휴무일 포함 달력 전체 산입)", "Full-time / Standard cyclical roster (counts weekends & rest days)")}</option>
-              <option value="piecework" ${p.countingMode === "piecework" ? "selected" : ""}>${t("적법 성과급제 (Piecework Agreement — 주 5일+ 풀타임 상당 근무)", "Lawful Piecework Agreement (Full-time equivalent week)")}</option>
-              <option value="parttime_4" ${p.countingMode === "parttime_4" ? "selected" : ""}>${t("파트타임·캐주얼 — 주 4일 표준 근무 (풀타임의 80% 비례 산입)", "Part-time / Casual — 4 standard days/week (80% proportional)")}</option>
-              <option value="parttime_3" ${p.countingMode === "parttime_3" ? "selected" : ""}>${t("파트타임·캐주얼 — 주 3일 표준 근무 (풀타임의 60% 비례 산입)", "Part-time / Casual — 3 standard days/week (60% proportional)")}</option>
-              <option value="parttime_2" ${p.countingMode === "parttime_2" ? "selected" : ""}>${t("파트타임·캐주얼 — 주 2일 표준 근무 (풀타임의 40% 비례 산입)", "Part-time / Casual — 2 standard days/week (40% proportional)")}</option>
-              <option value="exact_shifts" ${p.countingMode === "exact_shifts" ? "selected" : ""}>${t("파트타임·캐주얼 — 실제 출근한 표준 근무일수(Shifts) 직접 입력", "Part-time / Casual — Enter exact full standard shifts worked")}</option>
+              <option value="piecework" ${p.countingMode === "piecework" ? "selected" : ""}>${t("적법 성과급제 (Piecework Agreement · 주 5일+ 풀타임 상당 근무)", "Lawful Piecework Agreement (Full-time equivalent week)")}</option>
+              <option value="parttime_4" ${p.countingMode === "parttime_4" ? "selected" : ""}>${t("파트타임·캐주얼 · 주 4일 표준 근무 (풀타임의 80% 비례 산입)", "Part-time / Casual · 4 standard days/week (80% proportional)")}</option>
+              <option value="parttime_3" ${p.countingMode === "parttime_3" ? "selected" : ""}>${t("파트타임·캐주얼 · 주 3일 표준 근무 (풀타임의 60% 비례 산입)", "Part-time / Casual · 3 standard days/week (60% proportional)")}</option>
+              <option value="parttime_2" ${p.countingMode === "parttime_2" ? "selected" : ""}>${t("파트타임·캐주얼 · 주 2일 표준 근무 (풀타임의 40% 비례 산입)", "Part-time / Casual · 2 standard days/week (40% proportional)")}</option>
+              <option value="exact_shifts" ${p.countingMode === "exact_shifts" ? "selected" : ""}>${t("파트타임·캐주얼 · 실제 출근한 표준 근무일수(Shifts) 직접 입력", "Part-time / Casual · Enter exact full standard shifts worked")}</option>
             </select>
           </div>
 
@@ -1861,7 +1861,7 @@ function renderCalculatorSummary() {
     }
     if (hasAmbiguousOverlap) {
       hasReviewWarning = true;
-      blockersKo.push("중복 달력 기간 내 파트타임·교대근무 실제 출근일 미확인: 두 개 이상의 근무 기간이 달력상 겹치면서 정확한 일별 출근 날짜(Shift dates)가 입력되지 않아 중복 여부를 확정할 수 없어요. 실제 출근 날짜 기록표를 통해 중복되지 않은 근무일을 먼저 확인해 주세요.");
+      blockersKo.push("중복 달력 기간 내 파트타임·교대근무 실제 출근일 미확인: 두 개 이상의 근무 기간이 달력상 겹치면서 정확한 일별 출근 날짜(Shift dates)가 입력되지 않아 중복 여부를 확정할 수 없어요. 실제 출근 날짜 기록표로 중복되지 않은 근무일을 먼저 확인해 주세요.");
       blockersEn.push("Overlapping calendar periods with aggregate shift/part-time counts: Exact daily shift dates are required to verify non-overlapping days across concurrent jobs.");
     }
     if (totalUnverifiedDays > 0) {
@@ -1883,7 +1883,7 @@ function renderCalculatorSummary() {
   if (hasHardFailure) {
     verdictClass = "badge-danger";
     verdictTitleKo = "법정 필수 요건 미충족 항목 발견 (확인 필수)";
-    verdictTitleEn = "Statutory Blocker Detected — Review Required";
+    verdictTitleEn = "Statutory Blocker Detected · Review Required";
   } else if (hasReviewWarning || blockersKo.length > 0) {
     verdictClass = "badge-warning";
     verdictTitleKo = "추가 일수 확보 또는 수동 증빙 검토 필요";
@@ -2050,7 +2050,7 @@ function evaluateCondition8547(input = {}) {
   // T49: Visa expiry hard stop check
   if (visaExpiryDate && assessmentDate && visaExpiryDate < assessmentDate) {
     reasonsKo.push(`<strong>비자 만료(${visaExpiryDate})에 따른 취업권 소멸 주의:</strong> 조건 8547 면제나 서면 허가는 유효한 비자(또는 취업 가능 브리징 비자)가 존속하는 범위 내에서만 적용되며, 비자 자체의 유효기간을 연장하거나 만료된 비자에 취업권을 부여하지 않아요.`);
-    reasonsEn.push(`<strong>Visa Expired (${visaExpiryDate}) — No Work Authority:</strong> Condition 8547 exemptions or permissions never extend the underlying visa expiry date or authorize work after a visa ceases.`);
+    reasonsEn.push(`<strong>Visa Expired (${visaExpiryDate}) · No Work Authority:</strong> Condition 8547 exemptions or permissions never extend the underlying visa expiry date or authorize work after a visa ceases.`);
     return {
       status: "not_met_visa_expired",
       badgeClass: "badge-danger",
@@ -2074,11 +2074,11 @@ function evaluateCondition8547(input = {}) {
   if (northernSectors.includes(sector)) {
     if (pcEval.valid && pcEval.northern) {
       isAutoExempt = true;
-      reasonsKo.push(`<strong>북부 호주(Northern Australia Table 3) 4대 산업 자동 면제 해당:</strong> 입력하신 우편번호(${pcStr})가 북부 호주(Table 3)에 속하므로, 건설·광업·어업·임업 분야에서 사전 허가 없이 동일 고용주와 6개월 초과 근무가 자동 면제돼요.`);
+      reasonsKo.push(`<strong>북부 호주(Northern Australia Table 3) 4대 산업 자동 면제 해당:</strong> 입력하신 우편번호(${pcStr})가 북부 호주(Table 3)에 속하므로 건설·광업·어업·임업 분야에서 사전 허가 없이 동일 고용주와 6개월 초과 근무가 자동 면제돼요.`);
       reasonsEn.push(`<strong>Northern Australia Automatic Exemption Applies:</strong> Postcode ${pcStr} is in Northern Australia (Table 3), so work in Construction, Mining, Fishing or Forestry is automatically exempt beyond 6 months.`);
     } else {
-      reasonsKo.push(`<strong>주의 — 북부 호주 우편번호 불일치:</strong> 건설·광업·어업·임업의 6개월 자동 면제는 <strong>북부 호주(Table 3) 우편번호</strong>에서만 적용돼요. 입력하신 우편번호(${pcStr || "미입력"})는 북부 호주에 속하지 않으므로 업종 자동 면제가 적용되지 않아요!`);
-      reasonsEn.push(`<strong>Warning — Not in Northern Australia (Table 3):</strong> Construction, Mining, Fishing and Forestry are only automatically exempt in Northern Australia Table 3 postcodes.`);
+      reasonsKo.push(`<strong>주의 · 북부 호주 우편번호 불일치:</strong> 건설·광업·어업·임업의 6개월 자동 면제는 <strong>북부 호주(Table 3) 우편번호</strong>에서만 적용돼요. 입력하신 우편번호(${pcStr || "미입력"})는 북부 호주에 속하지 않으므로 업종 자동 면제가 적용되지 않아요!`);
+      reasonsEn.push(`<strong>Warning · Not in Northern Australia (Table 3):</strong> Construction, Mining, Fishing and Forestry are only automatically exempt in Northern Australia Table 3 postcodes.`);
     }
   }
 
@@ -2112,7 +2112,7 @@ function evaluateCondition8547(input = {}) {
   // W10 (T23–T27): Separate Visa Clock Reset Engine (NEVER conflated with automatic sector exemption!)
   if (visaReset) {
     if (resetEventType === "bva_granted_not_in_effect") {
-      reasonsKo.push("<strong>주의 — 브리징 비자 미발효 시 시계 리셋 불가 (PAM3 s 3.4.1):</strong> 브리징 비자가 승인(Grant)되었더라도 기존 WHM 비자가 만료되어 브리징 비자가 실제로 발효(In effect)되기 전에는 6개월 시계가 리셋되지 않아요!");
+      reasonsKo.push("<strong>주의 · 브리징 비자 미발효 시 시계 리셋 불가 (PAM3 s 3.4.1):</strong> 브리징 비자가 승인(Grant)되었더라도 기존 WHM 비자가 만료되어 브리징 비자가 실제로 발효(In effect)되기 전에는 6개월 시계가 리셋되지 않아요!");
       reasonsEn.push("<strong>Clock Does Not Reset Until Bridging Visa Comes Into Effect (PAM3 s 3.4.1):</strong> Grant of a Bridging Visa alone does not reset the 6-month limit while your primary WHM visa remains in effect.");
       return {
         status: "not_met_bva_not_in_effect",
@@ -2128,8 +2128,8 @@ function evaluateCondition8547(input = {}) {
       };
     }
     if (resetEventType === "bva_in_effect_8547_unknown") {
-      reasonsKo.push("<strong>수동 확인 필요 — 브리징 비자 부과 조건(Condition 8547 유무) 확인 필수:</strong> 발효된 브리징 비자의 승인 통지서(VEVO)에서 조건 8547 부과 여부 및 취업 제한 조건을 먼저 확인해야 해요.");
-      reasonsEn.push("<strong>Manual Review Required — Check Bridging Visa Conditions in VEVO:</strong> Verify whether Condition 8547 applies to your Bridging Visa now in effect.");
+      reasonsKo.push("<strong>수동 확인 필요 · 브리징 비자 부과 조건(Condition 8547 유무) 확인 필수:</strong> 발효된 브리징 비자의 승인 통지서(VEVO)에서 조건 8547 부과 여부 및 취업 제한 조건을 먼저 확인해야 해요.");
+      reasonsEn.push("<strong>Manual Review Required · Check Bridging Visa Conditions in VEVO:</strong> Verify whether Condition 8547 applies to your Bridging Visa now in effect.");
       return {
         status: "manual_review_bva_condition_unknown",
         badgeClass: "badge-warning",
@@ -2161,7 +2161,7 @@ function evaluateCondition8547(input = {}) {
     }
     // Both resetDate and valid resetEventType provided (T24, T27)
     if (assessmentDate && resetExpiryStr && assessmentDate > resetExpiryStr) {
-      reasonsKo.push(`<strong>주의 — 리셋 후 새로운 6개월 기한(${resetExpiryStr})도 이미 도과됨:</strong> 리셋 기산일(${resetDate})로부터 새로 시작된 6개월 시계가 판정 기준일(${assessmentDate}) 현재 이미 만료되었어요!`);
+      reasonsKo.push(`<strong>주의 · 리셋 후 새로운 6개월 기한(${resetExpiryStr})도 이미 도과됨:</strong> 리셋 기산일(${resetDate})로부터 새로 시작된 6개월 시계가 판정 기준일(${assessmentDate}) 현재 이미 만료되었어요!`);
       reasonsEn.push(`<strong>Expired After Reset:</strong> The new 6-month period starting on ${resetDate} ended on ${resetExpiryStr} (before the assessment date ${assessmentDate}).`);
       return {
         status: "not_met_reset_clock_expired",
@@ -2194,8 +2194,8 @@ function evaluateCondition8547(input = {}) {
 
   // W11 (T28): Workers compensation period requires manual review, NOT unconditional green auto-exempt
   if (workersComp) {
-    reasonsKo.push("<strong>수동 검토 필요 — 산재보상 급여(Workers Compensation) 수령 기간 확인 (PAM3 [Sch8/8547] s 3.2.4):</strong> 산재보상 수령 기간으로 인해 6개월을 넘긴 경우 해당 수령 기간과 실제 노무 제공 기간을 구분하여 증빙 서류로 소명해야 하므로 수동 검토가 필요해요.");
-    reasonsEn.push("<strong>Manual Review Required — Workers Compensation Period (PAM3 [Sch8/8547] s 3.2.4):</strong> Requires verifying the exact period of receiving workers compensation payments versus active work.");
+    reasonsKo.push("<strong>수동 검토 필요 · 산재보상 급여(Workers Compensation) 수령 기간 확인 (PAM3 [Sch8/8547] s 3.2.4):</strong> 산재보상 수령 기간으로 인해 6개월을 넘긴 경우 해당 수령 기간과 실제 노무 제공 기간을 구분하여 증빙 서류로 소명해야 하므로 수동 검토가 필요해요.");
+    reasonsEn.push("<strong>Manual Review Required · Workers Compensation Period (PAM3 [Sch8/8547] s 3.2.4):</strong> Requires verifying the exact period of receiving workers compensation payments versus active work.");
     return {
       status: "manual_review_workers_comp",
       badgeClass: "badge-warning",
@@ -2229,8 +2229,8 @@ function evaluateCondition8547(input = {}) {
   }
 
   if (permissionStatus === "submitted_before_expiry_pending") {
-    reasonsKo.push(`<strong>만료일(${sixMonthDateStr}) 이전 서면 허가 신청 접수 완료 — 결정 대기 중 임시 근무 허용:</strong> 자동 면제는 아니나, 6개월 만료일 이전에 신청서를 제출했으므로 호주 연방 이민성의 서면 결정이 나올 때까지 임시로 계속 근무할 수 있어요.`);
-    reasonsEn.push(`<strong>Written Permission Submitted BEFORE ${sixMonthDateStr} — Interim Work Allowed Pending Decision:</strong> Not an automatic exemption, but because you lodged before expiry, you may continue working until Home Affairs issues a written decision.`);
+    reasonsKo.push(`<strong>만료일(${sixMonthDateStr}) 이전 서면 허가 신청 접수 완료 · 결정 대기 중 임시 근무 허용:</strong> 자동 면제는 아니나, 6개월 만료일 이전에 신청서를 제출했으므로 호주 연방 이민성의 서면 결정이 나올 때까지 임시로 계속 근무할 수 있어요.`);
+    reasonsEn.push(`<strong>Written Permission Submitted BEFORE ${sixMonthDateStr} · Interim Work Allowed Pending Decision:</strong> Not an automatic exemption, but because you lodged before expiry, you may continue working until Home Affairs issues a written decision.`);
     return {
       status: "interim_work_allowed_pending_decision",
       badgeClass: "badge-warning",
@@ -2246,8 +2246,8 @@ function evaluateCondition8547(input = {}) {
   }
 
   if (permissionStatus === "submitted_after_expiry_pending") {
-    reasonsKo.push(`<strong>경고 — 6개월 만료일(${sixMonthDateStr}) 이후 서면 허가 신청 (즉시 근무 중단 필수!):</strong> 만료일이 지난 뒤에 허가를 신청한 경우에는 호주 연방 이민성으로부터 서면 승인 통지를 받을 때까지 <strong>절대 계속 근무할 수 없으며 즉시 업무를 중단</strong>해야 해요!`);
-    reasonsEn.push(`<strong>CRITICAL — Permission Submitted AFTER ${sixMonthDateStr} (Must Stop Work Immediately!):</strong> Because the request was submitted after the 6-month limit expired, you MUST stop working immediately and wait for written approval.`);
+    reasonsKo.push(`<strong>경고 · 6개월 만료일(${sixMonthDateStr}) 이후 서면 허가 신청 (즉시 근무 중단 필수!):</strong> 만료일이 지난 뒤에 허가를 신청한 경우에는 호주 연방 이민성으로부터 서면 승인 통지를 받을 때까지 <strong>절대 계속 근무할 수 없으며 즉시 업무를 중단</strong>해야 해요!`);
+    reasonsEn.push(`<strong>CRITICAL · Permission Submitted AFTER ${sixMonthDateStr} (Must Stop Work Immediately!):</strong> Because the request was submitted after the 6-month limit expired, you MUST stop working immediately and wait for written approval.`);
     return {
       status: "stop_work_until_approved",
       badgeClass: "badge-danger",
@@ -2264,7 +2264,7 @@ function evaluateCondition8547(input = {}) {
 
   if (permGrounds) {
     if (assessmentDate && sixMonthDateStr !== "-" && assessmentDate > sixMonthDateStr) {
-      reasonsKo.push(`<strong>주의 — 6개월 만료일(${sixMonthDateStr}) 도과 및 미신청 상태:</strong> 허가 신청 사유가 있더라도 이미 6개월 만료일이 지났으므로 즉시 근무를 중단하고 서면 승인을 받아야 해요.`);
+      reasonsKo.push(`<strong>주의 · 6개월 만료일(${sixMonthDateStr}) 도과 및 미신청 상태:</strong> 허가 신청 사유가 있더라도 이미 6개월 만료일이 지났으므로 즉시 근무를 중단하고 서면 승인을 받아야 해요.`);
       reasonsEn.push(`<strong>6-Month Limit (${sixMonthDateStr}) Already Passed Without Prior Submission:</strong> You must stop working immediately until written permission is granted.`);
       return {
         status: "stop_work_expired_unsubmitted",
@@ -2356,9 +2356,9 @@ function renderCondition8547Simulator() {
   } = res;
 
   let badgeLabelKo = "6개월 근무 제한 적용 (조치 필요)";
-  let badgeLabelEn = "6-Month Limit Applies — Action Required";
-  let headingKo = `자동 면제 사유가 확인되지 않았어요 — ${activeCutoffDate}까지만 근무 가능해요`;
-  let headingEn = `No Automatic Exemption Identified — 6-Month Limit Ends on ${activeCutoffDate}`;
+  let badgeLabelEn = "6-Month Limit Applies · Action Required";
+  let headingKo = `자동 면제 사유가 확인되지 않았어요 · ${activeCutoffDate}까지만 근무 가능해요`;
+  let headingEn = `No Automatic Exemption Identified · 6-Month Limit Ends on ${activeCutoffDate}`;
 
   if (status === "auto_exempt") {
     badgeLabelKo = "사전 허가 불필요 (자동 면제 해당)";
@@ -2369,7 +2369,7 @@ function renderCondition8547Simulator() {
     badgeLabelKo = "신규 6개월 시계 리셋 적용 중";
     badgeLabelEn = "New 6-Month Clock Reset Active";
     headingKo = `리셋 기산일(${resetDate}) 기준 새 6개월 만료일은 ${activeCutoffDate}이에요`;
-    headingEn = `Clock Reset on ${resetDate} — New 6-Month Limit Runs Until ${activeCutoffDate}`;
+    headingEn = `Clock Reset on ${resetDate} · New 6-Month Limit Runs Until ${activeCutoffDate}`;
   } else if (status === "permission_approved") {
     badgeLabelKo = "서면 연장 허가 승인 완료";
     badgeLabelEn = "Written Permission Approved";
@@ -2395,10 +2395,10 @@ function renderCondition8547Simulator() {
     badgeLabelEn = "Stop Work Immediately / Limit Expired";
     headingKo = status === "not_met_visa_expired"
       ? `비자 만료(${visaExpiryDate})로 인해 취업권이 종료되었어요`
-      : `6개월 제한 기한(${activeCutoffDate})이 만료되었어요 — 서면 승인 전 근무 불가!`;
+      : `6개월 제한 기한(${activeCutoffDate})이 만료되었어요 · 서면 승인 전 근무 불가!`;
     headingEn = status === "not_met_visa_expired"
-      ? `Visa Expired on ${visaExpiryDate} — Work Rights Ceased`
-      : `6-Month Limit (${activeCutoffDate}) Expired — Must Stop Working!`;
+      ? `Visa Expired on ${visaExpiryDate} · Work Rights Ceased`
+      : `6-Month Limit (${activeCutoffDate}) Expired · Must Stop Working!`;
   }
 
   const statusBadge = `<span class="badge ${badgeClass}">${t(badgeLabelKo, badgeLabelEn)}</span>`;
@@ -2570,20 +2570,20 @@ function renderRightsSourcesAndFootnotes() {
         <h4 style="color:#1A4731;">${t("✓ 워킹홀리데이(417 · 462) 비자 소지자의 핵심 권리", "✓ Key Rights on a Working Holiday Maker (417 / 462) Visa")}</h4>
         <ul style="margin:8px 0 0 18px;padding:0;font-size:13.8px;line-height:1.65;color:#2E2E2E;">
           <li>${t("<strong>모든 직종 근무 가능:</strong> 조건 8547(동일 고용주 6개월 제한 및 면제 규정)을 준수하는 한 호주 내 어떤 직종·고용 형태(풀타임·파트타임·캐주얼)로도 일할 수 있어요.", "<strong>Work in any occupation:</strong> Subject to Condition 8547, you can work full-time, part-time, or casual in any industry.")}</li>
-          <li>${t("<strong>호주 공정근로법(Fair Work Act) 동일 보호:</strong> 내국인과 동일한 법정 최저임금, 캐주얼 로딩(최소 25%), 피스레이트 최저시급 보장, 그리고 퇴직연금(Superannuation — 출국 시 DASP 환급 신청 가능)을 받을 권리가 있어요.", "<strong>Full Fair Work workplace protections:</strong> Entitled to national minimum wage, 25% casual loading, piecework minimum wage guarantee, and Superannuation (DASP claimable upon departure).")}</li>
-          <li>${t("<strong>다중 고용주 합산 및 조기 연장 신청 불이익 없음:</strong> 여러 고용주 밑에서 일한 지정 근로를 합산해 88일/179일을 채울 수 있으며, 호주 내에서 현 비자 보유 중 2·3차 비자를 조기 신청·승인받아도 기존 비자 잔여 기간을 잃지 않고 연속 24개월/36개월 체류가 보장돼요(cl 417.513 / 462.513).", "<strong>Combine multiple employers & early lodge protection:</strong> Combine eligible work across multiple employers, and lodge onshore early without losing remaining stay period (cl 417.513 / 462.513).")}</li>
+          <li>${t("<strong>호주 공정근로법(Fair Work Act) 동일 보호:</strong> 내국인과 동일한 법정 최저임금, 캐주얼 로딩(최소 25%), 피스레이트 최저시급 보장, 그리고 퇴직연금(Superannuation · 출국 시 DASP 환급 신청 가능)을 받을 권리가 있어요.", "<strong>Full Fair Work workplace protections:</strong> Entitled to national minimum wage, 25% casual loading, piecework minimum wage guarantee, and Superannuation (DASP claimable upon departure).")}</li>
+          <li>${t("<strong>다중 고용주 합산 및 조기 연장 신청 불이익 없음:</strong> 여러 고용주 밑에서 일한 지정 근로를 합산해 88일/179일을 채울 수 있으며 호주 내에서 현 비자 보유 중 2·3차 비자를 조기 신청·승인받아도 기존 비자 잔여 기간을 잃지 않고 연속 24개월/36개월 체류가 보장돼요(cl 417.513 / 462.513).", "<strong>Combine multiple employers & early lodge protection:</strong> Combine eligible work across multiple employers, and lodge onshore early without losing remaining stay period (cl 417.513 / 462.513).")}</li>
           <li>${t("<strong>최대 4개월(17주) 학업·직무훈련 허용 (Condition 8548):</strong> 각 비자당 최대 4개월까지 어학연수나 단기 과정을 수강할 수 있어요.", "<strong>Up to 4 months (17 weeks) study or training (Condition 8548):</strong> Allowed on each WHM visa.")}</li>
         </ul>
       </article>
       <article class="rule8547-card" style="border-top:4px solid #9B1C1C;">
         <h4 style="color:#771D1D;">${t("✗ 비자 거절 · 취소(s 116)로 이어지는 6대 치명적 함정", "✗ 6 Critical Traps Leading to Visa Refusal or Cancellation (s 116)")}</h4>
         <ul style="margin:8px 0 0 18px;padding:0;font-size:13.8px;line-height:1.65;color:#2E2E2E;">
-          <li>${t("<strong>함정 1 — 462 광업·어업·임업 우편번호 착오:</strong> Subclass 462에서 광업(Mining)을 지정 근로로 계산하거나, 남부 지방(NSW·VIC·SA·TAS·남부 WA)에서의 어업·임업을 462 지정 근로로 오인하는 경우 (462 어업·임업은 북부 호주 Table 3 전용!).", "<strong>Trap 1 — Subclass 462 Mining/Fishing/Forestry mismatch:</strong> Mining never counts for 462, and Fishing/Forestry for 462 count ONLY in Northern Australia (Table 3).")}</li>
-          <li>${t("<strong>함정 2 — 관광·접객업(Tourism & Hospitality) 일반 지방 오인:</strong> 관광·접객업은 북부 호주(Table 3) 또는 외곽·극외곽 호주(Table 1·2) 우편번호에서만 지정 근로로 인정돼요. 일반 지방(Table 4, 예: 바이런베이·골드코스트·일반 지방 도시) 카페·호텔 근무는 지정 근로로 산입되지 않아요! (단, 조건 8547 6개월 면제는 호주 전역 적용)", "<strong>Trap 2 — Tourism & Hospitality in standard regional areas:</strong> For 88/179-day specified work, Tourism & Hospitality is restricted to Northern or Remote/Very Remote postcodes (Tables 1–3), NOT all of Regional Australia (Table 4).")}</li>
-          <li>${t("<strong>함정 3 — 투잡 동일 날짜 중복 계산 & 무급 기상악화 미차감:</strong> 하루에 두 곳에서 일해도 하루는 최대 1일로만 산입되며, 피스레이트·캐주얼 계약 중 폭우·악천후로 일하지 못한 무급 휴업일(Petra 사례)을 88일에서 빼지 않고 신청했다가 일수 부족으로 거절되는 사례.", "<strong>Trap 3 — Double-counting overlapping days or unpaid weather days:</strong> One calendar day can never count as >1 day, and unpaid severe weather days do not count (Petra example).")}</li>
-          <li>${t("<strong>함정 4 — 학생비자 브리징(Ingrid 사례) 중 수행한 근로 산입:</strong> 1차 WHM 만료 후 학생비자(500) 체류 중이거나 학생비자에서 2차 WHM을 신청해 나온 브리징 비자 상태에서 한 근로는 3차 비자용 지정 근로로 절대 인정되지 않아요.", "<strong>Trap 4 — Working on a Student visa or non-WHM Bridging Visa (Ingrid trap):</strong> Work done while holding a Student visa or a BVA from a Student visa never counts toward a 3rd WHM visa.")}</li>
-          <li>${t("<strong>함정 5 — 인력파견업체(Agency) 변경을 통한 6개월 제한 우회 시도:</strong> 파견업체만 바꾸고 동일한 최종 사업장(End-user)의 같은 장소에서 6개월을 넘겨 일하면 조건 8547 위반이에요.", "<strong>Trap 5 — Switching labour-hire agencies at the same end-user:</strong> Condition 8547 looks at the end-user business and physical workplace, not the payroll agency.")}</li>
-          <li>${t("<strong>함정 6 — 워킹홀리데이 승인 후 관광비자(eVisitor 651 · Visitor 600 vs ETA 601) 신청 시 주의 (PAM3 VM-3182 s 4.9.1):</strong> WHM 비자가 승인된 뒤 <strong>eVisitor(651) 또는 Visitor(600)</strong> 비자를 신청해 승인받으면 이민법 s 82에 의해 기존 WHM 비자와 취업권이 즉시 소멸해요! 반면 <strong>ETA(601)</strong>는 기존 WHM 비자를 소멸시키지 않고 병존(Concurrent)하다가 WHM 만료 시점에 발효돼요.", "<strong>Trap 6 — Applying for a Visitor visa after WHM grant (eVisitor 651 / Visitor 600 vs ETA 601 — PAM3 s 4.9.1):</strong> Grant of an <strong>eVisitor (651) or Visitor (600)</strong> visa ceases your WHM visa under s 82 of the Migration Act. By contrast, an <strong>ETA (601)</strong> runs concurrently until the WHM expires and takes effect thereafter without ceasing the WHM visa.")}</li>
+          <li>${t("<strong>함정 1 · 462 광업·어업·임업 우편번호 착오:</strong> Subclass 462에서 광업(Mining)을 지정 근로로 계산하거나 남부 지방(NSW·VIC·SA·TAS·남부 WA)에서의 어업·임업을 462 지정 근로로 오인하는 경우 (462 어업·임업은 북부 호주 Table 3 전용!).", "<strong>Trap 1 · Subclass 462 Mining/Fishing/Forestry mismatch:</strong> Mining never counts for 462, and Fishing/Forestry for 462 count ONLY in Northern Australia (Table 3).")}</li>
+          <li>${t("<strong>함정 2 · 관광·접객업(Tourism & Hospitality) 일반 지방 오인:</strong> 관광·접객업은 북부 호주(Table 3) 또는 외곽·극외곽 호주(Table 1·2) 우편번호에서만 지정 근로로 인정돼요. 일반 지방(Table 4, 예: 바이런베이·골드코스트·일반 지방 도시) 카페·호텔 근무는 지정 근로로 산입되지 않아요! (단, 조건 8547 6개월 면제는 호주 전역 적용)", "<strong>Trap 2 · Tourism & Hospitality in standard regional areas:</strong> For 88/179-day specified work, Tourism & Hospitality is restricted to Northern or Remote/Very Remote postcodes (Tables 1–3), NOT all of Regional Australia (Table 4).")}</li>
+          <li>${t("<strong>함정 3 · 투잡 동일 날짜 중복 계산 & 무급 기상악화 미차감:</strong> 하루에 두 곳에서 일해도 하루는 최대 1일로만 산입되며, 피스레이트·캐주얼 계약 중 폭우·악천후로 일하지 못한 무급 휴업일(Petra 사례)을 88일에서 빼지 않고 신청했다가 일수 부족으로 거절되는 사례.", "<strong>Trap 3 · Double-counting overlapping days or unpaid weather days:</strong> One calendar day can never count as >1 day, and unpaid severe weather days do not count (Petra example).")}</li>
+          <li>${t("<strong>함정 4 · 학생비자 브리징(Ingrid 사례) 중 수행한 근로 산입:</strong> 1차 WHM 만료 후 학생비자(500) 체류 중이거나 학생비자에서 2차 WHM을 신청해 나온 브리징 비자 상태에서 한 근로는 3차 비자용 지정 근로로 절대 인정되지 않아요.", "<strong>Trap 4 · Working on a Student visa or non-WHM Bridging Visa (Ingrid trap):</strong> Work done while holding a Student visa or a BVA from a Student visa never counts toward a 3rd WHM visa.")}</li>
+          <li>${t("<strong>함정 5 · 인력파견업체(Agency) 변경으로 6개월 제한을 우회하려는 시도:</strong> 파견업체만 바꾸고 동일한 최종 사업장(End-user)의 같은 장소에서 6개월을 넘겨 일하면 조건 8547 위반이에요.", "<strong>Trap 5 · Switching labour-hire agencies at the same end-user:</strong> Condition 8547 looks at the end-user business and physical workplace, not the payroll agency.")}</li>
+          <li>${t("<strong>함정 6 · 워킹홀리데이 승인 후 관광비자(eVisitor 651 · Visitor 600 vs ETA 601) 신청 시 주의 (PAM3 VM-3182 s 4.9.1):</strong> WHM 비자가 승인된 뒤 <strong>eVisitor(651) 또는 Visitor(600)</strong> 비자를 신청해 승인받으면 이민법 s 82에 의해 기존 WHM 비자와 취업권이 즉시 소멸해요! 반면 <strong>ETA(601)</strong>는 기존 WHM 비자를 소멸시키지 않고 병존(Concurrent)하다가 WHM 만료 시점에 발효돼요.", "<strong>Trap 6 · Applying for a Visitor visa after WHM grant (eVisitor 651 / Visitor 600 vs ETA 601 · PAM3 s 4.9.1):</strong> Grant of an <strong>eVisitor (651) or Visitor (600)</strong> visa ceases your WHM visa under s 82 of the Migration Act. By contrast, an <strong>ETA (601)</strong> runs concurrently until the WHM expires and takes effect thereafter without ceasing the WHM visa.")}</li>
         </ul>
       </article>
     `;
@@ -2600,31 +2600,31 @@ function renderRightsSourcesAndFootnotes() {
 
     mrEl.innerHTML = `
       <article class="rule8547-card">
-        <h4>${t("Poller 정기 감시 ① — 6대 지정 지역 우편번호표 (LIN 22/012 · 22/013 · 25/048)", "Primary-Source Monitor ① — 6 Designated Area Postcode Tables")}</h4>
+        <h4>${t("Poller 정기 감시 ① · 6대 지정 지역 우편번호표 (LIN 22/012 · 22/013 · 25/048)", "Primary-Source Monitor ① · 6 Designated Area Postcode Tables")}</h4>
         <p>${t(
           `호주 연방 이민성 <code>PageSchemaHiddenField</code> JSON 및 연방 법제처 고시문을 대조해 산불·홍수 등 신규 재해 선포 우편번호 추가를 자동 감지해요.<br/>• <strong>현행 검증 수량:</strong> 지방(Table 4) <strong>${pcCounts.regional}개</strong> · 북부(Table 3) <strong>${pcCounts.northern}개</strong> · 외곽(Table 1) <strong>${pcCounts.remote}개</strong> · 관광특례(Table 2) <strong>${pcCounts.additional_tourism || 4}개</strong> · 산불(Table 5) <strong>${pcCounts.bushfire}개</strong> · 자연재해(Table 6) <strong>${pcCounts.disaster}개</strong>`,
           `Automatically parses Home Affairs <code>PageSchemaHiddenField</code> JSON & legislative instruments to detect postcode additions.<br/>• <strong>Verified Counts:</strong> Regional (T4) <strong>${pcCounts.regional}</strong> · Northern (T3) <strong>${pcCounts.northern}</strong> · Remote (T1) <strong>${pcCounts.remote}</strong> · Tourism (T2) <strong>${pcCounts.additional_tourism || 4}</strong> · Bushfire (T5) <strong>${pcCounts.bushfire}</strong> · Disaster (T6) <strong>${pcCounts.disaster}</strong>`
         )}</p>
       </article>
       <article class="rule8547-card">
-        <h4>${t("Poller 정기 감시 ② — 417 협정국 연령 상한 & 법정 VAC (Sch 1 Item 1225/1224A)", "Primary-Source Monitor ② — 417 Age Caps & Statutory Base VAC")}</h4>
+        <h4>${t("Poller 정기 감시 ② · 417 협정국 연령 상한 & 법정 VAC (Sch 1 Item 1225/1224A)", "Primary-Source Monitor ② · 417 Age Caps & Statutory Base VAC")}</h4>
         <p>${t(
           `호주 연방 이민성 417 비자 스트림 스키마의 <code>Be this age</code> 목록과 Migration Regulations 1994 Schedule 1을 정기 파싱해요.<br/>• <strong>만 18~35세 협정국 (${age417.age_35_count || 10}개국):</strong> 대한민국(2026.7.1~), 영국(UK·BN(O)), 캐나다, 프랑스, 아일랜드, 이탈리아, 덴마크, 독일, 핀란드, 키프로스<br/>• <strong>만 18~30세 (${age417.age_30_count || 9}개국)</strong> 및 <strong>현행 기본 VAC:</strong> 1차 <strong>$840</strong> (파푸아뉴기니(PNG) 462 <strong>$690</strong>) · 2·3차 <strong>$1,000</strong>`,
           `Parses the live 417 stream schema & Migration Regulations 1994 Schedule 1 on every poll.<br/>• <strong>Age 18–35 (${age417.age_35_count || 10} countries):</strong> Republic of Korea (from 1 Jul 2026), UK/BN(O), Canada, France, Ireland, Italy, Denmark, Germany, Finland, Cyprus<br/>• <strong>Age 18–30 (${age417.age_30_count || 9} countries)</strong> & <strong>Base VAC:</strong> 1st <strong>$840</strong> ($690 Papua New Guinea 462) · 2nd/3rd <strong>$1,000</strong>`
         )}</p>
       </article>
       <article class="rule8547-card">
-        <h4>${t("Poller 정기 감시 ③ — Subclass 462 30개국 실시간 쿼터(Cap) & 추첨제(Ballot)", "Primary-Source Monitor ③ — Live Subclass 462 Country Caps & Ballot Status")}</h4>
+        <h4>${t("Poller 정기 감시 ③ · Subclass 462 30개국 실시간 쿼터(Cap) & 추첨제(Ballot)", "Primary-Source Monitor ③ · Live Subclass 462 Country Caps & Ballot Status")}</h4>
         <p>${t(
           `호주 연방 이민성 <code>status-of-country-caps</code> 테이블을 실시간 파싱해 국가별 1차 비자 쿼터 마감 상태를 추적해요 (2·3차 연장 비자는 쿼터 제한 없음!).<br/>• <strong>실시간 파싱 결과:</strong> 접수 중(Open) <strong>${caps462.open_count || 23}개국</strong> + 무제한(미국) · 일시중단(Paused): <strong>${pausedStr}</strong> · 추첨제(Ballot): <strong>중국, 인도, 베트남, 인도네시아</strong>`,
           `Parses the live <code>status-of-country-caps</code> table on Home Affairs (Note: annual caps apply only to 1st 462 visas; 2nd & 3rd extensions are uncapped).<br/>• <strong>Live Status:</strong> Open: <strong>${caps462.open_count || 23} countries</strong> + USA (no cap) · Paused: <strong>${pausedStr}</strong> · Pre-Application Ballot: <strong>China, India, Vietnam, Indonesia</strong>`
         )}</p>
       </article>
       <article class="rule8547-card">
-        <h4>${t("Poller 정기 감시 ④ — 조건 8547 (6개월 제한) 자동 면제 유지 여부 감시", "Primary-Source Monitor ④ — Condition 8547 Automatic Exemptions Currency")}</h4>
+        <h4>${t("Poller 정기 감시 ④ · 조건 8547 (6개월 제한) 자동 면제 유지 여부 감시", "Primary-Source Monitor ④ · Condition 8547 Automatic Exemptions Currency")}</h4>
         <p>${t(
-          `호주 연방 이민성 <code>6-month-work-limitation</code> 원문에서 2024.1.1 발효 자동 면제 지침(<em>"until the Government makes further decisions"</em>)의 유지 여부나 종료 고시를 감시해요.<br/>• <strong>현재 상태:</strong> <strong>정상 유지 중 (Active)</strong> — 호주 전역 농축산·자연재해복구·5대 핵심산업, 북부 호주 4대 산업, 근무 장소 변경(장소당 ≤6개월) 사전 허가 면제 확인 완료`,
-          `Monitors Home Affairs <code>6-month-work-limitation</code> policy for any change to the <em>"until the Government makes further decisions"</em> automatic exemptions.<br/>• <strong>Current Status:</strong> <strong>CONFIRMED ACTIVE</strong> — Nationwide critical sectors, plant/animal cultivation, disaster recovery, Northern Australia sectors & different workplace locations remain exempt.`
+          `호주 연방 이민성 <code>6-month-work-limitation</code> 원문에서 2024.1.1 발효 자동 면제 지침(<em>"until the Government makes further decisions"</em>)의 유지 여부나 종료 고시를 감시해요.<br/>• <strong>현재 상태:</strong> <strong>정상 유지 중 (Active)</strong> · 호주 전역 농축산·자연재해복구·5대 핵심산업, 북부 호주 4대 산업, 근무 장소 변경(장소당 ≤6개월) 사전 허가 면제 확인 완료`,
+          `Monitors Home Affairs <code>6-month-work-limitation</code> policy for any change to the <em>"until the Government makes further decisions"</em> automatic exemptions.<br/>• <strong>Current Status:</strong> <strong>CONFIRMED ACTIVE</strong> · Nationwide critical sectors, plant/animal cultivation, disaster recovery, Northern Australia sectors & different workplace locations remain exempt.`
         )}</p>
       </article>
     `;
@@ -2659,7 +2659,7 @@ function renderRightsSourcesAndFootnotes() {
           <strong>[${f.id}] ${f.cite}:</strong> ${t(f.descKo, f.descEn)}
           ${isInternal
             ? `<span class="badge badge-neutral" style="margin-left:6px;">${t("내부 지침 레퍼런스 (비공개 스냅샷)", "Internal Policy Reference (Non-Public Snapshot)")}</span>`
-            : `<a href="${f.url}" target="_blank" rel="noopener" style="color:var(--color-burgundy);font-weight:700;margin-left:6px;">${t("[공식 원문 ↗]", "[Official Source ↗]")}</a>`
+            : `<a href="${f.url}" target="_blank" rel="noopener" style="color:var(--color-burgundy);font-weight:700;margin-left:6px;">${t("공식 원문 ↗", "Official Source ↗")}</a>`
           }
         </div>
       `;
@@ -2844,11 +2844,11 @@ const I18N_STATIC = {
     en: "7. Assessment / Intended Application Date (Future planned work after this date is separated from completed days)"
   },
   chkNoChildren: {
-    ko: "체류 기간 중 부양 자녀(Dependent children)를 동반하지 않습니다 (cl 417.211(4)(d) / 462.217(c) 필수 요건)",
+    ko: "체류 기간 중 부양 자녀(Dependent children)를 동반하지 않아요 (cl 417.211(4)(d) / 462.217(c) 필수 요건)",
     en: "Not accompanied by dependent children at any time during stay in Australia (mandatory under cl 417.211(4)(d) / 462.217(c))"
   },
   chkNoExcludedEmp: {
-    ko: "장관이 지정한 ‘제외 고용주(Excluded Employer, Reg 1.15FB)’ 밑에서 수행한 근로가 아닙니다 (cl 417.211(5)(d) 필수 요건)",
+    ko: "장관이 지정한 ‘제외 고용주(Excluded Employer, Reg 1.15FB)’ 밑에서 수행한 근로가 아니에요 (cl 417.211(5)(d) 필수 요건)",
     en: "Work was NOT performed for a listed Excluded Employer under Reg 1.15FB (mandatory under cl 417.211(5)(d) / 462.218(1)(d))"
   },
   chkUkConfirmed: {
@@ -2856,7 +2856,7 @@ const I18N_STATIC = {
     en: "Confirmed valid UK / BN(O) passport held at application (Item 1225(3BA) specified work exemption)"
   },
   chkUkPassportConfirmed: {
-    ko: "[영국(UK·BN(O)) 신청자 확인] 2024.07.01 이후 유효한 영국(GBNI) 또는 BN(O) 여권으로 신청합니다 (Item 1225(3BA))",
+    ko: "영국(UK·BN(O)) 여권 확인: 2024.07.01 이후 유효한 영국(GBNI) 또는 BN(O) 여권으로 신청해요 (Item 1225(3BA))",
     en: "[UK / BN(O) Passport Confirmation] Applying on or after 1 Jul 2024 using a valid UK (GBNI) or BN(O) passport (Item 1225(3BA))"
   },
   step2Title: {
@@ -2877,8 +2877,8 @@ const I18N_STATIC = {
     en: "All specified work (except declared bushfire/natural disaster volunteering) must be lawfully remunerated in accordance with the Fair Work Act and applicable Award, supported by payslips and bank records."
   },
   c8547Overline: {
-    ko: "MODULE 04 · VISA CONDITION 8547 — 6-MONTH WORK LIMITATION & EXEMPTION ENGINE",
-    en: "MODULE 04 · VISA CONDITION 8547 — 6-MONTH WORK LIMITATION & EXEMPTION ENGINE"
+    ko: "MODULE 04 · VISA CONDITION 8547 · 6-MONTH WORK LIMITATION & EXEMPTION ENGINE",
+    en: "MODULE 04 · VISA CONDITION 8547 · 6-MONTH WORK LIMITATION & EXEMPTION ENGINE"
   },
   c8547Title: {
     ko: "비자 조건 8547 (동일 고용주 6개월 근무 제한) 만료일 계산 & 자동 면제 · 시계 리셋 정밀 판정기",
@@ -2933,8 +2933,8 @@ const I18N_STATIC = {
     en: "<strong>Working in Different Physical Locations (incl. Switching to/from WFH):</strong> Working for the same employer across different physical branches, sites, farms, schools, hospitals, different ABN subsidiaries, or <strong>switching between office and remote/work-from-home</strong>, where work at <strong>any single location does not exceed 6 months</strong> (Automatically Exempt)"
   },
   chk8547VisaReset: {
-    ko: "<strong>신규 WHM 비자 승인 또는 브리징 비자 발효 (6개월 시계 리셋 — PAM3 s 3.2 & 3.4.1):</strong> 근무 중 2차·3차 WHM 비자가 새로 승인되었거나, 기존 WHM 비자가 만료되면서 후속 비자 대기용 브리징 비자(BVA/BVB)가 발효됨 (발효일로부터 6개월 시계가 0일로 새로 시작됨!)",
-    en: "<strong>New WHM Visa Granted or Bridging Visa Came into Effect (6-Month Clock Reset — PAM3 s 3.2 & 3.4.1):</strong> A new 2nd/3rd WHM visa was granted, or a Bridging Visa (BVA/BVB) came into effect upon expiry of your prior WHM visa (Resets the 6-month clock to zero!)"
+    ko: "<strong>신규 WHM 비자 승인 또는 브리징 비자 발효 (6개월 시계 리셋 · PAM3 s 3.2 & 3.4.1):</strong> 근무 중 2차·3차 WHM 비자가 새로 승인되었거나 기존 WHM 비자가 만료되면서 후속 비자 대기용 브리징 비자(BVA/BVB)가 발효됨 (발효일로부터 6개월 시계가 0일로 새로 시작됨!)",
+    en: "<strong>New WHM Visa Granted or Bridging Visa Came into Effect (6-Month Clock Reset · PAM3 s 3.2 & 3.4.1):</strong> A new 2nd/3rd WHM visa was granted, or a Bridging Visa (BVA/BVB) came into effect upon expiry of your prior WHM visa (Resets the 6-month clock to zero!)"
   },
   chk8547MultiClient: {
     ko: "<strong>자영업자(Self-employed ABN) 다수 고객사 서비스 제공:</strong> 본인 ABN으로 용역을 제공하되, 해당 사업체가 유일한 거래처(Sole end-user)가 아니며 동시에 여러 고객사에 서비스를 제공함 (위반 아님)",
@@ -2945,8 +2945,8 @@ const I18N_STATIC = {
     en: "<strong>Receiving Workers Compensation Payments (PAM3 s 3.2.4):</strong> Exceeding 6 months of employment while receiving workers compensation payments (Automatically Exempt)"
   },
   chk8547PermGrounds: {
-    ko: "<strong>사전 서면 허가(Written Permission) 신청 사유 보유:</strong> ① 풀타임 취업 가능 비자(482 SID · 186 ENS · 820 파트너 등, 500 학생비자 제외)를 접수하고 결과 대기 중이거나, ② 고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 첨부해 6개월 만료 전에 허가를 신청함",
-    en: "<strong>Grounds for Written Permission Request:</strong> (1) Applied for a visa allowing ongoing full-time work (e.g. 482 SID, 186 ENS, 820 Partner — excluding 500 Student), OR (2) Performing critical work supported by an employer letter, submitted BEFORE the 6-month expiry"
+    ko: "<strong>사전 서면 허가(Written Permission) 신청 사유 보유:</strong> ① 풀타임 취업 가능 비자(482 SID · 186 ENS · 820 파트너 등, 500 학생비자 제외)를 접수하고 결과 대기 중이거나 ② 고용주에게 필수적인 업무(Critical work)로서 고용주 지지 서한을 첨부해 6개월 만료 전에 허가를 신청함",
+    en: "<strong>Grounds for Written Permission Request:</strong> (1) Applied for a visa allowing ongoing full-time work (e.g. 482 SID, 186 ENS, 820 Partner · excluding 500 Student), OR (2) Performing critical work supported by an employer letter, submitted BEFORE the 6-month expiry"
   },
   seasonOverline: {
     ko: "MODULE 05 · SEASONAL HARVEST & REGIONAL WORK EXPLORER",
@@ -2957,7 +2957,7 @@ const I18N_STATIC = {
     en: "Seasonal Harvest & Regional Work Explorer (13 Regions × 12 Months)"
   },
   seasonSub: {
-    ko: "호주 정부 National Harvest Guide(18판) 기준선과 ABARES 원예 노동 수요 통계를 결합해 월별(1~12월)·주별 주요 작물 수확·전정 시기를 정리했어요. 원하는 지역 카드의 <strong>[우편번호 검증·계산기에 자동 입력]</strong> 버튼을 누르면 위 우편번호 검증기와 지정 근로 계산기에 즉시 연동돼요. (참고: 구 Harvest Trail 포털은 2024.06.30 종료되었으며, 현재 실시간 구인 공고는 Workforce Australia에서 확인해요.)",
+    ko: "호주 정부 National Harvest Guide(18판) 기준선과 ABARES 원예 노동 수요 통계를 결합해 월별(1~12월)·주별 주요 작물 수확·전정 시기를 정리했어요. 원하는 지역 카드의 <strong>우편번호 검증·계산기에 자동 입력</strong> 버튼을 누르면 위 우편번호 검증기와 지정 근로 계산기에 즉시 연동돼요. (참고: 구 Harvest Trail 포털은 2024.06.30 종료되었고 현재 실시간 구인 공고는 Workforce Australia에서 확인해요.)",
     en: "Combines the Australian Government National Harvest Guide baseline and ABARES horticultural labour demand data across 13 major farming hubs. Click <strong>[Load Postcode into Checker]</strong> on any region card to load that postcode directly into the Postcode Verifier and Calculator above. (Note: The former Harvest Trail portal closed on 30 June 2024; live vacancies are now hosted on Workforce Australia.)"
   },
   lblSeasonMonth: { ko: "1. 희망 근무 월(Month) 선택", en: "1. Filter by Harvest Month" },
@@ -3016,7 +3016,7 @@ const I18N_STATIC = {
     en: "Visa outcomes are determined by delegates of the Minister for Home Affairs under the Migration Act 1958, Migration Regulations 1994, and applicable Legislative Instruments (LIN 22/012, LIN 22/013, LIN 25/048) based on the documentary evidence provided."
   },
   discP3: {
-    ko: "구체적인 비자 연장 신청, 28일 실체비자 만료 유예기간 적용, 조건 8547 위반 위험 검토 또는 고용주 스폰서 비자(482/494/186) 전환을 앞두고 계신 경우 반드시 박창민 대표변호사(QLS Accredited Specialist in Immigration Law · 공식 상담 링크: https://parklawyers.com.au/links/?lang=ko)와 개별 상담을 진행하시기 바랍니다.",
+    ko: "구체적인 비자 연장 신청, 28일 실체비자 만료 유예기간 적용, 조건 8547 위반 위험 검토 또는 고용주 스폰서 비자(482/494/186) 전환을 앞두고 계신 경우 반드시 박창민 대표변호사(QLS Accredited Specialist in Immigration Law · 공식 상담 링크: https://parklawyers.com.au/links/?lang=ko)와 개별 상담을 진행해 주세요.",
     en: "For formal legal advice regarding your visa extension, the 28-day onshore grace period, Condition 8547 compliance, or employer-sponsored visa pathways (482/494/186), please consult Chang Min Park (QLS Accredited Specialist in Immigration Law · Official Inquiry: https://parklawyers.com.au/links/)."
   },
   fnHeading: {
@@ -3069,8 +3069,8 @@ function translateDynamicFormControls(lang) {
   if (subEl) {
     const val = subEl.value;
     subEl.innerHTML = `
-      <option value="417">${lang === "ko" ? "Subclass 417 — Working Holiday (워킹홀리데이 · 한국 포함 19개국)" : "Subclass 417 — Working Holiday (19 Partner Countries incl. Korea)"}</option>
-      <option value="462">${lang === "ko" ? "Subclass 462 — Work and Holiday (취업관광 · 30개국)" : "Subclass 462 — Work and Holiday (30 Partner Countries)"}</option>
+      <option value="417">${lang === "ko" ? "Subclass 417 · Working Holiday (워킹홀리데이 · 한국 포함 19개국)" : "Subclass 417 · Working Holiday (19 Partner Countries incl. Korea)"}</option>
+      <option value="462">${lang === "ko" ? "Subclass 462 · Work and Holiday (취업관광 · 30개국)" : "Subclass 462 · Work and Holiday (30 Partner Countries)"}</option>
     `;
     subEl.value = val;
   }
@@ -3080,9 +3080,9 @@ function translateDynamicFormControls(lang) {
   if (targetEl) {
     const val = targetEl.value;
     targetEl.innerHTML = `
-      <option value="first">${lang === "ko" ? "1차 비자 (First Visa — 해외 신청 필수 · 462 연간 쿼터/추첨 적용)" : "First WHM Visa (Must apply offshore · 462 annual caps & ballot apply)"}</option>
-      <option value="second">${lang === "ko" ? "2차 비자 (Second Visa — 최소 3개월 / 88일 지정 근로)" : "Second WHM Visa (Min 3 calendar months / 88 days specified work)"}</option>
-      <option value="third">${lang === "ko" ? "3차 비자 (Third Visa — 최소 6개월 / 179일 지정 근로, 2019.7.1 이후)" : "Third WHM Visa (Min 6 calendar months / 179 days specified work, from 1 Jul 2019)"}</option>
+      <option value="first">${lang === "ko" ? "1차 비자 (First Visa · 해외 신청 필수 · 462 연간 쿼터/추첨 적용)" : "First WHM Visa (Must apply offshore · 462 annual caps & ballot apply)"}</option>
+      <option value="second">${lang === "ko" ? "2차 비자 (Second Visa · 최소 3개월 / 88일 지정 근로)" : "Second WHM Visa (Min 3 calendar months / 88 days specified work)"}</option>
+      <option value="third">${lang === "ko" ? "3차 비자 (Third Visa · 최소 6개월 / 179일 지정 근로, 2019.7.1 이후)" : "Third WHM Visa (Min 6 calendar months / 179 days specified work, from 1 Jul 2019)"}</option>
     `;
     targetEl.value = val;
   }
@@ -3093,10 +3093,10 @@ function translateDynamicFormControls(lang) {
     const val = visaHeldEl.value;
     visaHeldEl.innerHTML = `
       <option value="valid_whm">${lang === "ko" ? "적격 WHM 비자 (2차 신청 시 1차 WHM / 3차 신청 시 2차 WHM 보유 중 수행)" : "Qualifying WHM Visa (Held 1st WHM for 2nd visa / Held 2nd WHM for 3rd visa)"}</option>
-      <option value="valid_bva_akio">${lang === "ko" ? "1차 WHM 보유 중 2차 WHM을 신청하여 발효된 브리징 비자 (Akio 원칙 — 3차 산입 가능)" : "Bridging Visa in effect after applying for 2nd WHM while holding 1st WHM (Akio rule — Valid)"}</option>
-      <option value="covid_408">${lang === "ko" ? "COVID-19 408 Pandemic 비자 (필수 코로나 의료 업무 수행 이력 수동 심사 대상)" : "COVID-19 Pandemic Event 408 Visa (Critical COVID-19 medical work — Manual Review)"}</option>
+      <option value="valid_bva_akio">${lang === "ko" ? "1차 WHM 보유 중 2차 WHM을 신청하여 발효된 브리징 비자 (Akio 원칙 · 3차 산입 가능)" : "Bridging Visa in effect after applying for 2nd WHM while holding 1st WHM (Akio rule · Valid)"}</option>
+      <option value="covid_408">${lang === "ko" ? "COVID-19 408 Pandemic 비자 (필수 코로나 의료 업무 수행 이력 수동 심사 대상)" : "COVID-19 Pandemic Event 408 Visa (Critical COVID-19 medical work · Manual Review)"}</option>
       <option value="invalid_1st_for_3rd">${lang === "ko" ? "3차 비자 신청인데 1차 WHM 체류 중에만 수행한 근로 (산입 불가!)" : "Work done during 1st WHM visa only, claimed toward a 3rd WHM visa (Ineligible!)"}</option>
-      <option value="invalid_student_ingrid">${lang === "ko" ? "학생비자(500) 등 타 비자 또는 타 비자에서 전환된 브리징 비자 보유 중 수행 (Ingrid 함정 — 산입 불가!)" : "Work done on a Student visa (500) or BVA from a Student visa (Ingrid trap — Ineligible!)"}</option>
+      <option value="invalid_student_ingrid">${lang === "ko" ? "학생비자(500) 등 타 비자 또는 타 비자에서 전환된 브리징 비자 보유 중 수행 (Ingrid 함정 · 산입 불가!)" : "Work done on a Student visa (500) or BVA from a Student visa (Ingrid trap · Ineligible!)"}</option>
     `;
     visaHeldEl.value = val;
   }
@@ -3106,12 +3106,12 @@ function translateDynamicFormControls(lang) {
   if (locEl) {
     const val = locEl.value;
     locEl.innerHTML = `
-      <option value="onshore_substantive">${lang === "ko" ? "호주 내(Onshore) — 현재 유효한 WHM 실체비자 보유 중 (cl 417.513 연속 체류 합산 적용)" : "Onshore (In Australia) — Currently holding a WHM substantive visa (cl 417.513 continuous stay applies)"}</option>
-      <option value="onshore_other_substantive">${lang === "ko" ? "호주 내(Onshore) — WHM 외 다른 실체비자(학생·관광 등) 보유 중 (cl 417.512 승인일로부터 12개월)" : "Onshore (In Australia) — Holding a non-WHM substantive visa (cl 417.512: 12m from grant)"}</option>
-      <option value="onshore_28days">${lang === "ko" ? "호주 내(Onshore) — 브리징 비자 보유 중이나 마지막 실체비자 만료 후 28일 이내 (Item 1225(3B)(f)(ii) 특례 · cl 417.512 승인일로부터 12개월)" : "Onshore (In Australia) — No substantive visa, within 28 days of expiry (Item 1225(3B)(f)(ii) · cl 417.512: 12m from grant)"}</option>
-      <option value="offshore">${lang === "ko" ? "호주 밖(Offshore) — 해외에서 신청 및 해외에서 승인 대기 (cl 417.511 입국일로부터 12개월)" : "Offshore (Outside Australia) — Applying & granted outside Australia (cl 417.511: 12m from entry)"}</option>
-      <option value="offshore_to_onshore_mismatch">${lang === "ko" ? "신청 위치·승인 위치 불일치 주의 (해외 신청 후 호주 입국 대기 또는 호주 내 신청 후 출국 대기 — cl 417.411/412 거절 위험!)" : "Location mismatch warning (Applied offshore then entered Australia, or applied onshore then departed — cl 417.411/412 risk!)"}</option>
-      <option value="onshore_over28">${lang === "ko" ? "호주 내(Onshore) — 마지막 실체비자 만료 후 28일 경과 (호주 내 유효 신청 불가!)" : "Onshore (In Australia) — More than 28 days since last substantive visa ceased (Invalid onshore application!)"}</option>
+      <option value="onshore_substantive">${lang === "ko" ? "호주 내(Onshore) · 현재 유효한 WHM 실체비자 보유 중 (cl 417.513 연속 체류 합산 적용)" : "Onshore (In Australia) · Currently holding a WHM substantive visa (cl 417.513 continuous stay applies)"}</option>
+      <option value="onshore_other_substantive">${lang === "ko" ? "호주 내(Onshore) · WHM 외 다른 실체비자(학생·관광 등) 보유 중 (cl 417.512 승인일로부터 12개월)" : "Onshore (In Australia) · Holding a non-WHM substantive visa (cl 417.512: 12m from grant)"}</option>
+      <option value="onshore_28days">${lang === "ko" ? "호주 내(Onshore) · 브리징 비자 보유 중이나 마지막 실체비자 만료 후 28일 이내 (Item 1225(3B)(f)(ii) 특례 · cl 417.512 승인일로부터 12개월)" : "Onshore (In Australia) · No substantive visa, within 28 days of expiry (Item 1225(3B)(f)(ii) · cl 417.512: 12m from grant)"}</option>
+      <option value="offshore">${lang === "ko" ? "호주 밖(Offshore) · 해외에서 신청 및 해외에서 승인 대기 (cl 417.511 입국일로부터 12개월)" : "Offshore (Outside Australia) · Applying & granted outside Australia (cl 417.511: 12m from entry)"}</option>
+      <option value="offshore_to_onshore_mismatch">${lang === "ko" ? "신청 위치·승인 위치 불일치 주의 (해외 신청 후 호주 입국 대기 또는 호주 내 신청 후 출국 대기 · cl 417.411/412 거절 위험!)" : "Location mismatch warning (Applied offshore then entered Australia, or applied onshore then departed · cl 417.411/412 risk!)"}</option>
+      <option value="onshore_over28">${lang === "ko" ? "호주 내(Onshore) · 마지막 실체비자 만료 후 28일 경과 (호주 내 유효 신청 불가!)" : "Onshore (In Australia) · More than 28 days since last substantive visa ceased (Invalid onshore application!)"}</option>
     `;
     locEl.value = val;
   }
@@ -3121,22 +3121,22 @@ function translateDynamicFormControls(lang) {
   if (secEl) {
     const val = secEl.value;
     secEl.innerHTML = `
-      <optgroup label="${lang === "ko" ? "호주 전역 자동 면제 분야 (Nationwide Automatic Exemptions — 사전 허가 불필요)" : "Nationwide Automatic Exemptions (No Permission Required Anywhere in Australia)"}">
-        <option value="plant_animal">${lang === "ko" ? "식물 및 동물 재배·사육 (Plant & animal cultivation — 호주 전역 과수·채소·축산·원유 낙농·전정·즉시가공)" : "Plant & animal cultivation (Nationwide fruit/veg harvest, pruning, livestock, shearing, immediate processing)"}</option>
-        <option value="agri_food">${lang === "ko" ? "핵심 산업 ① 농업 및 식품 가공 (Agriculture & food processing — 호주 전역 모든 영농 및 인간·동물 소비용 식육·식품 가공)" : "Critical Sector ① Agriculture & food processing (Nationwide farming, meat & food processing)"}</option>
-        <option value="health">${lang === "ko" ? "핵심 산업 ② 보건·의료 (Health — 호주 전역 병원 근무 및 의사·간호·치과·의료행정·영상·정신건강·의료장비·병원청소 등 보건 지원 직무)" : "Critical Sector ② Health (Nationwide hospital jobs, medical/nursing/dental, medical admin, imaging, mental health, facility cleaning)"}</option>
-        <option value="aged_disability">${lang === "ko" ? "핵심 산업 ③ 노인 및 장애인 돌봄 (Aged care & disability services — 호주 전역 노인요양·장애인 서비스·케어러)" : "Critical Sector ③ Aged care & disability services (Nationwide aged/disability care & support workers)"}</option>
-        <option value="childcare">${lang === "ko" ? "핵심 산업 ④ 보육·아동 돌봄 (Childcare — 호주 전역 어린이집·크레시·패밀리데이케어·내니(Nanny)·오페어(Au Pair)·방과후 돌봄)" : "Critical Sector ④ Childcare (Nationwide early learning centres, family day care, nannies, au pairs, outside school hours care)"}</option>
-        <option value="tourism_hosp">${lang === "ko" ? "핵심 산업 ⑤ 관광 및 접객업 (Tourism & hospitality — 호주 전역 호텔·모텔·호스텔·하우스키핑·카페·식당·바·케이터링·투어가이드·여행사·이벤트)" : "Critical Sector ⑤ Tourism & hospitality (Nationwide hotels, housekeeping, cafes, restaurants, bars, catering, tour guides, events)"}</option>
-        <option value="disaster_rec">${lang === "ko" ? "자연재해 복구 업무 (Natural disaster recovery — 호주 전역 산불·홍수·사이클론 피해 복구·청소·건설·행정·지원)" : "Natural disaster recovery work (Nationwide bushfire, flood & cyclone clean-up, construction, admin & support)"}</option>
+      <optgroup label="${lang === "ko" ? "호주 전역 자동 면제 분야 (Nationwide Automatic Exemptions · 사전 허가 불필요)" : "Nationwide Automatic Exemptions (No Permission Required Anywhere in Australia)"}">
+        <option value="plant_animal">${lang === "ko" ? "식물 및 동물 재배·사육 (Plant & animal cultivation · 호주 전역 과수·채소·축산·원유 낙농·전정·즉시가공)" : "Plant & animal cultivation (Nationwide fruit/veg harvest, pruning, livestock, shearing, immediate processing)"}</option>
+        <option value="agri_food">${lang === "ko" ? "핵심 산업 ① 농업 및 식품 가공 (Agriculture & food processing · 호주 전역 모든 영농 및 인간·동물 소비용 식육·식품 가공)" : "Critical Sector ① Agriculture & food processing (Nationwide farming, meat & food processing)"}</option>
+        <option value="health">${lang === "ko" ? "핵심 산업 ② 보건·의료 (Health · 호주 전역 병원 근무 및 의사·간호·치과·의료행정·영상·정신건강·의료장비·병원청소 등 보건 지원 직무)" : "Critical Sector ② Health (Nationwide hospital jobs, medical/nursing/dental, medical admin, imaging, mental health, facility cleaning)"}</option>
+        <option value="aged_disability">${lang === "ko" ? "핵심 산업 ③ 노인 및 장애인 돌봄 (Aged care & disability services · 호주 전역 노인요양·장애인 서비스·케어러)" : "Critical Sector ③ Aged care & disability services (Nationwide aged/disability care & support workers)"}</option>
+        <option value="childcare">${lang === "ko" ? "핵심 산업 ④ 보육·아동 돌봄 (Childcare · 호주 전역 어린이집·크레시·패밀리데이케어·내니(Nanny)·오페어(Au Pair)·방과후 돌봄)" : "Critical Sector ④ Childcare (Nationwide early learning centres, family day care, nannies, au pairs, outside school hours care)"}</option>
+        <option value="tourism_hosp">${lang === "ko" ? "핵심 산업 ⑤ 관광 및 접객업 (Tourism & hospitality · 호주 전역 호텔·모텔·호스텔·하우스키핑·카페·식당·바·케이터링·투어가이드·여행사·이벤트)" : "Critical Sector ⑤ Tourism & hospitality (Nationwide hotels, housekeeping, cafes, restaurants, bars, catering, tour guides, events)"}</option>
+        <option value="disaster_rec">${lang === "ko" ? "자연재해 복구 업무 (Natural disaster recovery · 호주 전역 산불·홍수·사이클론 피해 복구·청소·건설·행정·지원)" : "Natural disaster recovery work (Nationwide bushfire, flood & cyclone clean-up, construction, admin & support)"}</option>
       </optgroup>
       <optgroup label="${lang === "ko" ? "북부 호주(Northern Australia Table 3) 한정 자동 면제 분야" : "Northern Australia (Table 3 Postcodes ONLY) Automatic Exemptions"}">
-        <option value="north_construction">${lang === "ko" ? "건설업 (Construction — 북부 호주 우편번호 내에서는 자동 면제 / 그 외 지역은 6개월 제한 적용)" : "Construction (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
-        <option value="north_mining">${lang === "ko" ? "광업 (Mining — 북부 호주 우편번호 내에서는 자동 면제 / 그 외 지역은 6개월 제한 적용)" : "Mining (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
-        <option value="north_fishing">${lang === "ko" ? "어업 및 진주 양식 (Fishing & pearling — 북부 호주 우편번호 내에서는 자동 면제)" : "Fishing & pearling (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
-        <option value="north_tree">${lang === "ko" ? "임업 및 벌목 (Tree farming & felling — 북부 호주 우편번호 내에서는 자동 면제)" : "Tree farming & felling (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
+        <option value="north_construction">${lang === "ko" ? "건설업 (Construction · 북부 호주 우편번호 내에서는 자동 면제 / 그 외 지역은 6개월 제한 적용)" : "Construction (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
+        <option value="north_mining">${lang === "ko" ? "광업 (Mining · 북부 호주 우편번호 내에서는 자동 면제 / 그 외 지역은 6개월 제한 적용)" : "Mining (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
+        <option value="north_fishing">${lang === "ko" ? "어업 및 진주 양식 (Fishing & pearling · 북부 호주 우편번호 내에서는 자동 면제)" : "Fishing & pearling (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
+        <option value="north_tree">${lang === "ko" ? "임업 및 벌목 (Tree farming & felling · 북부 호주 우편번호 내에서는 자동 면제)" : "Tree farming & felling (Automatically exempt in Northern Australia Table 3 postcodes ONLY)"}</option>
       </optgroup>
-      <optgroup label="${lang === "ko" ? "일반 산업 (자동 업종 면제 비해당 — 장소 변경·비자 리셋·사전 서면 허가 확인 필수)" : "Standard Non-Exempt Sectors (Requires Location Change, Visa Reset, or Prior Written Permission)" }">
+      <optgroup label="${lang === "ko" ? "일반 산업 (자동 업종 면제 비해당 · 장소 변경·비자 리셋·사전 서면 허가 확인 필수)" : "Standard Non-Exempt Sectors (Requires Location Change, Visa Reset, or Prior Written Permission)" }">
         <option value="other_office">${lang === "ko" ? "일반 사무·IT·금융·마케팅·전문직·콜센터·소매업(기념품점·면세점·일반 마트)·물류창고·일반 제조업 등" : "Standard Corporate, IT, Finance, Marketing, Call Centre, General Retail (souvenir/duty-free/supermarket), Warehousing & Manufacturing"}</option>
       </optgroup>
     `;
@@ -3150,7 +3150,7 @@ function translateDynamicFormControls(lang) {
     resetTypeEl.innerHTML = `
       <option value="new_whm_granted">${lang === "ko" ? "신규 2·3차 WHM 비자 발효 (자동 리셋)" : "New 2nd/3rd WHM Visa Granted (Automatic Clock Reset)"}</option>
       <option value="bva_in_effect_with_8547">${lang === "ko" ? "기존 비자 만료 후 조건 8547 부과 브리징 비자 발효 (수동 검토/리셋)" : "Bridging Visa with Condition 8547 Came into Effect (Manual Review / Reset)"}</option>
-      <option value="bva_granted_not_in_effect">${lang === "ko" ? "브리징 비자 승인만 되고 아직 기존 비자 유효 중 (리셋 안 됨!)" : "Bridging Visa Granted Only — Substantive Visa Still Active (Does NOT Reset!)"}</option>
+      <option value="bva_granted_not_in_effect">${lang === "ko" ? "브리징 비자 승인만 되고 아직 기존 비자 유효 중 (리셋 안 됨!)" : "Bridging Visa Granted Only · Substantive Visa Still Active (Does NOT Reset!)"}</option>
     `;
     resetTypeEl.value = val;
   }
@@ -3349,7 +3349,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "📋 GSM 서류검토(Case Review™)": "📋 GSM Case Review™",
     "🚨 비자응급실 (s 57·PIC 4020·8547 NOICC 무료 진단) →": "🚨 Visa Emergency (Free s 57 / PIC 4020 / 8547 NOICC Triage) →",
     "📋 GSM Case Review™️ (189·190·491 전환 서류검토) →": "📋 GSM Case Review™ (189 · 190 · 491 Transition Audit) →",
-    "🧭 워킹홀리데이(417·462) 종료 후 학생·482 스폰서·DAMA·기술이민 전환 6단계 맞춤 진단이 필요하신가요?": "🧭 Planning Your Next Visa After WHM (417/462) — Student, 482 Sponsor, DAMA, or Skilled PR?",
+    "🧭 워킹홀리데이(417·462) 종료 후 학생·482 스폰서·DAMA·기술이민 전환 6단계 맞춤 진단이 필요하신가요?": "🧭 Planning Your Next Visa After WHM (417/462) · Student, 482 Sponsor, DAMA, or Skilled PR?",
     "내 나이·영어·경력·직종을 기준으로 워홀 이후 전환 가능한 후속 비자 6단계 진단(#module-diagnose), 전체 영주권 로드맵(#module-pathways), 그리고 실전 FAQ를 통합 가이드에서 확인해 보세요.": "Run the 6-step post-WHM visa transition diagnostic (#module-diagnose), explore full PR pathways (#module-pathways), and check real-world Immigration FAQs.",
     "🧭 워홀 후 비자 전환 6단계 진단 (#module-diagnose) →": "🧭 6-Step Post-WHM Visa Diagnostic (#module-diagnose) →",
     "🗺️ 영주권 전체 경로 로드맵 (#module-pathways) →": "🗺️ Full PR Pathways Roadmap (#module-pathways) →",
@@ -3393,64 +3393,64 @@ document.addEventListener("DOMContentLoaded", () => {
     "Schedule 6D 11대 평가 항목 입력": "Schedule 6D 11-Factor Assessment Inputs",
     "1. 초청 시점 만 나이 (Part 6D.1)": "1. Age at Time of Invitation (Part 6D.1)",
     "만 18세 ~ 24세 (25점)": "Aged 18–24 (25 pts)",
-    "만 25세 ~ 32세 (30점 — 최고 배점)": "Aged 25–32 (30 pts — Maximum)",
+    "만 25세 ~ 32세 (30점 · 최고 배점)": "Aged 25–32 (30 pts · Maximum)",
     "만 33세 ~ 39세 (25점)": "Aged 33–39 (25 pts)",
     "만 40세 ~ 44세 (15점)": "Aged 40–44 (15 pts)",
-    "만 45세 이상 (0점 — GSM 189/190/491 신청 불가)": "Aged 45+ (0 pts — Ineligible for GSM 189/190/491)",
-    "2. 영어 능력 (Part 6D.2 — 유효기간 3년)": "2. English Language Ability (Part 6D.2 — 3-Year Validity)",
-    "Competent English — IELTS 각 6.0 / PTE 50 (0점 · 최소 기본요건)": "Competent English — IELTS 6.0 / PTE 50 (0 pts · Minimum Threshold)",
-    "Proficient English — IELTS 각 7.0 / PTE 65 (10점)": "Proficient English — IELTS 7.0 / PTE 65 (10 pts)",
-    "Superior English — IELTS 각 8.0 / PTE 79 (20점)": "Superior English — IELTS 8.0 / PTE 79 (20 pts)",
-    "3. 해외 숙련 경력 (Part 6D.3 — 최근 10년 내 주 20h+)": "3. Overseas Skilled Employment (Part 6D.3 — 20h+/wk in last 10 yrs)",
+    "만 45세 이상 (0점 · GSM 189/190/491 신청 불가)": "Aged 45+ (0 pts · Ineligible for GSM 189/190/491)",
+    "2. 영어 능력 (Part 6D.2 · 유효기간 3년)": "2. English Language Ability (Part 6D.2 · 3-Year Validity)",
+    "Competent English · IELTS 각 6.0 / PTE 50 (0점 · 최소 기본요건)": "Competent English · IELTS 6.0 / PTE 50 (0 pts · Minimum Threshold)",
+    "Proficient English · IELTS 각 7.0 / PTE 65 (10점)": "Proficient English · IELTS 7.0 / PTE 65 (10 pts)",
+    "Superior English · IELTS 각 8.0 / PTE 79 (20점)": "Superior English · IELTS 8.0 / PTE 79 (20 pts)",
+    "3. 해외 숙련 경력 (Part 6D.3 · 최근 10년 내 주 20h+)": "3. Overseas Skilled Employment (Part 6D.3 · 20h+/wk in last 10 yrs)",
     "3년 미만 (0점)": "Under 3 years (0 pts)",
     "3년 이상 ~ 5년 미만 (5점)": "3 to <5 years (5 pts)",
     "5년 이상 ~ 8년 미만 (10점)": "5 to <8 years (10 pts)",
     "8년 이상 (15점)": "8+ years (15 pts)",
-    "4. 호주 내 숙련 경력 (Part 6D.4 — 최근 10년 내 주 20h+)": "4. Australian Skilled Employment (Part 6D.4 — 20h+/wk in last 10 yrs)",
+    "4. 호주 내 숙련 경력 (Part 6D.4 · 최근 10년 내 주 20h+)": "4. Australian Skilled Employment (Part 6D.4 · 20h+/wk in last 10 yrs)",
     "1년 미만 (0점)": "Under 1 year (0 pts)",
     "1년 이상 ~ 3년 미만 (5점)": "1 to <3 years (5 pts)",
     "8년 이상 (20점)": "8+ years (20 pts)",
     "5. 최종 학력/자격 (Part 6D.7)": "5. Educational Qualifications (Part 6D.7)",
-    "박사 학위 (Doctorate / PhD — 20점)": "Doctorate / PhD (20 pts)",
+    "박사 학위 (Doctorate / PhD · 20점)": "Doctorate / PhD (20 pts)",
     "학사(Bachelor) 또는 석사(Masters) 학위 (15점)": "Bachelor or Masters Degree (15 pts)",
     "호주 Diploma / Trade 학위 또는 기술심사기관 인정 자격 (10점)": "Australian Diploma / Trade Qualification or Recognised Award (10 pts)",
     "인정 학력 없음 (0점)": "No Recognised Qualification (0 pts)",
     "6. 배우자/파트너 자격 또는 미혼 (Part 6D.11)": "6. Partner Skills or Single Status (Part 6D.11)",
-    "미혼(Single) 또는 파트너가 호주 시민권자/영주권자 (10점 — 6D112)": "Single OR Partner is Australian Citizen/PR (10 pts — 6D112)",
-    "파트너가 만 45세 미만 + Competent 영어 + 동일 리스트 기술심사 보유 (10점 — 6D111)": "Partner <45 + Competent English + Skilled Assessment (10 pts — 6D111)",
-    "파트너가 Competent 영어(IELTS 6.0)만 보유 (5점 — 6D113)": "Partner has Competent English (IELTS 6.0) only (5 pts — 6D113)",
+    "미혼(Single) 또는 파트너가 호주 시민권자/영주권자 (10점 · 6D112)": "Single OR Partner is Australian Citizen/PR (10 pts · 6D112)",
+    "파트너가 만 45세 미만 + Competent 영어 + 동일 리스트 기술심사 보유 (10점 · 6D111)": "Partner <45 + Competent English + Skilled Assessment (10 pts · 6D111)",
+    "파트너가 Competent 영어(IELTS 6.0)만 보유 (5점 · 6D113)": "Partner has Competent English (IELTS 6.0) only (5 pts · 6D113)",
     "파트너가 시민권/영주권자가 아니며 영어/기술심사 미보유 (0점)": "Partner is non-citizen/PR without English or Skills Assessment (0 pts)",
-    "7. 추가 가점 항목 (해당 항목 모두 체크 — Part 6D.6 / 6D.7A / 6D.8 / 6D.9 / 6D.10)": "7. Bonus Point Factors (Tick all that apply — Parts 6D.6–6D.10)",
+    "7. 추가 가점 항목 (해당 항목 모두 체크 · Part 6D.6 / 6D.7A / 6D.8 / 6D.9 / 6D.10)": "7. Bonus Point Factors (Tick all that apply · Parts 6D.6–6D.10)",
     "Subclass 189 · 190 · 491 법정 점수 산출 결과": "Subclass 189 · 190 · 491 Statutory Points Breakdown",
     "8개 주/준주 중 현재 바로 노미네이션 신청(또는 ROI/Matrix 접수)이 가능한 주와 부족한 개월 수를 즉시 판정": "Instantly identify eligible States/Territories and any remaining residency/work months required",
     "내 거주지 · 근무 개월 · 주당 시간 · 졸업생 프로필 입력": "Your Current State, Work Months, Weekly Hours & Graduate Profile",
     "1. 현재 거주 중인 주/준주 (또는 해외)": "1. Current State/Territory of Residence (or Offshore)",
-    "Queensland (QLD — 브리즈번 / 골드코스트·지방 QLD)": "Queensland (QLD — Brisbane / Gold Coast & Regional QLD)",
-    "New South Wales (NSW — 시드니 / 지방 NSW)": "New South Wales (NSW — Sydney / Regional NSW)",
-    "Victoria (VIC — 멜버른 / 지방 VIC)": "Victoria (VIC — Melbourne / Regional VIC)",
-    "Western Australia (WA — 퍼스 및 서호주 전역)": "Western Australia (WA — Perth & Statewide WA)",
-    "South Australia (SA — 애들레이드 및 외곽 SA)": "South Australia (SA — Adelaide & Regional SA)",
-    "Tasmania (TAS — 호바트·론세스턴 등 전역)": "Tasmania (TAS — Hobart, Launceston & Statewide)",
-    "Australian Capital Territory (ACT — 캔버라)": "Australian Capital Territory (ACT — Canberra)",
-    "Northern Territory (NT — 다윈·앨리스스프링스 등)": "Northern Territory (NT — Darwin & Regional NT)",
-    "해외 거주 중 (Offshore — 한국 등 호주 외 거주)": "Residing Offshore (Outside Australia)",
+    "Queensland (QLD · 브리즈번 / 골드코스트·지방 QLD)": "Queensland (QLD · Brisbane / Gold Coast & Regional QLD)",
+    "New South Wales (NSW · 시드니 / 지방 NSW)": "New South Wales (NSW · Sydney / Regional NSW)",
+    "Victoria (VIC · 멜버른 / 지방 VIC)": "Victoria (VIC · Melbourne / Regional VIC)",
+    "Western Australia (WA · 퍼스 및 서호주 전역)": "Western Australia (WA · Perth & Statewide WA)",
+    "South Australia (SA · 애들레이드 및 외곽 SA)": "South Australia (SA · Adelaide & Regional SA)",
+    "Tasmania (TAS · 호바트·론세스턴 등 전역)": "Tasmania (TAS · Hobart, Launceston & Statewide)",
+    "Australian Capital Territory (ACT · 캔버라)": "Australian Capital Territory (ACT · Canberra)",
+    "Northern Territory (NT · 다윈·앨리스스프링스 등)": "Northern Territory (NT · Darwin & Regional NT)",
+    "해외 거주 중 (Offshore · 한국 등 호주 외 거주)": "Residing Offshore (Outside Australia)",
     "2. 직군 산업 분야 (Priority Sector)": "2. Occupation Industry Sector",
     "일반 기술·전문직·기능직 (General CSOL/State List)": "General Skilled / Professional / Trade Occupation",
-    "건축·건설·트레이드 (Building & Construction — QLD·WA·SA 최우선 우대)": "Building & Construction Trades (Priority in QLD, WA, SA)",
+    "건축·건설·트레이드 (Building & Construction · QLD·WA·SA 최우선 우대)": "Building & Construction Trades (Priority in QLD, WA, SA)",
     "보건·의료·간호·교육·사회복지 (Health, Nursing, Teaching, Social Work)": "Health, Nursing, Teaching & Social Work",
     "3. 현 거주 주(State) 연속 거주 개월 수 (개월)": "3. Continuous Residency in Current State (Months)",
     "4. 현 거주 주 내 숙련 직무 연속 근무 개월 수 (개월)": "4. Continuous Skilled Employment in Current State (Months)",
     "5. 주당 평균 유급 근무시간 (시간/주)": "5. Average Paid Working Hours per Week",
-    "주 35~38시간 이상 (Full-time — 전 주정부 190/491 기준 충족)": "35–38+ hrs/wk (Full-time — Meets all State 190/491 thresholds)",
+    "주 35~38시간 이상 (Full-time · 전 주정부 190/491 기준 충족)": "35–38+ hrs/wk (Full-time · Meets all State 190/491 thresholds)",
     "주 30시간 이상 (QLD·SA·ACT 190 기준 충족)": "30+ hrs/wk (Meets QLD, SA, ACT 190 thresholds)",
     "주 20시간 이상 (NSW·TAS·SA 491 기준 충족)": "20+ hrs/wk (Meets NSW, TAS, SA 491 thresholds)",
     "주 15시간 이상 (ACT 491 13/15주 기준 충족)": "15+ hrs/wk (Meets ACT 491 threshold)",
     "현재 미취업 (졸업생 무경력 스트림 또는 해외 경력 활용)": "Currently Unemployed (Graduate stream or offshore experience)",
     "6. 현 거주 주(State) 내 대학/VET 졸업 여부": "6. Graduate of a University/VET Institution in Current State?",
     "아니오 (일반 숙련 근로자 스트림)": "No (Standard Skilled Worker Stream)",
-    "예 — 해당 주에서 학사/석사/학위(2년+) 졸업 (Regional NSW·WA·TAS·SA·NT 졸업생 특례)": "Yes — Bachelor/Masters (2+ yrs) in this State (Graduate concessions)",
-    "예 — 해당 주에서 박사(PhD) 학위 취득 (ACT 무료·자동초청 / QLD·WA·SA 우대)": "Yes — Doctorate (PhD) completed in this State (Priority stream)",
-    "예 — 해당 주에서 2년 이상 VET (Cert III/IV/Diploma) 졸업 (WA·TAS·SA 졸업생)": "Yes — 2+ yr VET (Cert III/IV/Diploma) in this State",
+    "예 · 해당 주에서 학사/석사/학위(2년+) 졸업 (Regional NSW·WA·TAS·SA·NT 졸업생 특례)": "Yes · Bachelor/Masters (2+ yrs) in this State (Graduate concessions)",
+    "예 · 해당 주에서 박사(PhD) 학위 취득 (ACT 무료·자동초청 / QLD·WA·SA 우대)": "Yes · Doctorate (PhD) completed in this State (Priority stream)",
+    "예 · 해당 주에서 2년 이상 VET (Cert III/IV/Diploma) 졸업 (WA·TAS·SA 졸업생)": "Yes · 2+ yr VET (Cert III/IV/Diploma) in this State",
     "내 프로필 기준 주정부 노미네이션(190 · 491) 적격 판정": "State Nomination (190 · 491) Eligibility Assessment",
     "8개 주/준주별 190·491 세부 스트림 · 거주/근무/고용계약 · 수수료 · 숨은 함정 총정리": "8-State/Territory 190 & 491 Streams, Residency/Work Rules, Fees & Key Traps",
     "QLD (퀸즐랜드)": "QLD (Queensland)",
@@ -3465,14 +3465,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "주정부 노미네이션 수수료 + FY2026–27 연방 비자비(VAC) 총합": "State Nomination Fee + FY2026–27 Federal VAC Total",
     "비자 종류 · 노미네이션 주 · 가족 수 · [491/494 전용] 191 전환 요건": "Visa Subclass, Nominating State, Family Size & [491/494 Only] 191 PR Check",
     "1. 신청 비자 서브클래스": "1. Target Visa Subclass",
-    "Subclass 491 — 지방 주정부/가족 지명 임시 5년 (3년 후 191 영주권 전환 대상 · VAC $6,140)": "Subclass 491 — Regional Provisional 5-Yr (Eligible for 191 PR after 3 yrs · VAC $6,140)",
-    "Subclass 191 — [491/494 소지자 전용] 3년 후 영주권 전환 신청 (VAC $630 · 주정부 비용 $0)": "Subclass 191 — [491/494 Holders Only] 3-Yr PR Transition (VAC $630 · State Fee $0)",
-    "Subclass 190 — 주정부 지명 영주비자 (처음부터 영주권 Direct PR · 191 전환 대상 아님 · VAC $6,140)": "Subclass 190 — State Nominated Direct PR (Direct PR · Not a 191 pathway · VAC $6,140)",
-    "Subclass 189 — 독립기술 영주비자 (처음부터 영주권 Direct PR · 주정부/191 대상 아님 · VAC $6,135)": "Subclass 189 — Skilled Independent Direct PR (Direct PR · Not a 191 pathway · VAC $6,135)",
+    "Subclass 491 · 지방 주정부/가족 지명 임시 5년 (3년 후 191 영주권 전환 대상 · VAC $6,140)": "Subclass 491 · Regional Provisional 5-Yr (Eligible for 191 PR after 3 yrs · VAC $6,140)",
+    "Subclass 191 · [491/494 소지자 전용] 3년 후 영주권 전환 신청 (VAC $630 · 주정부 비용 $0)": "Subclass 191 · [491/494 Holders Only] 3-Yr PR Transition (VAC $630 · State Fee $0)",
+    "Subclass 190 · 주정부 지명 영주비자 (처음부터 영주권 Direct PR · 191 전환 대상 아님 · VAC $6,140)": "Subclass 190 · State Nominated Direct PR (Direct PR · Not a 191 pathway · VAC $6,140)",
+    "Subclass 189 · 독립기술 영주비자 (처음부터 영주권 Direct PR · 주정부/191 대상 아님 · VAC $6,135)": "Subclass 189 · Skilled Independent Direct PR (Direct PR · Not a 191 pathway · VAC $6,135)",
     "2. 노미네이션 신청 주/준주 (190·491만 해당)": "2. Nominating State/Territory (190 & 491 Only)",
-    "QLD — $630.30 (Onshore GST 포함)": "QLD — $630.30 (incl. Onshore GST)",
-    "NSW — $346.50 (Onshore GST 포함)": "NSW — $346.50 (incl. Onshore GST)",
-    "WA — $0 (서호주 주정부 신청비 전면 무료!)": "WA — $0 (Western Australia $0 Nomination Fee)",
+    "QLD · $630.30 (Onshore GST 포함)": "QLD · $630.30 (incl. Onshore GST)",
+    "NSW · $346.50 (Onshore GST 포함)": "NSW · $346.50 (incl. Onshore GST)",
+    "WA · $0 (서호주 주정부 신청비 전면 무료!)": "WA · $0 (Western Australia $0 Nomination Fee)",
     "3. 동반 성인 가족 수 (만 18세 이상 배우자 등)": "3. Accompanying Adult Applicants (18+ Partner/Dependants)",
     "0명 (단독 신청)": "0 (Single Applicant)",
     "1명 (+$3,070 / 191은 +$315)": "1 Adult (+$3,070 / 191 is +$315)",
@@ -3487,8 +3487,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "491/494 보유 3년 이상 + ATO Notice of Assessment 3개 연도 확보 완료": "Held 491/494 for 3+ yrs + 3 income years of ATO NOAs ready",
     "아직 3년 미만 보유 중 (5년 비자 기간 중 총 3개 과세연도 NOA 확보 필요)": "Held <3 yrs (Must complete 3 years and 3 ATO NOAs within 5-yr validity)",
     "6. [491/494 소지자 전용] 지방 거주·근무 조건(8579) 준수": "6. [491/494 Holders Only] Condition 8579 Regional Compliance",
-    "준수 완료 — 지정 지방(Designated Regional Area) 내 거주·근무·학업 유지": "Compliant — Resided, worked & studied exclusively in Designated Regional Areas",
-    "주의 필요 — 대도시(시드니·멜버른·브리즈번) 장기 체류 또는 주소 변경 미신고(8578)": "Caution — Extended metro stay (Sydney/Melbourne/Brisbane) or unnotified address (8578)",
+    "준수 완료 · 지정 지방(Designated Regional Area) 내 거주·근무·학업 유지": "Compliant · Resided, worked & studied exclusively in Designated Regional Areas",
+    "주의 필요 · 대도시(시드니·멜버른·브리즈번) 장기 체류 또는 주소 변경 미신고(8578)": "Caution · Extended metro stay (Sydney/Melbourne/Brisbane) or unnotified address (8578)",
     "FY2026–27 총비용 & Subclass 191 영주권 전환 판정": "FY2026–27 Total Statutory Cost & Subclass 191 PR Assessment",
     "내 기술이민 점수(Schedule 6D) & 주정부 노미네이션 진단서 복사 · 인쇄(PDF) & 상담 메일 발송": "Copy, Print (PDF) & Email Your GSM Points & State Nomination Brief",
     "위 모듈에서 계산된 189·190·491 점수, 거주 주 노미네이션 적격 판정, 총비용 요약문을 즉시 복사하거나 상담 메일에 첨부할 수 있어요.": "Copy or email your calculated 189/190/491 points, state nomination eligibility, and fee breakdown directly to Park & Co.",
