@@ -1556,3 +1556,36 @@ table.occ-table tr:hover td {
     grid-template-columns: 1fr;
   }
 }
+
+/* WHM pv-input & mobile compact polish */
+#pv-input {
+  min-width: 225px;
+  width: 225px;
+}
+@media (max-width: 640px) {
+  #pv-input {
+    width: 100%;
+    min-width: 0;
+  }
+  .hero-jump-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 6px !important;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .hero-jump-row a {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+  .hero {
+    padding: 16px 0 18px !important;
+  }
+  .hero h1 {
+    font-size: 1.32rem !important;
+    margin-bottom: 6px !important;
+  }
+}
