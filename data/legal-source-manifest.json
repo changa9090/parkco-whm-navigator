@@ -1,7 +1,7 @@
 {
   "manifest_version": "2026.10.20-codex-audit",
-  "generated_at": "2026-11-05T15:07:23+10:00",
-  "last_polled_date": "2026-11-05",
+  "generated_at": "2026-11-09T07:25:45+10:00",
+  "last_polled_date": "2026-11-09",
   "verification_stages": [
     "fetchStatus (HTTP transport retrieval)",
     "contentCheckStatus (Substantive text / JSON schema extraction & non-empty body check)",
@@ -34,7 +34,7 @@
       "bytes": 63394,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -54,11 +54,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "161b8e8a533cb21c41f4f43484ca723e9788802d85761340b1f020d30d943646",
-      "bytes": 61903,
+      "sha256": "9c18d0e1671f169d14295fc21343fd0920b96bd13c8075b643421208fec2d83b",
+      "bytes": 61885,
       "method": "curl_h2_ha_schema",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -82,7 +82,7 @@
       "bytes": 6164,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -106,7 +106,7 @@
       "bytes": 50247,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -126,11 +126,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "5eee419b02e220d12b9c2867066f285e60fa4fd53cd2cfc3d9fc316af2df9800",
-      "bytes": 1309396,
+      "sha256": "07ab9bfe36854beda16d7f2b5c149a323759d8b9ed1a3e2a8acd6484197255f4",
+      "bytes": 1309403,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -150,11 +150,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "89bb82c4252f287598d7531271d01450e85fcd4ab3139d2a3a71940462ae08b4",
-      "bytes": 1307107,
+      "sha256": "96250e5452ea49513872f0512861a64d1ff33f2e765287202266e7583e437fb4",
+      "bytes": 1307114,
       "method": "curl_h2_direct",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -174,11 +174,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "d45dba993e0ef9d00475944c67302749a2d3d1f25c90a3fa5371ee7ef01ecc92",
-      "bytes": 1311650,
+      "sha256": "c7b44b1b7eb65dbce2998e1a2eacab73f37c78bbede0deaf0bd52df8e519f7e8",
+      "bytes": 1311657,
       "method": "curl_h2_direct",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -198,11 +198,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "704f76c8676bdecc407bcbb84ec2802f000df3be167248da8656163ee4cdb3f5",
+      "sha256": "9f7ceff5aa76c1c16b1107a62fc7d9c14a067111572fcbd1e9837b042b0c7dd1",
       "bytes": 65568,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -222,11 +222,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "eb1937ac4fa31595839229a1ea6cebf45ed568efb0b32b40b71c3d3f79cbd3b8",
+      "sha256": "3bbe9fe5f3493bb6ec4a979d1e0ce04a774b4ffc5952a350f14350dcba21ffd7",
       "bytes": 62696,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -246,11 +246,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "23c710738fc5fa965ef0242860bec8b1ae6fdcd99749f59254b090e02e4b3996",
-      "bytes": 62696,
+      "sha256": "2ff16f323ba45888336bd76ef82df1182bc38fa9d1cafb60cd2a6a9449c6364e",
+      "bytes": 62687,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -270,11 +270,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "7a57522d0515d9093bae264b3dffc87e88dd10c0b063bcdd78d828726cb997bb",
-      "bytes": 62764,
+      "sha256": "fad06159ae72648323033da50c4631d6c1365c880a417c65d4f5b3a20705e89e",
+      "bytes": 62755,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -298,7 +298,7 @@
       "bytes": 432008,
       "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-05T15:07:23+10:00"
+      "checked_at": "2026-11-09T07:25:45+10:00"
     }
   ],
   "internal_policy_references": [
