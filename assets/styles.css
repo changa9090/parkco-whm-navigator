@@ -493,13 +493,30 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 /* 6 Filter Grid */
 .filters-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px 18px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.filters-grid-2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.filter-group-full {
+  grid-column: 1 / -1;
+}
+.filters-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .filter-group {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .filter-label {
   display: flex;
@@ -508,9 +525,19 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   font-size: 13.5px;
   font-weight: 700;
   color: var(--color-charcoal);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
-.filter-select {
+input, select {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.filter-select, #c8547-postcode {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 10px 12px;
   font-size: 14.5px;
   font-weight: 600;
@@ -547,7 +574,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 /* 13 DAMA Regional Cards Grid */
 .region-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(285px, 100%), 1fr));
   gap: 16px;
 }
 .dama-card {
@@ -972,10 +999,10 @@ table.occ-table tr:hover td {
   flex-wrap: wrap;
 }
 
-/* Park & Co Unified Visit Counter & Referral Modal v2.1 */
+/* Park & Co Unified Visit Counter & Referral Modal v3.0 */
 .visit-counter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; align-items: center; }
 .visit-counter[hidden] { display: none !important; }
-.visit-counter:not([hidden]) { cursor: pointer; }
+.visit-counter:not([hidden]) { display: flex !important; cursor: pointer; }
 .visit-counter > span em { font-style: normal; }
 .visit-counter > span { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px; padding: 5px 13px; font-size: 12.5px; color: #E8E2D9; display: inline-flex; align-items: center; transition: border-color 0.15s ease, background 0.15s ease; }
 .visit-counter:not([hidden]):hover > span { border-color: #FDE68A; background: rgba(255, 255, 255, 0.11); }
@@ -1031,16 +1058,16 @@ table.occ-table tr:hover td {
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .stat-row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .filters-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .footnotes-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1052,16 +1079,28 @@ table.occ-table tr:hover td {
     font-size: 26px;
   }
   .stat-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .filters-grid {
-    grid-template-columns: 1fr;
+  .filters-grid,
+  .filters-grid-2col,
+  .pv-AreaGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .filter-group-full {
+    grid-column: auto;
+  }
+  .calc-step-box,
+  .postcode-verifier-box,
+  .combinator-panel,
+  .calc-summary-sticky,
+  .disclaimer-card {
+    padding: 16px;
   }
   .search-bar-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .modal-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   /* Mobile Card Layout for Table */
   table.occ-table {
@@ -1199,12 +1238,19 @@ table.occ-table tr:hover td {
 /* Multi-Step Calculator Layout */
 .calc-layout {
   display: grid;
-  grid-template-columns: 1.35fr 0.95fr;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.95fr);
   gap: 24px;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
+}
+.calc-layout > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (max-width: 1024px) {
-  .calc-layout { grid-template-columns: 1fr; }
+  .calc-layout { grid-template-columns: minmax(0, 1fr); }
 }
 .calc-step-box {
   background: var(--color-white);
@@ -1213,6 +1259,9 @@ table.occ-table tr:hover td {
   padding: 22px;
   box-shadow: var(--shadow-1);
   margin-bottom: 20px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .calc-step-header {
   display: flex;
@@ -1221,6 +1270,9 @@ table.occ-table tr:hover td {
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--color-line);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .calc-step-num {
   background: var(--color-burgundy);
@@ -1229,12 +1281,15 @@ table.occ-table tr:hover td {
   font-size: 13px;
   padding: 4px 10px;
   border-radius: var(--radius-pill);
+  flex-shrink: 0;
 }
 .calc-step-header h3 {
   font-size: 18px;
   font-weight: 800;
   color: var(--color-charcoal);
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Period Card */
@@ -1244,11 +1299,16 @@ table.occ-table tr:hover td {
   border-radius: var(--radius-md);
   padding: 16px;
   margin-bottom: 14px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .whm-period-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 .whm-period-top h4 {
@@ -1259,11 +1319,18 @@ table.occ-table tr:hover td {
 }
 .whm-period-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+.whm-period-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (max-width: 640px) {
-  .whm-period-grid { grid-template-columns: 1fr; }
+  .whm-period-grid { grid-template-columns: minmax(0, 1fr); }
 }
 .whm-period-status {
   margin-top: 12px;
@@ -1297,6 +1364,10 @@ table.occ-table tr:hover td {
   border-radius: var(--radius-lg);
   padding: 22px;
   box-shadow: var(--shadow-2);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
 }
 .progress-track {
   width: 100%;
@@ -1316,12 +1387,19 @@ table.occ-table tr:hover td {
 /* Condition 8547 Simulator */
 .c8547-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 24px;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
+}
+.c8547-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (max-width: 980px) {
-  .c8547-grid { grid-template-columns: 1fr; }
+  .c8547-grid { grid-template-columns: minmax(0, 1fr); }
 }
 .timeline-milestone-grid {
   display: grid;
@@ -1588,4 +1666,18 @@ table.occ-table tr:hover td {
     font-size: 1.32rem !important;
     margin-bottom: 6px !important;
   }
+}
+
+/* Prevent horizontal overflow on narrow mobile viewports (390px) even with overflow-x: visible */
+.container,
+.postcode-verifier-box,
+.combinator-panel,
+.disclaimer-card,
+.parkco-accordion,
+.parkco-accordion-body,
+.footer-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
 }

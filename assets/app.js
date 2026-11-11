@@ -207,6 +207,72 @@ const COUNTRIES = {
   ]
 };
 
+function matchPolled417CountryCode(rawName) {
+  if (!rawName || typeof rawName !== "string") return null;
+  const cleaned = rawName.toLowerCase().replace(/northern\s+ireland/g, "").trim();
+  if (/republic\s+of\s+korea|\bsouth\s+korea\b|\bkorea\b/.test(cleaned)) return "KR";
+  if (/united\s+kingdom|\bbritain\b|british\s+national\s+overseas/.test(cleaned)) return "UK";
+  if (/\bcanada\b/.test(cleaned)) return "CA";
+  if (/\bcyprus\b/.test(cleaned)) return "CY";
+  if (/\bdenmark\b/.test(cleaned)) return "DK";
+  if (/\bfinland\b/.test(cleaned)) return "FI";
+  if (/\bfrance\b/.test(cleaned)) return "FR";
+  if (/\bgermany\b/.test(cleaned)) return "DE";
+  if (/republic\s+of\s+ireland|\bireland\b/.test(cleaned)) return "IE";
+  if (/\bitaly\b/.test(cleaned)) return "IT";
+  if (/\bjapan\b/.test(cleaned)) return "JP";
+  if (/\btaiwan\b/.test(cleaned)) return "TW";
+  if (/hong\s+kong|\bhksar\b/.test(cleaned)) return "HK";
+  if (/\bbelgium\b/.test(cleaned)) return "BE";
+  if (/\bestonia\b/.test(cleaned)) return "EE";
+  if (/\bmalta\b/.test(cleaned)) return "MT";
+  if (/\bnetherlands\b/.test(cleaned)) return "NL";
+  if (/\bnorway\b/.test(cleaned)) return "NO";
+  if (/\bsweden\b/.test(cleaned)) return "SE";
+  return null;
+}
+
+function syncPolledCountryRules(pollingObj = (typeof POLLING_DATA !== "undefined" ? POLLING_DATA : null)) {
+  const ageRules = pollingObj?.monitored_rules?.subclass_417_age_caps;
+  if (!ageRules || !Array.isArray(COUNTRIES["417"])) {
+    return { synced: false, updatedCodes: [], byCode: {} };
+  }
+  const targetAges = {};
+  if (Array.isArray(ageRules.age_30_countries)) {
+    ageRules.age_30_countries.forEach((name) => {
+      const code = matchPolled417CountryCode(name);
+      if (code) targetAges[code] = 30;
+    });
+  }
+  if (Array.isArray(ageRules.age_35_countries)) {
+    ageRules.age_35_countries.forEach((name) => {
+      const code = matchPolled417CountryCode(name);
+      if (code) targetAges[code] = 35;
+    });
+  }
+  if (typeof ageRules.korea_age_max === "number" && ageRules.korea_age_max >= 18) {
+    targetAges.KR = ageRules.korea_age_max;
+  }
+
+  const updatedCodes = [];
+  const byCode = {};
+  COUNTRIES["417"].forEach((entry) => {
+    const polledMax = targetAges[entry.code];
+    if (typeof polledMax === "number" && polledMax >= 18) {
+      if (entry.maxAge !== polledMax) {
+        entry.maxAge = polledMax;
+        entry.ko = entry.ko.replace(/만\s*18~\d+세/, `만 18~${polledMax}세`);
+        entry.en = entry.en.replace(/Age\s*18[–-]\d+/, `Age 18–${polledMax}`);
+        updatedCodes.push(entry.code);
+      }
+    }
+    byCode[entry.code] = entry.maxAge;
+  });
+  return { synced: true, updatedCodes, byCode };
+}
+
+syncPolledCountryRules();
+
 // 9 Specified Work Categories
 const WORK_CATEGORIES = [
   {
@@ -545,16 +611,112 @@ const FOOTNOTES = [
 // STATE & INITIALIZATION
 // =========================================================================
 
+const WORK_PERIODS_STORAGE_KEY = "parkco_whm_work_periods_v1";
 let workPeriods = [];
 let nextPeriodId = 1;
 let selectedEvidence = ["payslips", "bank", "super_ato", "form1263_1464"];
 let selectedSeasonMonth = 0; // 0 = All, 1..12
 let selectedSeasonState = "ALL";
 
+function escapeHtmlAttr(val) {
+  return String(val ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function saveWorkPeriodsToStorage() {
+  try {
+    if (typeof localStorage === "undefined" || !localStorage) return false;
+    if (!Array.isArray(workPeriods) || workPeriods.length === 0) {
+      localStorage.removeItem(WORK_PERIODS_STORAGE_KEY);
+      return true;
+    }
+    const sanitized = workPeriods.map((p, idx) => ({
+      id: Number(p.id) || (idx + 1),
+      employerName: String(p.employerName || ""),
+      employerAbn: String(p.employerAbn || ""),
+      category: String(p.category || "plant"),
+      postcode: String(p.postcode || ""),
+      startDate: String(p.startDate || ""),
+      endDate: String(p.endDate || ""),
+      countingMode: String(p.countingMode || "fulltime"),
+      exactShiftsWorked: Number(p.exactShiftsWorked) || 0,
+      stdShiftsPerWeek: Number(p.stdShiftsPerWeek) || 5,
+      unpaidAbsentDays: Number(p.unpaidAbsentDays) || 0,
+      lawfullyPaid: Boolean(p.lawfullyPaid),
+      shortShiftWarning: Boolean(p.shortShiftWarning),
+      covidHealthcareClaimed: Boolean(p.covidHealthcareClaimed),
+      bushfireUnpaidBefore2025: Boolean(p.bushfireUnpaidBefore2025)
+    }));
+    localStorage.setItem(WORK_PERIODS_STORAGE_KEY, JSON.stringify(sanitized));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function loadWorkPeriodsFromStorage() {
+  try {
+    if (typeof localStorage === "undefined" || !localStorage) return false;
+    const raw = localStorage.getItem(WORK_PERIODS_STORAGE_KEY);
+    if (!raw) return false;
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed) || parsed.length === 0) return false;
+    workPeriods = parsed.map((p, idx) => ({
+      id: Number(p.id) || (idx + 1),
+      employerName: String(p.employerName || ""),
+      employerAbn: String(p.employerAbn || ""),
+      category: String(p.category || "plant"),
+      postcode: String(p.postcode || "").replace(/\D/g, "").slice(0, 4),
+      startDate: String(p.startDate || ""),
+      endDate: String(p.endDate || ""),
+      countingMode: String(p.countingMode || "fulltime"),
+      exactShiftsWorked: Number(p.exactShiftsWorked) || 0,
+      stdShiftsPerWeek: Number(p.stdShiftsPerWeek) || 5,
+      unpaidAbsentDays: Number(p.unpaidAbsentDays) || 0,
+      lawfullyPaid: p.lawfullyPaid !== undefined ? Boolean(p.lawfullyPaid) : true,
+      shortShiftWarning: Boolean(p.shortShiftWarning),
+      covidHealthcareClaimed: Boolean(p.covidHealthcareClaimed),
+      bushfireUnpaidBefore2025: Boolean(p.bushfireUnpaidBefore2025)
+    }));
+    const maxId = workPeriods.reduce((m, item) => Math.max(m, Number(item.id) || 0), 0);
+    nextPeriodId = maxId + 1;
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function clearSavedWorkPeriods() {
+  workPeriods = [];
+  try {
+    if (typeof localStorage !== "undefined" && localStorage) {
+      localStorage.removeItem(WORK_PERIODS_STORAGE_KEY);
+    }
+  } catch (e) {}
+  renderPeriodsList();
+  renderCalculatorSummary();
+  showForm1263Feedback(t("✓ 저장된 근무기록이 브라우저에서 삭제되었습니다", "✓ Saved work entries cleared from browser"));
+}
+
+function showForm1263Feedback(msg) {
+  if (typeof document === "undefined" || !document) return;
+  const el = document.getElementById("form1263-action-feedback");
+  if (!el) return;
+  el.textContent = msg;
+  setTimeout(() => {
+    if (el.textContent === msg) el.textContent = "";
+  }, 2600);
+}
+
 function loadSampleWorkPeriods() {
   workPeriods = [
     {
       id: nextPeriodId++,
+      employerName: "Coral Coast Orchards Pty Ltd",
+      employerAbn: "12345678901",
       category: "plant",
       postcode: "4870",
       startDate: "2026-03-01",
@@ -567,6 +729,7 @@ function loadSampleWorkPeriods() {
       shortShiftWarning: false
     }
   ];
+  saveWorkPeriodsToStorage();
   renderPeriodsList();
   renderCalculatorSummary();
 }
@@ -1665,6 +1828,7 @@ function renderPeriodsList() {
   const assessmentDate = document.getElementById("calc-assessment-date")?.value || todayBrisbaneIso();
 
   if (workPeriods.length === 0) {
+    saveWorkPeriodsToStorage();
     container.innerHTML = `
       <div class="neutral-prompt-box">
         <strong>${t("아직 입력된 지정 근로 기간이 없습니다.", "No work periods entered yet.")}</strong><br/>
@@ -1673,6 +1837,8 @@ function renderPeriodsList() {
     `;
     return;
   }
+
+  saveWorkPeriodsToStorage();
 
   const port = evaluateSpecifiedWorkPortfolio(workPeriods, {
     subclass,
@@ -1703,6 +1869,16 @@ function renderPeriodsList() {
 
         <div class="whm-period-grid">
           <div class="filter-group">
+            <label class="filter-label">${t("고용주·사업장명 (선택 · Form 1263 대조용)", "Employer / Business Name (Optional · Form 1263)")}</label>
+            <input type="text" class="filter-select p-field-meta" data-id="${p.id}" data-field="employerName" value="${escapeHtmlAttr(p.employerName || "")}" placeholder="${t("예: Coral Coast Orchards", "e.g. Coral Coast Orchards")}" />
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">${t("고용주 ABN (선택 · 11자리 숫자)", "Employer ABN (Optional · 11 digits)")}</label>
+            <input type="text" class="filter-select p-field-meta" data-id="${p.id}" data-field="employerAbn" inputmode="numeric" maxlength="14" value="${escapeHtmlAttr(p.employerAbn || "")}" placeholder="${t("예: 12 345 678 901", "e.g. 12 345 678 901")}" />
+          </div>
+
+          <div class="filter-group">
             <label class="filter-label">${t("업무 종류 (Category)", "Work Category")}</label>
             <select class="filter-select p-field" data-id="${p.id}" data-field="category">
               ${WORK_CATEGORIES.map(c => `<option value="${c.id}" ${p.category === c.id ? "selected" : ""}>${t(c.ko, c.en)}</option>`).join("")}
@@ -1711,7 +1887,7 @@ function renderPeriodsList() {
 
           <div class="filter-group">
             <label class="filter-label">${t("실제 근무지 우편번호 (Postcode)", "Workplace Postcode")}</label>
-            <input type="text" class="filter-select p-field" data-id="${p.id}" data-field="postcode" inputmode="numeric" maxlength="4" value="${p.postcode}" placeholder="예: 4870" />
+            <input type="text" class="filter-select p-field" data-id="${p.id}" data-field="postcode" inputmode="numeric" maxlength="4" value="${escapeHtmlAttr(p.postcode)}" placeholder="${t("예: 4870", "e.g. 4870")}" />
           </div>
 
           <div class="filter-group">
@@ -1799,14 +1975,258 @@ function renderPeriodsList() {
     });
   });
 
-  container.querySelectorAll(".btn-remove-period").forEach(btn => {
+  container.querySelectorAll(".p-field-meta").forEach(el => {
+    el.addEventListener("input", (e) => {
+      const id = Number(e.target.getAttribute("data-id"));
+      const field = e.target.getAttribute("data-field");
+      const period = workPeriods.find(x => x.id === id);
+      if (!period) return;
+      if (field === "employerAbn") {
+        period[field] = e.target.value.replace(/[^\d\s]/g, "").slice(0, 14);
+        e.target.value = period[field];
+      } else {
+        period[field] = e.target.value;
+      }
+      saveWorkPeriodsToStorage();
+    });
+  });
+
+  container.querySelectorAll(".p-remove, .btn-remove-period").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const id = Number(e.target.getAttribute("data-id"));
       workPeriods = workPeriods.filter(x => x.id !== id);
+      saveWorkPeriodsToStorage();
       renderPeriodsList();
       renderCalculatorSummary();
     });
   });
+}
+
+function formatPostcodeTablesLabel(pcStr, lang = "ko") {
+  const ev = evaluatePostcodeAreas(pcStr);
+  if (!ev.valid) return lang === "en" ? "Invalid postcode" : "우편번호 미입력/오류";
+  const tables = [];
+  if (ev.remote) tables.push("Table 1 Remote");
+  if (ev.additionalTourismArea) tables.push("Table 2 Tourism");
+  if (ev.northern) tables.push("Table 3 Northern");
+  if (ev.regional) tables.push("Table 4 Regional");
+  if (ev.bushfire) tables.push("Table 5 Bushfire");
+  if (ev.disaster) tables.push("Table 6 Disaster");
+  if (!tables.length) return lang === "en" ? `${pcStr} (Metro / Non-designated)` : `${pcStr} (비지정 대도시)`;
+  return `${pcStr} (${tables.join(", ")})`;
+}
+
+function formatCountingModeLabel(mode, lang = "ko") {
+  const map = {
+    fulltime: { ko: "풀타임/표준교대(주7일)", en: "Full-time / Standard roster (7d/wk)" },
+    piecework: { ko: "적법 성과급(풀타임 상당)", en: "Lawful piecework (Full-time eq.)" },
+    parttime_4: { ko: "파트타임(주4일·80%)", en: "Part-time (4d/wk · 80%)" },
+    parttime_3: { ko: "파트타임(주3일·60%)", en: "Part-time (3d/wk · 60%)" },
+    parttime_2: { ko: "파트타임(주2일·40%)", en: "Part-time (2d/wk · 40%)" },
+    exact_shifts: { ko: "실제 표준근무일(Shifts) 비례", en: "Exact standard shifts worked" }
+  };
+  const entry = map[mode] || map.fulltime;
+  return lang === "en" ? entry.en : entry.ko;
+}
+
+function getForm1263ExportData(overrides = {}) {
+  const docReady = typeof document !== "undefined" && document && typeof document.getElementById === "function";
+  const subclass = overrides.subclass || (docReady ? document.getElementById("calc-subclass")?.value : null) || "417";
+  const targetVisa = overrides.targetVisa || (docReady ? document.getElementById("calc-target")?.value : null) || "second";
+  const countryCode = overrides.countryCode || (docReady ? document.getElementById("calc-country")?.value : null) || "KR";
+  const visaHeld = overrides.visaHeld || (docReady ? document.getElementById("calc-visa-held")?.value : null) || "valid_whm";
+  const assessmentDate = overrides.assessmentDate || (docReady ? document.getElementById("calc-assessment-date")?.value : null) || todayBrisbaneIso();
+  const periods = Array.isArray(overrides.periods) ? overrides.periods : workPeriods;
+
+  const port = evaluateSpecifiedWorkPortfolio(periods, {
+    subclass,
+    targetVisa,
+    countryCode,
+    visaHeld,
+    assessmentDate
+  });
+
+  const rows = periods.map((p, idx) => {
+    const ev = port.evals[idx] || evaluateSinglePeriod(p, subclass, targetVisa, { assessmentDate, globalVisaHeld: visaHeld });
+    const cat = WORK_CATEGORIES.find(c => c.id === p.category) || WORK_CATEGORIES[0];
+    return {
+      periodNo: idx + 1,
+      employerName: String(p.employerName || "").trim(),
+      employerAbn: String(p.employerAbn || "").trim(),
+      categoryKo: cat.ko,
+      categoryEn: cat.en,
+      postcode: String(p.postcode || "").trim(),
+      areaKo: formatPostcodeTablesLabel(String(p.postcode || "").trim(), "ko"),
+      areaEn: formatPostcodeTablesLabel(String(p.postcode || "").trim(), "en"),
+      startDate: p.startDate || "-",
+      endDate: p.endDate || "-",
+      countingKo: formatCountingModeLabel(p.countingMode, "ko"),
+      countingEn: formatCountingModeLabel(p.countingMode, "en"),
+      remunerationKo: p.lawfullyPaid ? "적법 유급(Payslips)" : (cat.volunteerAllowed ? "재해복구 자원봉사" : "무급/미확인(불인정)"),
+      remunerationEn: p.lawfullyPaid ? "Lawfully Paid (Payslips)" : (cat.volunteerAllowed ? "Disaster Volunteer" : "Unpaid/Ineligible"),
+      unpaidAbsentDays: Number(p.unpaidAbsentDays) || 0,
+      eligibleDays: ev.qualifies ? ev.effectiveDays : 0,
+      qualifies: Boolean(ev.qualifies)
+    };
+  });
+
+  return { subclass, targetVisa, countryCode, assessmentDate, port, rows };
+}
+
+function buildForm1263SummaryText(lang = currentLang, overrides = {}) {
+  const isEn = lang === "en";
+  const { subclass, targetVisa, assessmentDate, port, rows } = getForm1263ExportData(overrides);
+  const targetLabel = targetVisa === "third"
+    ? (isEn ? "3rd Visa (179-day target)" : "3차 비자 (목표 179일)")
+    : targetVisa === "first"
+    ? (isEn ? "1st Visa (0-day target)" : "1차 비자 (지정근로 없음)")
+    : (isEn ? "2nd Visa (88-day target)" : "2차 비자 (목표 88일)");
+
+  const lines = [];
+  if (isEn) {
+    lines.push(`=== Park & Co WHM Navigator · ImmiAccount & Form 1263 Specified Work Summary ===`);
+    lines.push(`Stream: Subclass ${subclass} · ${targetLabel} | Assessment Date: ${assessmentDate}`);
+    lines.push(`Confirmed Days: ${port.deduplicatedDays} / ${port.requiredDays} days (Overlap Deducted: ${port.overlapRemovedDays}d | Raw Sum: ${port.rawQualifyingDaysSum}d)`);
+    lines.push(`--------------------------------------------------------------------------------`);
+    if (rows.length === 0) {
+      lines.push(`No work periods entered yet.`);
+    } else {
+      rows.forEach((r) => {
+        const emp = r.employerName ? `${r.employerName}${r.employerAbn ? ` (ABN: ${r.employerAbn})` : ""}` : (r.employerAbn ? `ABN: ${r.employerAbn}` : "Employer not specified");
+        lines.push(
+          `[Period #${r.periodNo}] ${r.startDate} to ${r.endDate} | ${emp} | ${r.categoryEn} | ${r.areaEn} | ${r.countingEn} | ${r.remunerationEn} | Unpaid Absent: ${r.unpaidAbsentDays}d | Eligible: ${r.eligibleDays}d`
+        );
+      });
+    }
+    lines.push(`--------------------------------------------------------------------------------`);
+    lines.push(` ImmiAccount / Form 1263 Evidence Cross-Check: Payslips + Bank Statements + Super/STP + Employer ABN`);
+  } else {
+    lines.push(`=== Park & Co WHM Navigator · ImmiAccount 및 Form 1263 지정 근로 요약표 ===`);
+    lines.push(`대상 비자: Subclass ${subclass} · ${targetLabel} | 판정 기준일: ${assessmentDate}`);
+    lines.push(`최종 확정 산입 일수: ${port.deduplicatedDays} / ${port.requiredDays}일 (중복 자동 공제: ${port.overlapRemovedDays}일 | 단순 합산: ${port.rawQualifyingDaysSum}일)`);
+    lines.push(`--------------------------------------------------------------------------------`);
+    if (rows.length === 0) {
+      lines.push(`입력된 지정 근로 기간이 없습니다.`);
+    } else {
+      rows.forEach((r) => {
+        const emp = r.employerName ? `${r.employerName}${r.employerAbn ? ` (ABN: ${r.employerAbn})` : ""}` : (r.employerAbn ? `ABN: ${r.employerAbn}` : "고용주명 미입력");
+        lines.push(
+          `[기간 #${r.periodNo}] ${r.startDate} ~ ${r.endDate} | ${emp} | ${r.categoryKo} | ${r.areaKo} | ${r.countingKo} | ${r.remunerationKo} | 무급결근: ${r.unpaidAbsentDays}일 | 인정일수: ${r.eligibleDays}일`
+        );
+      });
+    }
+    lines.push(`--------------------------------------------------------------------------------`);
+    lines.push(`ImmiAccount / Form 1263 제출 전 필수 대조: 급여명세서(Payslips) · 급여 입금 내역 · 연금(Super)/STP · 사업장 실제 우편번호`);
+  }
+  return lines.join("\n");
+}
+
+function csvEscapeCell(val) {
+  const s = String(val ?? "");
+  if (/[",\r\n]/.test(s)) {
+    return `"${s.replace(/"/g, '""')}"`;
+  }
+  return s;
+}
+
+function buildForm1263CsvContent(lang = currentLang, overrides = {}) {
+  const isEn = lang === "en";
+  const { subclass, targetVisa, assessmentDate, port, rows } = getForm1263ExportData(overrides);
+  const headers = isEn
+    ? ["Period #", "Subclass", "Target Stream", "Employer Name", "Employer ABN", "Industry / Category", "Regional Postcode & Table Designation", "Date From", "Date To", "Counting Method", "Paid / Volunteer Status", "Unpaid Absent Days", "Eligible Days", "Portfolio Overlap Deducted Days", "Portfolio Total Confirmed Days", "Target Required Days", "Assessment Date"]
+    : ["기간 번호", "비자 서브클래스", "목표 차수", "고용주명", "고용주 ABN", "지정 근로 업종", "근무지 우편번호 및 지역표", "근무 시작일", "근무 종료일", "산정 방식", "급여/자원봉사 구분", "무급 결근일수", "기간별 인정일수", "전체 중복 공제일수", "최종 확정 합산일수", "목표 기준일수", "판정 기준일"];
+
+  const csvRows = [headers.map(csvEscapeCell).join(",")];
+  if (rows.length === 0) {
+    const emptyRow = [
+      "-", subclass, targetVisa, "", "", isEn ? "No periods entered" : "입력된 기간 없음",
+      "", "", "", "", "", 0, 0, port.overlapRemovedDays, port.deduplicatedDays, port.requiredDays, assessmentDate
+    ];
+    csvRows.push(emptyRow.map(csvEscapeCell).join(","));
+  } else {
+    rows.forEach((r) => {
+      const line = [
+        r.periodNo,
+        subclass,
+        targetVisa,
+        r.employerName,
+        r.employerAbn,
+        isEn ? r.categoryEn : r.categoryKo,
+        isEn ? r.areaEn : r.areaKo,
+        r.startDate,
+        r.endDate,
+        isEn ? r.countingEn : r.countingKo,
+        isEn ? r.remunerationEn : r.remunerationKo,
+        r.unpaidAbsentDays,
+        r.eligibleDays,
+        port.overlapRemovedDays,
+        port.deduplicatedDays,
+        port.requiredDays,
+        assessmentDate
+      ];
+      csvRows.push(line.map(csvEscapeCell).join(","));
+    });
+  }
+  return "\uFEFF" + csvRows.join("\r\n");
+}
+
+function copyForm1263Summary() {
+  const text = buildForm1263SummaryText(currentLang);
+  if (typeof window !== "undefined") {
+    window.__lastCopiedForm1263Summary = text;
+  }
+  const onDone = () => {
+    showForm1263Feedback(t("✓ ImmiAccount · Form 1263 요약본이 복사되었습니다", "✓ Form 1263 summary copied to clipboard"));
+  };
+  try {
+    if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(onDone).catch(() => {
+        fallbackCopyText(text);
+        onDone();
+      });
+      return text;
+    }
+  } catch (e) {}
+  fallbackCopyText(text);
+  onDone();
+  return text;
+}
+
+function fallbackCopyText(text) {
+  try {
+    if (typeof document === "undefined" || !document.body) return;
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+  } catch (e) {}
+}
+
+function downloadForm1263Csv() {
+  const csvContent = buildForm1263CsvContent(currentLang);
+  if (typeof window !== "undefined") {
+    window.__lastDownloadedForm1263Csv = csvContent;
+  }
+  try {
+    if (typeof Blob !== "undefined" && typeof URL !== "undefined" && URL.createObjectURL && typeof document !== "undefined") {
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = "whm-form1263-work-summary.csv";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 1500);
+    }
+  } catch (e) {}
+  showForm1263Feedback(t("✓ whm-form1263-work-summary.csv 다운로드 완료", "✓ Downloaded whm-form1263-work-summary.csv"));
+  return csvContent;
 }
 
 function renderCalculatorSummary() {
@@ -2091,6 +2511,35 @@ function addCalendarMonthsClamped(dateStr, monthsToAdd) {
   return dt ? dt.toISOString().slice(0, 10) : "";
 }
 
+/*
+ * Exact Condition 8547 6-calendar-month final lawful work day under
+ * Acts Interpretation Act 1901 (Cth) s 2G(1) & (2) + Home Affairs PAM3 Condition 8547 policy:
+ * - s 2G(1): Where target month (m + monthsToAdd) has corresponding day d (d <= maxDay),
+ *   the period ends at the end of the day BEFORE corresponding day d (e.g. 2026-05-01 -> 2026-10-31; 2026-08-28 -> 2027-02-27).
+ * - s 2G(2): Where target month lacks corresponding day d (d > maxDay),
+ *   the period ends at the end of the last day of that target calendar month (e.g. 2026-08-31 -> 2027-02-28; 2023-08-31 -> 2024-02-29).
+ */
+function computeCondition8547EndDateUTC(dateStr, monthsToAdd = 6) {
+  if (!dateStr || typeof dateStr !== "string") return null;
+  const parts = dateStr.split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return null;
+  const [y, m, d] = parts;
+  if (m < 1 || m > 12 || d < 1 || d > 31) return null;
+  const targetMonthIndex = (m - 1) + monthsToAdd;
+  const targetYear = y + Math.floor(targetMonthIndex / 12);
+  const normMonth = ((targetMonthIndex % 12) + 12) % 12;
+  const maxDay = new Date(Date.UTC(targetYear, normMonth + 1, 0)).getUTCDate();
+  if (d <= maxDay) {
+    return new Date(Date.UTC(targetYear, normMonth, d) - 86400000);
+  }
+  return new Date(Date.UTC(targetYear, normMonth, maxDay));
+}
+
+function computeCondition8547EndDate(dateStr, monthsToAdd = 6) {
+  const dt = computeCondition8547EndDateUTC(dateStr, monthsToAdd);
+  return dt ? dt.toISOString().slice(0, 10) : "";
+}
+
 function evaluateCondition8547(input = {}) {
   const startStr = input.startDate || "2026-05-01";
   const pcStr = String(input.postcode || "").trim();
@@ -2107,7 +2556,7 @@ function evaluateCondition8547(input = {}) {
   const permissionStatus = input.permissionStatus || "none";
 
   const pcEval = evaluatePostcodeAreas(pcStr);
-  const sixMonthDateObj = addCalendarMonthsUTC(startStr, 6);
+  const sixMonthDateObj = computeCondition8547EndDateUTC(startStr, 6);
   let sixMonthDateStr = "-";
   let twoWeeksPriorStr = "-";
   if (sixMonthDateObj) {
@@ -2119,7 +2568,7 @@ function evaluateCondition8547(input = {}) {
   let resetExpiryStr = "";
   let resetTwoWeeksPriorStr = "";
   if (resetDate) {
-    const rObj = addCalendarMonthsUTC(resetDate, 6);
+    const rObj = computeCondition8547EndDateUTC(resetDate, 6);
     if (rObj) {
       resetExpiryStr = rObj.toISOString().slice(0, 10);
       resetTwoWeeksPriorStr = new Date(rObj.getTime() - 14 * 86400000).toISOString().slice(0, 10);
@@ -2381,11 +2830,28 @@ function evaluateCondition8547(input = {}) {
     };
   }
 
+  const isOnFinalLawfulDay = Boolean(assessmentDate && sixMonthDateStr !== "-" && assessmentDate === sixMonthDateStr);
+  const isPastCutoff = Boolean(assessmentDate && sixMonthDateStr !== "-" && assessmentDate > sixMonthDateStr);
+  if (reasonsKo.length === 0 && sixMonthDateStr !== "-") {
+    if (isPastCutoff) {
+      reasonsKo.push(`<strong>6개월 법정 상한일(${sixMonthDateStr}) 경과 주의 (Acts Interpretation Act 1901 s 2G):</strong> 출근 시작일(${startStr}) 기준 6달력월 마지막 적법 근무일은 <strong>${sixMonthDateStr}</strong>이며 그 다음 날부터는 7개월 차 첫날(조건 8547 위반 위험)에 해당합니다.`);
+      reasonsEn.push(`<strong>6-Month Statutory Limit (${sixMonthDateStr}) Passed (Acts Interpretation Act 1901 s 2G):</strong> Starting on ${startStr}, the final lawful day of the 6-month period was <strong>${sixMonthDateStr}</strong>; any work from the day after breaches Condition 8547 without an exemption or permission.`);
+    } else if (isOnFinalLawfulDay) {
+      reasonsKo.push(`<strong>오늘(${sixMonthDateStr})이 6개월 기간의 마지막 적법 근무일입니다 (Acts Interpretation Act 1901 s 2G):</strong> 내일부터는 7개월 차 첫날이 되므로 사전 허가 미접수 시 오늘까지만 근무할 수 있습니다.`);
+      reasonsEn.push(`<strong>Today (${sixMonthDateStr}) Is Your Final Lawful Day of the 6-Month Period (Acts Interpretation Act 1901 s 2G):</strong> Tomorrow is Day 1 of Month 7; you cannot work beyond today without prior submission or an exemption.`);
+    } else {
+      reasonsKo.push(`<strong>6개월 법정 상한일 안내 (Acts Interpretation Act 1901 s 2G):</strong> 출근 시작일(${startStr}) 기준 마지막 적법 근무일은 <strong>${sixMonthDateStr}</strong>입니다 (권장 사전 허가 신청일: <strong>${twoWeeksPriorStr}</strong>).`);
+      reasonsEn.push(`<strong>6-Month Statutory End Date (Acts Interpretation Act 1901 s 2G):</strong> Starting on ${startStr}, your final lawful work day is <strong>${sixMonthDateStr}</strong> (recommended advance permission request date: <strong>${twoWeeksPriorStr}</strong>).`);
+    }
+  }
+
   return {
     status: "limit_applies",
     badgeClass: "badge-danger",
     isAutoExempt: false,
     clockResetActive: false,
+    isOnFinalLawfulDay,
+    isPastCutoff,
     activeCutoffDate: sixMonthDateStr,
     initialSixMonthDateStr: sixMonthDateStr,
     twoWeeksPriorStr,
@@ -3139,8 +3605,8 @@ const I18N_STATIC = {
     en: "Visa outcomes are determined by delegates of the Minister for Home Affairs under the Migration Act 1958, Migration Regulations 1994, and applicable Legislative Instruments (LIN 22/012, LIN 22/013, LIN 25/048) based on the documentary evidence provided."
   },
   discP3: {
-    ko: "구체적인 비자 연장 신청, 28일 실체비자 만료 유예기간 적용, 조건 8547 위반 위험 검토 또는 고용주 스폰서 비자(482/494/186) 전환을 앞두고 계신 경우 반드시 박창민 대표변호사(QLS Accredited Specialist in Immigration Law · 공식 상담 링크: https://parklawyers.com.au/links/?lang=ko)와 개별 상담을 진행해 주십시오.",
-    en: "For formal legal advice regarding your visa extension, the 28-day onshore grace period, Condition 8547 compliance, or employer-sponsored visa pathways (482/494/186), please consult Chang Min Park (QLS Accredited Specialist in Immigration Law · Official Inquiry: https://parklawyers.com.au/links/)."
+    ko: "구체적인 비자 연장 신청, 28일 실체비자 만료 유예기간 적용, 조건 8547 위반 위험 검토 또는 고용주 스폰서 비자(482/494/186) 전환을 앞두고 계신 경우 반드시 박창민 대표변호사(QLS Accredited Specialist in Immigration Law · 공식 상담 링크: https://parklawyers.com.au/links/?lang=ko · 이메일: enquiry@parkcolawyers.com)와 개별 상담을 진행해 주십시오.",
+    en: "For formal legal advice regarding your visa extension, the 28-day onshore grace period, Condition 8547 compliance, or employer-sponsored visa pathways (482/494/186), please consult Chang Min Park (QLS Accredited Specialist in Immigration Law · Official Inquiry: https://parklawyers.com.au/links/ · Email: enquiry@parkcolawyers.com)."
   },
   fnHeading: {
     ko: "1차 공식 법령 · 행정입법(LIN) · PAM3 심사지침 레퍼런스 각주 ([1] ~ [18])",
@@ -3157,6 +3623,22 @@ const I18N_STATIC = {
   btnClearPeriods: {
     ko: "초기화",
     en: "Reset"
+  },
+  btnClearSavedPeriods: {
+    ko: "🗑️ 저장된 근무기록 초기화",
+    en: "🗑️ Clear Saved Entries"
+  },
+  form1263ToolbarNote: {
+    ko: "입력한 근무 기록은 현재 브라우저 기기(localStorage)에만 자동 임시 저장됩니다(서버 전송 없음). ImmiAccount 신청서 및 Form 1263 대조용 요약본을 원클릭으로 복사·다운로드할 수 있습니다.",
+    en: "Entered work periods are auto-saved locally in this browser only (never uploaded). Copy or download a structured ImmiAccount & Form 1263 summary in 1 click."
+  },
+  btnCopyForm1263: {
+    ko: "📋 ImmiAccount · Form 1263 요약 복사",
+    en: "📋 Copy Form 1263 Summary"
+  },
+  btnDownloadForm1263Csv: {
+    ko: "📥 Form 1263 CSV 다운로드",
+    en: "📥 Download Form 1263 CSV"
   },
   pam3NoteSummary: {
     ko: "PAM3 일수 산정 4대 원칙 보기 (풀타임 vs 파트타임 · 중복 공제 · 무급 휴업일)",
@@ -3374,9 +3856,15 @@ const HTML_I18N_KEYS = new Set([
   "footerFirmLine"
 ]);
 
+const DOC_TITLE_KO = "호주 워킹홀리데이(417 · 462) 2·3차 연장 · 지정 근로(88/179일) 및 조건 8547(6개월 근무 제한·면제) 네비게이터 (Park & Co WHM Navigator 2026)";
+const DOC_TITLE_EN = "Australia Working Holiday (417 · 462) 88/179-Day Specified Work & Condition 8547 Navigator (2026) | Park & Co Lawyers";
+
 function applyLanguage(lang) {
   currentLang = lang === "en" ? "en" : "ko";
-  document.documentElement.lang = currentLang;
+  if (typeof document !== "undefined" && document) {
+    if (document.documentElement) document.documentElement.lang = currentLang;
+    document.title = currentLang === "en" ? DOC_TITLE_EN : DOC_TITLE_KO;
+  }
   document.getElementById("lang-toggle-ko")?.classList.toggle("active", currentLang === "ko");
   document.getElementById("lang-toggle-en")?.classList.toggle("active", currentLang === "en");
 
@@ -3404,7 +3892,12 @@ function applyLanguage(lang) {
   renderSourceMonitorModal();
 }
 
+const setLanguage = applyLanguage;
+
 document.addEventListener("DOMContentLoaded", () => {
+  syncPolledCountryRules();
+  loadWorkPeriodsFromStorage();
+
   const bneToday = todayBrisbaneIso();
   const calcAssessEl = document.getElementById("calc-assessment-date");
   if (calcAssessEl && !calcAssessEl.value) calcAssessEl.value = bneToday;
@@ -3467,10 +3960,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Add BLANK period button + Sample / Clear buttons
+  // Add BLANK period button + Sample / Clear / Form 1263 Export buttons
   document.getElementById("btn-add-period")?.addEventListener("click", () => {
     workPeriods.push({
       id: nextPeriodId++,
+      employerName: "",
+      employerAbn: "",
       category: "plant",
       postcode: "",
       startDate: "",
@@ -3484,6 +3979,7 @@ document.addEventListener("DOMContentLoaded", () => {
       covidHealthcareClaimed: false,
       bushfireUnpaidBefore2025: false
     });
+    saveWorkPeriodsToStorage();
     renderPeriodsList();
     renderCalculatorSummary();
   });
@@ -3491,9 +3987,16 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSampleWorkPeriods();
   });
   document.getElementById("btn-clear-periods")?.addEventListener("click", () => {
-    workPeriods = [];
-    renderPeriodsList();
-    renderCalculatorSummary();
+    clearSavedWorkPeriods();
+  });
+  document.getElementById("btn-clear-saved-periods")?.addEventListener("click", () => {
+    clearSavedWorkPeriods();
+  });
+  document.getElementById("btn-copy-form1263")?.addEventListener("click", () => {
+    copyForm1263Summary();
+  });
+  document.getElementById("btn-download-form1263-csv")?.addEventListener("click", () => {
+    downloadForm1263Csv();
   });
 
   // Condition 8547 Sample / Reset buttons
