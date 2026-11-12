@@ -2990,8 +2990,8 @@ function renderCondition8547Simulator() {
   const overdueAlertBanner = isOverdueLimit ? `
     <div style="background:#FDF2F2;border:1.5px solid #B23028;border-left:5px solid #B23028;padding:12px 14px;border-radius:8px;font-size:13.5px;color:#771D1D;margin-bottom:12px;font-weight:700;">
       ${t(
-        `이미 6개월 근무 상한 경과 — 조건 위반 위험, 즉시 확인 필요: 판정 기준일(${assessmentDate}) 현재 6개월 법정 상한일(${activeCutoffDate})이 이미 지났습니다. 면제 요건이나 만료 전 접수된 서면 허가가 없다면 즉시 근무를 중단하고 조건 8547 위반 여부를 점검하십시오.`,
-        `CRITICAL · 6-Month Work Limit Already Exceeded — Risk of Breach, Immediate Check Required: As of ${assessmentDate}, your 6-month statutory cutoff (${activeCutoffDate}) has passed. Unless exempt or covered by a pre-expiry request, stop working immediately and seek legal review.`
+        `이미 6개월 근무 상한 경과 · 조건 위반 위험, 즉시 확인 필요: 판정 기준일(${assessmentDate}) 현재 6개월 법정 상한일(${activeCutoffDate})이 이미 지났습니다. 면제 요건이나 만료 전 접수된 서면 허가가 없다면 즉시 근무를 중단하고 조건 8547 위반 여부를 점검하십시오.`,
+        `CRITICAL · 6-Month Work Limit Already Exceeded · Risk of Breach, Immediate Check Required: As of ${assessmentDate}, your 6-month statutory cutoff (${activeCutoffDate}) has passed. Unless exempt or covered by a pre-expiry request, stop working immediately and seek legal review.`
       )}
     </div>
   ` : "";
