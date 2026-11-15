@@ -1,7 +1,7 @@
 {
   "manifest_version": "2026.10.20-codex-audit",
-  "generated_at": "2026-11-09T07:25:45+10:00",
-  "last_polled_date": "2026-11-09",
+  "generated_at": "2026-11-16T07:25:25+10:00",
+  "last_polled_date": "2026-11-16",
   "verification_stages": [
     "fetchStatus (HTTP transport retrieval)",
     "contentCheckStatus (Substantive text / JSON schema extraction & non-empty body check)",
@@ -34,7 +34,7 @@
       "bytes": 63394,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -57,8 +57,8 @@
       "sha256": "9c18d0e1671f169d14295fc21343fd0920b96bd13c8075b643421208fec2d83b",
       "bytes": 61885,
       "method": "curl_h2_ha_schema",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -82,7 +82,7 @@
       "bytes": 6164,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -106,7 +106,7 @@
       "bytes": 50247,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -126,11 +126,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "07ab9bfe36854beda16d7f2b5c149a323759d8b9ed1a3e2a8acd6484197255f4",
-      "bytes": 1309403,
+      "sha256": "86142c9c6d902c6be54d8ea9fbdf4bdea4fe7dbe98dcd8bc8c7d0a3b3c7c0d8d",
+      "bytes": 1313842,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -150,11 +150,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "96250e5452ea49513872f0512861a64d1ff33f2e765287202266e7583e437fb4",
-      "bytes": 1307114,
+      "sha256": "c1582087796c8d62618eea82d91bf76e8416e20ec4c727e1dfce9e2c86aa3a02",
+      "bytes": 1311553,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -174,11 +174,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "c7b44b1b7eb65dbce2998e1a2eacab73f37c78bbede0deaf0bd52df8e519f7e8",
-      "bytes": 1311657,
+      "sha256": "6b4eb036b38a6bd594b77dc07de2a34bd0a720b008f9eafa8e0b131a0fbc12d2",
+      "bytes": 1316096,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -198,11 +198,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "9f7ceff5aa76c1c16b1107a62fc7d9c14a067111572fcbd1e9837b042b0c7dd1",
-      "bytes": 65568,
+      "sha256": "f0079e5a3a6519045c83660deae512454cf8a9f39c64271158e574cc8fe400bd",
+      "bytes": 64716,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -222,11 +222,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "3bbe9fe5f3493bb6ec4a979d1e0ce04a774b4ffc5952a350f14350dcba21ffd7",
-      "bytes": 62696,
+      "sha256": "ed22e27da4a70abfa5daabae6c4ecf97668aaf9d809c199e4c147de47c252be4",
+      "bytes": 61449,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -246,11 +246,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "2ff16f323ba45888336bd76ef82df1182bc38fa9d1cafb60cd2a6a9449c6364e",
-      "bytes": 62687,
+      "sha256": "276983cf436a3f3e4bf67afc1d30420d0664d3ce697ffd3bd6053e7e67d7922f",
+      "bytes": 61449,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -270,11 +270,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "fad06159ae72648323033da50c4631d6c1365c880a417c65d4f5b3a20705e89e",
-      "bytes": 62755,
+      "sha256": "9643263225537151ee2d4e52f104842d817956e2831acd57849b2317b2c58e99",
+      "bytes": 61526,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "checked_at": "2026-11-16T07:25:25+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -294,11 +294,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "6df80ffc3c747aac845b7fce613f86871dd5a030ba2c37321690b2d195c07d20",
-      "bytes": 432008,
+      "sha256": "2487cc7f3f5598863918245243f473c3b2ea799eb886176e460f005979bc78ed",
+      "bytes": 433284,
       "method": "curl_h2_direct",
-      "changed_since_last_poll": false,
-      "checked_at": "2026-11-09T07:25:45+10:00"
+      "changed_since_last_poll": true,
+      "checked_at": "2026-11-16T07:25:25+10:00"
     }
   ],
   "internal_policy_references": [
