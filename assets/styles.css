@@ -1159,18 +1159,18 @@ table.occ-table tr:hover td {
   color: #FFFFFF !important;
 }
 
-/* 4-Gate Cards */
+/* 5-Gate Cards */
 .gates-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
   margin-bottom: 24px;
 }
-@media (max-width: 980px) {
-  .gates-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1160px) {
+  .gates-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  .gates-grid { grid-template-columns: 1fr; }
+  .gates-grid { grid-template-columns: minmax(0, 1fr); }
 }
 .gate-card {
   background: var(--color-white);
@@ -1668,8 +1668,101 @@ table.occ-table tr:hover td {
   }
 }
 
+/* 2027 WHM Extension Reform & Transitional Comparison Banner */
+.whm-reform-banner {
+  background: #FFFFFF;
+  border: 2px solid var(--color-burgundy);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-2);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.whm-reform-banner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-line);
+}
+.whm-reform-banner-head h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin: 0;
+  line-height: 1.35;
+}
+.whm-reform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+.whm-reform-track-card {
+  background: var(--color-paper);
+  border: 1.5px solid var(--color-line-strong);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.whm-reform-track-card.transitional {
+  border-top: 4px solid #1E6B4B;
+  background: #F7FBF9;
+}
+.whm-reform-track-card.post-reform {
+  border-top: 4px solid #B68B40;
+  background: #FFFDF8;
+}
+.whm-reform-track-card h4 {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--color-charcoal);
+}
+.whm-reform-track-card ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 13.4px;
+  line-height: 1.58;
+  color: var(--color-charcoal);
+}
+.whm-reform-track-card li {
+  margin-bottom: 5px;
+}
+.whm-reform-trap-strip {
+  background: #FDF2F2;
+  border: 1px solid #E8B8B3;
+  border-left: 4px solid #B23028;
+  border-radius: var(--radius-md);
+  padding: 11px 14px;
+  font-size: 13.2px;
+  line-height: 1.55;
+  color: #771D1D;
+}
+@media (max-width: 860px) {
+  .whm-reform-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .whm-reform-banner {
+    padding: 15px 16px;
+  }
+}
+
 /* Prevent horizontal overflow on narrow mobile viewports (390px) even with overflow-x: visible */
 .container,
+.whm-reform-banner,
+.whm-reform-grid > *,
 .postcode-verifier-box,
 .combinator-panel,
 .disclaimer-card,

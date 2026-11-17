@@ -1,9 +1,9 @@
 {
-  "last_polled_at": "2026-11-16T07:25:25+10:00",
-  "last_polled_date": "2026-11-16",
+  "last_polled_at": "2026-11-17T20:18:18+10:00",
+  "last_polled_date": "2026-11-17",
   "total_sources": 12,
   "live_verified_count": 12,
-  "changed_count": 8,
+  "changed_count": 7,
   "official_contact": "https://parklawyers.com.au/links/?lang=ko",
   "monitored_rules": {
     "postcodes_tables_1_to_6": {
@@ -223,6 +223,25 @@
       "all_exempt_categories_confirmed": true,
       "policy_notice": "From 1 January 2024 · Active until the Government makes further decisions"
     },
+    "whm_2027_extension_reform": {
+      "registration_opens": "2026-12-01",
+      "first_invitation_round": "mid-January 2027",
+      "registration_valid_until": "2027-06-30",
+      "transitional_cutoff": "2027-02-28",
+      "commencement_date": "2027-03-01",
+      "second_visa_days_until_2027_02_28": 88,
+      "second_visa_days_from_2027_03_01": 120,
+      "third_visa_days": 179,
+      "pre_2027_03_01_work_counts_toward_120": true,
+      "second_visa_cap_2026_27": 45000,
+      "third_visa_cap_2026_27": 25000,
+      "guarantee_validity_months": 12,
+      "uk_bno_exempt": true,
+      "grants_bridging_visa_on_registration_or_invite": false,
+      "live_announcement_detected": true,
+      "legislative_status": "public_policy_guidance_pending_instrument_registration",
+      "authority": "Department of Home Affairs (17 Nov 2026 · itemId=1464 & WHM Latest News) & Minister for Home Affairs Media Release"
+    },
     "statutory_vac_2026": {
       "first_visa_aud": 840,
       "first_visa_pacific_462_aud": 690,
@@ -292,7 +311,7 @@
       "bytes": 63394,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -316,7 +335,7 @@
       "bytes": 61885,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -340,7 +359,7 @@
       "bytes": 6164,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -364,7 +383,7 @@
       "bytes": 50247,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -384,22 +403,22 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "86142c9c6d902c6be54d8ea9fbdf4bdea4fe7dbe98dcd8bc8c7d0a3b3c7c0d8d",
-      "bytes": 1313842,
+      "sha256": "88ce711457a88b3bd227673a208904bcf73189e7db147580d016c6781a1958d1",
+      "bytes": 1314705,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_whm_latest_news",
       "authority": "호주 연방 이민성 (Department of Home Affairs)",
       "authority_ko": "호주 연방 이민성 (Department of Home Affairs)",
       "authority_en": "Department of Home Affairs",
-      "title": "WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)",
-      "title_ko": "WHM 프로그램 최신 개정 공지 (2026.7.1 연령 상향·추첨제·협정 개정)",
-      "title_en": "WHM Program Latest News (1 Jul 2026 Age 35 Expansion, Ballot & Bilateral Updates)",
-      "check_scope_ko": "신규 연령 상향·국가 추가·제도 개편 공지 감시",
-      "check_scope_en": "Monitors bilateral age expansions, new partner countries & policy alerts",
+      "title": "WHM Program Latest News (1 Mar 2027 Guarantee & 120-Day Reform, 1 Jul 2026 Age 35 Expansion)",
+      "title_ko": "WHM 프로그램 최신 개정 공지 (2027.3.1 2·3차 사전등록·초청제·120일 개편 및 2026.7.1 연령 상향)",
+      "title_en": "WHM Program Latest News (1 Mar 2027 Guarantee & 120-Day Reform, 1 Jul 2026 Age 35 Expansion)",
+      "check_scope_ko": "2027.3.1 세컨·서드 사전등록·초청(Guarantee)·120일 개편 및 연령 상향 공지 감시",
+      "check_scope_en": "Monitors 1 Mar 2027 Next Year Regional Work Guarantee, 120-day reform & bilateral updates",
       "url": "https://immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news",
       "sourceKind": "public_policy_guidance",
       "status": "live",
@@ -408,11 +427,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "c1582087796c8d62618eea82d91bf76e8416e20ec4c727e1dfce9e2c86aa3a02",
-      "bytes": 1311553,
+      "sha256": "8e294a7eec79d7e12da9e74e1c3ef66d979d270240b9651269d480ecb376bc2f",
+      "bytes": 1311815,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -432,11 +451,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "6b4eb036b38a6bd594b77dc07de2a34bd0a720b008f9eafa8e0b131a0fbc12d2",
-      "bytes": 1316096,
+      "sha256": "bffcf4a15f877189961499e939ecffb5369151420fd5c82f080cd7c6dad47a69",
+      "bytes": 1316959,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -456,11 +475,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "f0079e5a3a6519045c83660deae512454cf8a9f39c64271158e574cc8fe400bd",
-      "bytes": 64716,
+      "sha256": "5d81d26486dd7cada357f0ef4d7ff7035fe0c669c4160e46a18199edb5417706",
+      "bytes": 64659,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -480,11 +499,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "ed22e27da4a70abfa5daabae6c4ecf97668aaf9d809c199e4c147de47c252be4",
-      "bytes": 61449,
+      "sha256": "13729fac14f53c3f9c8a22e19890bdf0a8ed2a7539a30549147b0eda65a2c32f",
+      "bytes": 61740,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -504,11 +523,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "276983cf436a3f3e4bf67afc1d30420d0664d3ce697ffd3bd6053e7e67d7922f",
-      "bytes": 61449,
+      "sha256": "56fd9cabe2bf5907386de43c5c3d6133660c99dbb2add46b13ac194bdfd2176d",
+      "bytes": 61749,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -528,11 +547,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "9643263225537151ee2d4e52f104842d817956e2831acd57849b2317b2c58e99",
-      "bytes": 61526,
+      "sha256": "cffe884daae31f8eaddead2e90015bd8b10990749b7dabe871e6791421b77c87",
+      "bytes": 61808,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "checked_at": "2026-11-17T20:18:18+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -555,8 +574,8 @@
       "sha256": "2487cc7f3f5598863918245243f473c3b2ea799eb886176e460f005979bc78ed",
       "bytes": 433284,
       "method": "curl_h2_direct",
-      "changed_since_last_poll": true,
-      "checked_at": "2026-11-16T07:25:25+10:00"
+      "changed_since_last_poll": false,
+      "checked_at": "2026-11-17T20:18:18+10:00"
     }
   ]
 }
