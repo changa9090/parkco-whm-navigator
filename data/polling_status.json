@@ -1,6 +1,6 @@
 {
-  "last_polled_at": "2026-11-17T20:18:18+10:00",
-  "last_polled_date": "2026-11-17",
+  "last_polled_at": "2026-11-18T09:02:54+10:00",
+  "last_polled_date": "2026-11-18",
   "total_sources": 12,
   "live_verified_count": 12,
   "changed_count": 7,
@@ -311,7 +311,7 @@
       "bytes": 63394,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_462_specified_work",
@@ -335,7 +335,7 @@
       "bytes": 61885,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_8547_6month_limit",
@@ -359,7 +359,7 @@
       "bytes": 6164,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_417_first_stream",
@@ -383,7 +383,7 @@
       "bytes": 50247,
       "method": "curl_h2_ha_schema",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_uk_arrangements",
@@ -403,11 +403,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "88ce711457a88b3bd227673a208904bcf73189e7db147580d016c6781a1958d1",
-      "bytes": 1314705,
+      "sha256": "9eed41450729fccc5b80cc71468fa41f36d764696eb27c24cdf5f7354c9b33b8",
+      "bytes": 1314722,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_whm_latest_news",
@@ -427,11 +427,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "8e294a7eec79d7e12da9e74e1c3ef66d979d270240b9651269d480ecb376bc2f",
-      "bytes": 1311815,
+      "sha256": "3c71edf4d737583635c2dda66a69a0c40c9fe2027a9735e940473c35882e9b3d",
+      "bytes": 1311832,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "ha_country_caps",
@@ -451,11 +451,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "bffcf4a15f877189961499e939ecffb5369151420fd5c82f080cd7c6dad47a69",
+      "sha256": "7bdbfa5d128101d4bfdabe15e249415456a571d3e6ae1c9229bceb4e3f5863da",
       "bytes": 1316959,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "leg_mig_regs_1994",
@@ -475,11 +475,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "5d81d26486dd7cada357f0ef4d7ff7035fe0c669c4160e46a18199edb5417706",
-      "bytes": 64659,
+      "sha256": "5dfd686daa08371448caf2e58a6385edac96b3147d3199e32f50ee5185800b03",
+      "bytes": 64689,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "leg_lin_22_012",
@@ -499,11 +499,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "13729fac14f53c3f9c8a22e19890bdf0a8ed2a7539a30549147b0eda65a2c32f",
-      "bytes": 61740,
+      "sha256": "0f0e151b97d6963439943d8f4848625ecf0bcfe5c6f290a5cf68aeaabe4f136d",
+      "bytes": 61749,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "leg_lin_22_013",
@@ -523,11 +523,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "56fd9cabe2bf5907386de43c5c3d6133660c99dbb2add46b13ac194bdfd2176d",
-      "bytes": 61749,
+      "sha256": "8fdc740d765bd3acdd9c2cac6b3727d44d39741cdff6d842002bef2481f24ffc",
+      "bytes": 61740,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "leg_lin_25_048",
@@ -547,11 +547,11 @@
       "ruleMatchStatus": "matched",
       "reviewStatus": "verified_2026-10-20",
       "http_code": 200,
-      "sha256": "cffe884daae31f8eaddead2e90015bd8b10990749b7dabe871e6791421b77c87",
-      "bytes": 61808,
+      "sha256": "26e744da5f4b526649de990171dc7fe36e889ee12ea2ce81202c0afdfa05a63b",
+      "bytes": 61817,
       "method": "curl_h2_direct",
       "changed_since_last_poll": true,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     },
     {
       "id": "fwo_piecework",
@@ -575,7 +575,7 @@
       "bytes": 433284,
       "method": "curl_h2_direct",
       "changed_since_last_poll": false,
-      "checked_at": "2026-11-17T20:18:18+10:00"
+      "checked_at": "2026-11-18T09:02:54+10:00"
     }
   ]
 }

@@ -165,7 +165,7 @@
       <div class="postcode-verifier-box">
         <div class="search-bar-row" style="flex-wrap:wrap;gap:10px;align-items:center;">
           <div class="search-input-wrap" style="max-width:340px;flex:1 1 240px;">
-            <input type="text" id="pv-input" class="search-input" style="padding-left:16px;font-size:18px;font-weight:800;letter-spacing:1px;" inputmode="numeric" maxlength="4" value="" aria-label="4-digit Australian postcode" placeholder="4자리 우편번호 (예: 4870)" />
+            <input type="text" id="pv-input" class="search-input" style="padding-left:16px;font-size:18px;font-weight:800;letter-spacing:1px;" inputmode="numeric" maxlength="4" value="" aria-label="4-digit Australian postcode" data-i18n-placeholder="phPvInput" placeholder="4자리 우편번호 (예: 4870)" />
           </div>
           <div class="preset-chips-row" style="margin:0;padding:0;border:none;">
             <span class="preset-label" data-i18n="pvPresetLbl">주요 지역 예시:</span>
@@ -435,7 +435,7 @@
 
             <div class="filter-group">
               <label for="c8547-postcode" class="filter-label" data-i18n="lbl8547Postcode">2. 실제 근무지 우편번호 (북부 호주 Table 3 자동 판별)</label>
-              <input type="text" id="c8547-postcode" class="filter-select" inputmode="numeric" maxlength="4" value="" placeholder="예: 4870, 2000, 6725" />
+              <input type="text" id="c8547-postcode" class="filter-select" inputmode="numeric" maxlength="4" value="" data-i18n-placeholder="phC8547Postcode" placeholder="예: 4870, 2000, 6725" />
             </div>
 
             <div class="filter-group" style="grid-column: span 2;">
@@ -509,7 +509,7 @@
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
               <input type="checkbox" id="c8547-workers-comp" style="margin-top:4px;" />
-              <span data-i18n="chk8547WorkersComp"><strong>산재보상 급여(Workers Compensation) 수령 기간 (PAM3 s 3.2.4):</strong> 산재보상 수령 기간으로 인해 총 재직 기간이 6개월을 초과함 (산재 수령 기간과 실제 근무 기간 구분 및 증빙 수동 검토 대상)</span>
+              <span data-i18n="chk8547WorkersComp"><strong>산재보상 급여(Workers Compensation) 수령 기간 (PAM3 s 3.2.4):</strong> 산재보상 수령 기간으로 인해 총 재직 기간이 6개월을 초과함 · 수동 검토 대상 (자동 면제 아님)</span>
             </label>
 
             <label style="display:flex;align-items:flex-start;gap:8px;font-size:13.8px;cursor:pointer;">
